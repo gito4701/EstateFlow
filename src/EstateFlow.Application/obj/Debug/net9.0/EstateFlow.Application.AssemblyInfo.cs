@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EstateFlow.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49d9a147ab8f983034190749faabfb66f089771a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08818feef0c5172c0d2bdf6d5ff9f43105e3bf59")]
 [assembly: System.Reflection.AssemblyProductAttribute("EstateFlow.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EstateFlow.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -12,13 +12,15 @@ public sealed class PropertiesController : ControllerBase
     private readonly GetPropertyService _getPropertyService;
     private readonly UpdatePropertyService _updatePropertyService;
     private readonly DeletePropertyService _deletePropertyService;
+    private readonly SearchPropertiesService _searchPropertiesService;
 
-    public PropertiesController(CreatePropertyService createPropertyService, GetPropertyService getPropertyService, UpdatePropertyService updatePropertyService, DeletePropertyService deletePropertyService)
+    public PropertiesController(CreatePropertyService createPropertyService, GetPropertyService getPropertyService, UpdatePropertyService updatePropertyService, DeletePropertyService deletePropertyService, SearchPropertiesService searchPropertiesService)
     {
         _createPropertyService = createPropertyService;
         _getPropertyService = getPropertyService;
         _updatePropertyService = updatePropertyService;
         _deletePropertyService = deletePropertyService;
+        _searchPropertiesService = searchPropertiesService;
     }
 
     [HttpPost]
@@ -70,6 +72,31 @@ public sealed class PropertiesController : ControllerBase
             address = property.Address,
             state = property.State.ToString()
         }));
+    }
+
+    [HttpGet("search")]
+    public IActionResult Search([FromQuery] string? name, [FromQuery] string? status, [FromQuery] int page = 1, [FromQuery] int pageSize = 10, [FromQuery] string? sort = null, [FromQuery] string? direction = null)
+    {
+        var response = _searchPropertiesService.Handle(new SearchPropertiesRequest(name, status, page, pageSize, sort, direction));
+
+        if (!response.IsSuccess)
+        {
+            return BadRequest(new { message = response.Error ?? "Unable to search properties." });
+        }
+
+        return Ok(new
+        {
+            page = response.Page,
+            pageSize = response.PageSize,
+            totalCount = response.TotalCount,
+            items = response.Properties.Select(property => new
+            {
+                id = property.Id.Value,
+                name = property.Name,
+                address = property.Address,
+                state = property.State.ToString()
+            })
+        });
     }
 
     [HttpPut("{id:guid}")]

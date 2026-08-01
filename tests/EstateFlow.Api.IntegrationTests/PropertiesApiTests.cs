@@ -1,5 +1,6 @@
 using System.Net;
 using System.Net.Http.Json;
+using System.Text.Json;
 using EstateFlow.Application.Requests;
 using EstateFlow.Domain.Properties;
 using Microsoft.EntityFrameworkCore;
@@ -168,6 +169,30 @@ public sealed class PropertiesApiTests : IClassFixture<CustomWebApplicationFacto
         var payload = await response.Content.ReadFromJsonAsync<List<Dictionary<string, object>>>();
         Assert.NotNull(payload);
         Assert.True(payload.Count >= 2);
+    }
+
+    [Fact]
+    public async Task GetApiPropertiesSearch_WithFiltersAndPaging_ReturnsPagedResults()
+    {
+        await _client.PostAsJsonAsync("/api/properties", new CreatePropertyRequest("Alpha Property", "Address A"));
+        await _client.PostAsJsonAsync("/api/properties", new CreatePropertyRequest("Beta Property", "Address B"));
+
+        var response = await _client.GetAsync("/api/properties/search?name=alpha&page=1&pageSize=1");
+
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        var payload = await response.Content.ReadFromJsonAsync<Dictionary<string, JsonElement>>();
+        Assert.NotNull(payload);
+        Assert.Equal(1, payload!["page"].GetInt32());
+        Assert.Equal(1, payload["pageSize"].GetInt32());
+        Assert.True(payload["items"].GetArrayLength() >= 1);
+    }
+
+    [Fact]
+    public async Task GetApiPropertiesSearch_WithInvalidPaging_ReturnsBadRequest()
+    {
+        var response = await _client.GetAsync("/api/properties/search?page=0&pageSize=0");
+
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
     }
 
     [Fact]

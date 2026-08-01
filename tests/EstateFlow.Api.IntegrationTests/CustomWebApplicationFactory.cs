@@ -33,6 +33,7 @@ public sealed class CustomWebApplicationFactory : WebApplicationFactory<Program>
             services.RemoveAll<IPropertyRepository>();
             services.RemoveAll<CreatePropertyService>();
             services.RemoveAll<GetPropertyService>();
+            services.RemoveAll<SearchPropertiesService>();
 
             services.AddDbContext<EstateFlowDbContext>(options =>
             {
@@ -42,6 +43,7 @@ public sealed class CustomWebApplicationFactory : WebApplicationFactory<Program>
             services.AddScoped<IPropertyRepository, PropertyRepository>();
             services.AddScoped<CreatePropertyService>();
             services.AddScoped<GetPropertyService>();
+            services.AddScoped<SearchPropertiesService>();
         });
     }
 }

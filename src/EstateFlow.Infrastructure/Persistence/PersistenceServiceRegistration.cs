@@ -31,6 +31,7 @@ public static class PersistenceServiceRegistration
         services.AddScoped<GetPropertyService>();
         services.AddScoped<UpdatePropertyService>();
         services.AddScoped<DeletePropertyService>();
+        services.AddScoped<SearchPropertiesService>();
 
         return services;
     }
