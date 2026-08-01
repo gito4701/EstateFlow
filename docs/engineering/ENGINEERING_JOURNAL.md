@@ -126,3 +126,9 @@
 - Reason for this update: record formal acceptance of the completed S08 Application Layer Foundation work package.
 - Acceptance artifact created: `docs/engineering/AC-S08-001.md`.
 - Stage status recorded as Accepted with S08 completed and the next stage awaiting Lead Engineer Authorization.
+
+2026-08-01 — S09-APP-001
+- Task ID: S09-APP-001
+- Reason for this update: implement the first Property application workflow using the existing Application and Domain foundations.
+- Scope: created a CreateProperty request, create response, and application service that delegates validation and creation to the existing Property aggregate in the Domain layer.
+- Verification: build and tests passed after the application workflow and regression tests were added.
