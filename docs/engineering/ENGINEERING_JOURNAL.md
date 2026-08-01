@@ -132,3 +132,9 @@
 - Reason for this update: implement the first Property application workflow using the existing Application and Domain foundations.
 - Scope: created a CreateProperty request, create response, and application service that delegates validation and creation to the existing Property aggregate in the Domain layer.
 - Verification: build and tests passed after the application workflow and regression tests were added.
+
+2026-08-01 — AC-S09-001
+- Task ID: AC-S09-001
+- Reason for this update: record formal acceptance of the completed S09 Property Application Use Cases work package.
+- Acceptance artifact created: `docs/engineering/AC-S09-001.md`.
+- Stage status recorded as Accepted with S09 completed and the next stage awaiting Lead Engineer Authorization.

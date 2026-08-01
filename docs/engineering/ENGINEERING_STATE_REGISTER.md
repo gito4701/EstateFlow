@@ -13,6 +13,8 @@ This register records the current governance state, decisions, and approved stat
 - Acceptance record AC-S07-001 has been created and the S07 stage is marked Accepted.
 - Application layer foundation has been completed and accepted for S08.
 - Acceptance record AC-S08-001 has been created and the S08 stage is marked Accepted.
+- Property application use cases have been completed and accepted for S09.
+- Acceptance record AC-S09-001 has been created and the S09 stage is marked Accepted.
 
 ## Document Register
 - `ENGINEERING_CONSTITUTION.md` — governance and mandatory principles.
