@@ -15,3 +15,7 @@
 2026-08-01 — S05-DOM-001
 - Implemented initial `Property` aggregate foundation: `PropertyId` (strongly-typed id) and `Property` aggregate root (creation controlled via factory). Committed on `feature/stage-05-core-domain-model`.
 - Author: AI Coding Agent (implementation under Lead Engineer direction).
+
+2026-08-01 — S06-DOM-001 (Blocked)
+- Attempted to implement `Property` domain behaviour but stopped. No approved Product Definition (EDD) or lifecycle information was found in the repository to justify specific behaviour or lifecycle states. Per authority rules, no behavioural changes were made. Recorded on `feature/stage-06-property-domain-behaviour`.
+- Action required: Lead Engineer or Product Owner must provide Product Definition excerpts (EDD v1.0) specifying approved `Property` behaviour or lifecycle to proceed.
