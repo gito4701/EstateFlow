@@ -67,3 +67,10 @@
 - Product decision request created in `docs/product/PROPERTY_DOMAIN_DECISION_REQUEST.md`.
 - Engineering remains blocked from Property domain behaviour until Product Owner decisions for PD-003 and PD-004 are recorded.
 - No implementation occurred; only the documentation boundary for authorization was extended.
+
+2026-08-01 — S06-PD-008
+- Task ID: S06-PD-008
+- Reason for this update: create the Property Domain Decision Record as the formal placeholder for Product Owner decisions on lifecycle and business rules.
+- Property Domain Decision Record created in `docs/product/PROPERTY_DOMAIN_DECISION_RECORD.md`.
+- Engineering remains blocked from Property domain behaviour because no implementation authorization exists for PD-003 or PD-004.
+- No implementation occurred; the repository remains documentation-only.

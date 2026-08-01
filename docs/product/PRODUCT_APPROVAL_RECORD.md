@@ -36,3 +36,8 @@ Engineering implementation of Property domain behaviour may proceed only within 
 ## Future Implementation Dependency
 
 - S07 Domain Behaviour Implementation depends on this approval record and remains constrained to the approved baseline.
+
+## Pending Decisions
+
+- PD-003 Property Lifecycle
+- PD-004 Property Business Rules
