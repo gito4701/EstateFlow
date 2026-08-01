@@ -226,3 +226,10 @@
 - Scope: created the Owner product approval record and updated the supporting Owner definition, decision request, EDD, RTM, and engineering journal documents to reflect the pending approval structure.
 - Verification: build and tests were re-run after the documentation-only approval-record updates.
 - Approval status: PD-006 through PD-010 remain Pending Product Owner Approval; no Owner implementation is authorized.
+
+2026-08-02 — S29-PD-004
+- Task ID: S29-PD-004
+- Reason for this update: record the approved Product Owner decisions for Owner Management so engineering can proceed with documentation-only governance for future implementation planning.
+- Scope: created the Owner domain decision record and updated the Owner approval, definition, decision request, EDD, RTM, and engineering journal documents to reflect approved documentation decisions for PD-006, PD-007, PD-008, and PD-010, while marking PD-009 as Deferred.
+- Verification: build and tests were re-run after the documentation-only decision-record updates.
+- Approval status: documentation decisions are recorded; no Owner implementation is authorized.

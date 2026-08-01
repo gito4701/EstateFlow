@@ -3,48 +3,48 @@
 ## Purpose
 This document captures the Product Owner review checkpoints required before any Owner domain implementation may be authorized in EstateFlow.
 
-## Review Decisions Requested
+## Review Decisions Recorded
 
 ### PD-006 — Owner Definition Approval
 - Decision identifier: PD-006
-- Description: Confirm the approved business meaning of Owner within EstateFlow v1.
-- Current status: Pending Product Owner review.
-- Approval requirement: Product Owner must confirm the intended business role of Owner.
-- Implementation impact: Defines whether Owner is a principal party, a contact role, or another business concept.
+- Description: Approved business meaning of Owner within EstateFlow v1.
+- Current status: Approved.
+- Approved decision: Owner is a business concept used to represent the principal party associated with a property record.
+- Implementation impact: None; implementation remains blocked.
 
 ### PD-007 — Owner Scope Approval
 - Decision identifier: PD-007
-- Description: Confirm the approved scope of Owner within EstateFlow v1.
-- Current status: Pending Product Owner review.
-- Approval requirement: Product Owner must confirm whether Owner is in scope for v1 and what boundaries apply.
-- Implementation impact: Determines whether Owner-related work remains limited to documentation or may progress to implementation.
+- Description: Approved scope of Owner within EstateFlow v1.
+- Current status: Approved.
+- Approved decision: Owner is in scope as a documented product boundary for future planning, with explicit exclusions for implementation artifacts.
+- Implementation impact: None; implementation remains blocked.
 
 ### PD-008 — Owner-to-Property Relationship Approval
 - Decision identifier: PD-008
-- Description: Confirm the approved business relationship between Owner and Property.
-- Current status: Pending Product Owner review.
-- Approval requirement: Product Owner must confirm whether the relationship is one-to-one, one-to-many, or another association pattern.
-- Implementation impact: Shapes any future domain model and traceability expectations.
+- Description: Approved business relationship between Owner and Property.
+- Current status: Approved.
+- Approved decision: The Owner and Property relationship is a business association between a property record and an Owner record.
+- Implementation impact: None; implementation remains blocked.
 
 ### PD-009 — Owner Business Rules Approval
 - Decision identifier: PD-009
-- Description: Confirm the approved business rules for Owner.
-- Current status: Pending Product Owner review.
-- Approval requirement: Product Owner must approve any required Owner invariants or business constraints.
-- Implementation impact: Defines what rules may be implemented later and what must remain out of scope.
+- Description: Approved Owner business rules and invariants.
+- Current status: Deferred.
+- Approved decision: No Owner business rules or invariants are approved in this documentation baseline.
+- Implementation impact: None; implementation remains blocked.
 
 ### PD-010 — Owner Acceptance Criteria Approval
 - Decision identifier: PD-010
-- Description: Confirm the approved acceptance criteria for Owner-related work.
-- Current status: Pending Product Owner review.
-- Approval requirement: Product Owner must approve the success conditions for future Owner implementation.
-- Implementation impact: Establishes the acceptance baseline for any later implementation effort.
+- Description: Approved acceptance criteria for Owner-related work.
+- Current status: Approved.
+- Approved decision: Future Owner-related work must remain within the approved product-definition boundary and preserve the documented Owner concept, scope, and relationship.
+- Implementation impact: None; implementation remains blocked.
 
 ## Implementation Status
 No Owner domain implementation is authorized at this time. This review package is documentation-only and does not authorize any domain, persistence, API, or application work.
 
 ## Approval Record Status
-A formal approval record has been created to capture the pending Product Owner approval structure for PD-006 through PD-010. Implementation remains blocked until the Product Owner decisions are recorded.
+A formal decision record has been created to capture the recorded Owner decisions for PD-006 through PD-010. Implementation remains blocked until the documentation approval status changes.
 
 ## Review Guidance
-The Product Owner review should confirm the business boundary, expected relationship behavior, and acceptance expectations before any Owner implementation is authorized.
+The documented decisions establish the business boundary, approved relationship meaning, and acceptance expectations for future Owner implementation planning without authorizing implementation work.

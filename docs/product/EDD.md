@@ -10,10 +10,10 @@ EstateFlow v1.0 includes the approved Property aggregate and the minimum busines
 A new product-definition baseline for Owner management has been prepared to define the approved business boundary for introducing Owner into EstateFlow v1.0. This baseline documents the purpose of Owner, the approved scope of Owner within EstateFlow v1, the Owner-to-Property relationship, approved capabilities, explicit exclusions, and acceptance principles. The Owner baseline is documentation-only and does not authorize implementation work.
 
 ## Owner Product Definition Review Baseline
-The Owner baseline is now prepared for Product Owner review. The review package identifies the pending Product Owner decisions required before implementation authorization: PD-006 through PD-010. No Owner implementation work is authorized at this stage.
+The Owner baseline has been documented with Product Owner decisions recorded for documentation purposes. The current decision status is: PD-006 Approved, PD-007 Approved, PD-008 Approved, PD-009 Deferred, and PD-010 Approved. No Owner implementation work is authorized at this stage.
 
-## Owner Approval Record
-A formal approval record has been created to capture the pending Product Owner approval structure for the Owner baseline. The approval record does not invent decisions; it records that implementation authorization remains blocked until Product Owner approvals are recorded.
+## Owner Decision Record
+A formal Owner decision record has been created to capture the approved documentation decisions for the Owner baseline. The record does not invent rules and records that implementation authorization remains blocked until the documentation approval status changes.
 
 ## Property Aggregate Definition
 Property is the core EstateFlow v1.0 domain aggregate. It represents a real-estate asset record with a uniquely identified property record and the minimum business identity required for future implementation. The approved product baseline defines Property as the authoritative business concept for this release.

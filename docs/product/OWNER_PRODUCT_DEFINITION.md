@@ -37,12 +37,12 @@ Owner-related work is considered acceptable only when it remains within this app
 This document establishes the Owner product boundary only. It does not authorize implementation, data design, or functional delivery beyond the documented baseline.
 
 ## Product Owner Review Status
-The Owner baseline is prepared for Product Owner review. The following decisions remain pending approval before any implementation may be authorized:
-- PD-006 — Owner definition approval
-- PD-007 — Owner scope approval
-- PD-008 — Owner-to-Property relationship approval
-- PD-009 — Owner business rules approval
-- PD-010 — Owner acceptance criteria approval
+The Owner baseline has been documented with Product Owner decisions recorded for documentation purposes. The following status applies:
+- PD-006 — Approved
+- PD-007 — Approved
+- PD-008 — Approved
+- PD-009 — Deferred
+- PD-010 — Approved
 
 ## Approval Structure Status
-An approval record has been created to formalize the pending Product Owner review structure for these decisions. No Owner implementation is authorized until the corresponding approvals are recorded.
+A decision record has been created to formalize the recorded Owner decisions. No Owner implementation is authorized; only the documentation approval status may change in this stage.
