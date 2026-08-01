@@ -3,7 +3,6 @@ using EstateFlow.Application.Interfaces;
 using EstateFlow.Infrastructure.Persistence;
 using EstateFlow.Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -17,11 +16,7 @@ builder.Services.AddRouting();
 builder.Services.AddScoped<IApplicationService, ApiServiceRegistration>();
 builder.Services.AddScoped<IInfrastructureService, ApiServiceRegistration>();
 ApiServiceRegistration.RegisterServices(builder.Services);
-
-builder.Services.AddDbContext<EstateFlowDbContext>(options =>
-{
-    options.UseInMemoryDatabase("EstateFlow");
-});
+builder.Services.AddPersistence(builder.Configuration);
 
 var app = builder.Build();
 
