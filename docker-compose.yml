@@ -1,0 +1,23 @@
+services:
+  estateflow-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: estateflow-api:latest
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      Persistence__Provider: SqlServer
+      Persistence__ConnectionString: Server=sqlserver;Database=EstateFlow;User Id=sa;Password=YourStrong!Passw0rd
+      ConnectionStrings__DefaultConnection: Server=sqlserver;Database=EstateFlow;User Id=sa;Password=YourStrong!Passw0rd
+    depends_on:
+      - sqlserver
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: YourStrong!Passw0rd
+    ports:
+      - "1433:1433"

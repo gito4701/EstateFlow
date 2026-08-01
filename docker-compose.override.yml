@@ -1,0 +1,7 @@
+services:
+  estateflow-api:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      Persistence__Provider: InMemory
+      Persistence__ConnectionString: EstateFlow-Container
+      ConnectionStrings__DefaultConnection: EstateFlow-Container

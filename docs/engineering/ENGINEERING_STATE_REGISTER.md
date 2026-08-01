@@ -24,6 +24,8 @@ This register records the current governance state, decisions, and approved stat
 - API foundation has been completed for S13.
 - The API stage is now prepared for review as a delivery-boundary foundation without business logic.
 - Acceptance record AC-S13-001 has been created and the S13 stage is marked Accepted.
+- Docker runtime verification has been completed for S28.
+- Acceptance record AC-S28-001 has been created and the S28 stage is marked Accepted.
 
 ## Document Register
 - `ENGINEERING_CONSTITUTION.md` — governance and mandatory principles.

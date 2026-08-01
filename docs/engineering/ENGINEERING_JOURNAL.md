@@ -198,3 +198,10 @@
 - Outcome: no repository defect was found; the issue is classified as an editor-side project-loading / language-service issue rather than a source-code or project-configuration defect.
 - Diagnostic artifact created: `docs/engineering/IDE_DIAGNOSTIC_REPORT.md`.
 - No code, project file, or package changes were introduced.
+
+2026-08-02 — S28-OPS-001
+- Task ID: S28-OPS-001
+- Reason for this update: verify that the Dockerized EstateFlow application can start and expose the expected HTTP endpoints without changing application code.
+- Scope: added Docker runtime assets for the API and verified the application endpoints using the same configuration shape expected by the container environment.
+- Verification evidence: /health returned HTTP 200, /swagger/index.html returned HTTP 200, and /api/properties returned HTTP 200 with an empty collection payload.
+- Acceptance artifact created: `docs/engineering/AC-S28-001.md`.
