@@ -144,3 +144,10 @@
 - Reason for this update: establish the Infrastructure layer engineering foundation in accordance with the approved architecture boundary.
 - Scope: created foundational Infrastructure folders and lightweight abstractions for common services, configuration, and service contracts without introducing persistence, repositories, or external integrations.
 - Verification: build and existing tests were validated after the foundation scaffolding was added.
+
+2026-08-01 — AC-S10-001
+- Task ID: AC-S10-001
+- Reason for this update: record formal acceptance of the completed S10 Infrastructure Foundation work package.
+- Acceptance artifact created: `docs/engineering/AC-S10-001.md`.
+- Stage status recorded as Accepted with S10 completed and the next stage awaiting Lead Engineer Authorization.
+- Non-blocking observation: an IDE source-loading warning for `IInfrastructureService.cs` was recorded during development and does not block the milestone.
