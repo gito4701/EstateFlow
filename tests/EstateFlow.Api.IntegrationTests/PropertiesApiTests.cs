@@ -33,11 +33,16 @@ public sealed class PropertiesApiTests : IClassFixture<CustomWebApplicationFacto
     }
 
     [Fact]
-    public async Task PostApiProperties_WithInvalidRequest_ReturnsBadRequest()
+    public async Task PostApiProperties_WithInvalidRequest_ReturnsProblemDetails()
     {
         var response = await _client.PostAsJsonAsync("/api/properties", new CreatePropertyRequest("", ""));
 
         Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+        Assert.Equal("application/problem+json", response.Content.Headers.ContentType?.MediaType);
+
+        var payload = await response.Content.ReadFromJsonAsync<Dictionary<string, JsonElement>>();
+        Assert.NotNull(payload);
+        Assert.Equal("One or more validation errors occurred.", payload!["title"].GetString());
     }
 
     [Fact]
@@ -188,11 +193,53 @@ public sealed class PropertiesApiTests : IClassFixture<CustomWebApplicationFacto
     }
 
     [Fact]
-    public async Task GetApiPropertiesSearch_WithInvalidPaging_ReturnsBadRequest()
+    public async Task GetApiPropertiesSearch_WithInvalidPaging_ReturnsProblemDetails()
     {
         var response = await _client.GetAsync("/api/properties/search?page=0&pageSize=0");
 
         Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+        Assert.Equal("application/problem+json", response.Content.Headers.ContentType?.MediaType);
+
+        var payload = await response.Content.ReadFromJsonAsync<Dictionary<string, JsonElement>>();
+        Assert.NotNull(payload);
+        Assert.Equal("One or more validation errors occurred.", payload!["title"].GetString());
+    }
+
+    [Fact]
+    public async Task GetApiProperties_WithoutCorrelationId_GeneratesAndReturnsCorrelationIdHeader()
+    {
+        var response = await _client.GetAsync("/api/properties");
+
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        Assert.True(response.Headers.Contains("X-Correlation-ID"));
+
+        var correlationId = response.Headers.GetValues("X-Correlation-ID").Single();
+        Assert.False(string.IsNullOrWhiteSpace(correlationId));
+    }
+
+    [Fact]
+    public async Task GetApiProperties_WithExistingCorrelationId_PreservesCorrelationIdHeader()
+    {
+        using var request = new HttpRequestMessage(HttpMethod.Get, "/api/properties");
+        request.Headers.Add("X-Correlation-ID", "correlation-123");
+
+        var response = await _client.SendAsync(request);
+
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        Assert.Equal("correlation-123", response.Headers.GetValues("X-Correlation-ID").Single());
+    }
+
+    [Fact]
+    public async Task GetApiProperties_ReturnsCollectionWithoutChangingPayload()
+    {
+        await _client.PostAsJsonAsync("/api/properties", new CreatePropertyRequest("Property A", "Address A"));
+
+        var response = await _client.GetAsync("/api/properties");
+
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        var payload = await response.Content.ReadFromJsonAsync<List<Dictionary<string, object>>>();
+        Assert.NotNull(payload);
+        Assert.NotEmpty(payload);
     }
 
     [Fact]

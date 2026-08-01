@@ -1,6 +1,8 @@
+using System.ComponentModel.DataAnnotations;
 using EstateFlow.Application.Requests;
 using EstateFlow.Application.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 
 namespace EstateFlow.Api.Controllers;
 
@@ -30,7 +32,7 @@ public sealed class PropertiesController : ControllerBase
 
         if (!response.IsSuccess || response.PropertyId is null)
         {
-            return BadRequest(new { message = response.Error ?? "Unable to create property." });
+            return BuildErrorResponse(StatusCodes.Status400BadRequest, "Unable to create property.", response.Error ?? "Unable to create property.");
         }
 
         return CreatedAtAction(nameof(Create), new { id = response.PropertyId.Value }, new
@@ -48,7 +50,7 @@ public sealed class PropertiesController : ControllerBase
 
         if (!response.IsSuccess || response.Property is null)
         {
-            return NotFound(new { message = response.Error ?? "Property not found." });
+            return BuildErrorResponse(StatusCodes.Status404NotFound, "Property not found.", response.Error ?? "Property not found.");
         }
 
         return Ok(new
@@ -77,11 +79,16 @@ public sealed class PropertiesController : ControllerBase
     [HttpGet("search")]
     public IActionResult Search([FromQuery] string? name, [FromQuery] string? status, [FromQuery] int page = 1, [FromQuery] int pageSize = 10, [FromQuery] string? sort = null, [FromQuery] string? direction = null)
     {
+        if (page < 1 || pageSize < 1)
+        {
+            return BuildErrorResponse(StatusCodes.Status400BadRequest, "One or more validation errors occurred.", "The request contains invalid data.");
+        }
+
         var response = _searchPropertiesService.Handle(new SearchPropertiesRequest(name, status, page, pageSize, sort, direction));
 
         if (!response.IsSuccess)
         {
-            return BadRequest(new { message = response.Error ?? "Unable to search properties." });
+            return BuildErrorResponse(StatusCodes.Status400BadRequest, "Unable to search properties.", response.Error ?? "Unable to search properties.");
         }
 
         return Ok(new
@@ -104,7 +111,7 @@ public sealed class PropertiesController : ControllerBase
     {
         if (request is null)
         {
-            return BadRequest(new { message = "Request body is required." });
+            return BuildErrorResponse(StatusCodes.Status400BadRequest, "Request body is required.", "Request body is required.");
         }
 
         try
@@ -115,10 +122,10 @@ public sealed class PropertiesController : ControllerBase
             {
                 if (response.Error?.Contains("not found", StringComparison.OrdinalIgnoreCase) == true)
                 {
-                    return NotFound(new { message = response.Error });
+                    return BuildErrorResponse(StatusCodes.Status404NotFound, "Property not found.", response.Error);
                 }
 
-                return BadRequest(new { message = response.Error ?? "Unable to update property." });
+                return BuildErrorResponse(StatusCodes.Status400BadRequest, "Unable to update property.", response.Error ?? "Unable to update property.");
             }
 
             return Ok(new
@@ -131,7 +138,7 @@ public sealed class PropertiesController : ControllerBase
         }
         catch (Exception ex)
         {
-            return BadRequest(new { message = ex.Message });
+            return BuildErrorResponse(StatusCodes.Status400BadRequest, "Unable to update property.", ex.Message);
         }
     }
 
@@ -144,12 +151,30 @@ public sealed class PropertiesController : ControllerBase
         {
             if (response.Error?.Contains("not found", StringComparison.OrdinalIgnoreCase) == true)
             {
-                return NotFound(new { message = response.Error });
+                return BuildErrorResponse(StatusCodes.Status404NotFound, "Property not found.", response.Error);
             }
 
-            return BadRequest(new { message = response.Error ?? "Unable to delete property." });
+            return BuildErrorResponse(StatusCodes.Status400BadRequest, "Unable to delete property.", response.Error ?? "Unable to delete property.");
         }
 
         return NoContent();
+    }
+
+    private IActionResult BuildErrorResponse(int statusCode, string title, string detail)
+    {
+        var problemDetails = new ProblemDetails
+        {
+            Type = "about:blank",
+            Title = title,
+            Detail = detail,
+            Status = statusCode
+        };
+
+        return statusCode switch
+        {
+            StatusCodes.Status400BadRequest => BadRequest(problemDetails),
+            StatusCodes.Status404NotFound => NotFound(problemDetails),
+            _ => StatusCode(statusCode, problemDetails)
+        };
     }
 }
