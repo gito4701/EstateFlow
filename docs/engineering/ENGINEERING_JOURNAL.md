@@ -108,3 +108,9 @@
 - Reason for this update: correct the Property aggregate creation path so that creation requires approved business identity information and rejects invalid creation attempts through domain validation.
 - Scope: updated the Domain layer creation logic and added regression coverage for missing required information while preserving the approved lifecycle model.
 - Verification: build and domain tests passed after the correction.
+
+2026-08-01 — AC-S07-001
+- Task ID: AC-S07-001
+- Reason for this update: record formal acceptance of the completed S07 Property Domain Behaviour work package.
+- Acceptance artifact created: `docs/engineering/AC-S07-001.md`.
+- Stage status recorded as Accepted with S07 completed and the next stage awaiting Lead Engineer Authorization.

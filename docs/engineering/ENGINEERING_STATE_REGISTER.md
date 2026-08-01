@@ -8,9 +8,9 @@ This register records the current governance state, decisions, and approved stat
 - Records active ownership and change history expectations.
 
 ## Current State
-- Repository created for governance documentation only.
-- Approved documents established in `docs/engineering`.
-- No implementation artifacts present.
+- Repository governance and product-definition documentation are established.
+- Property domain behaviour implementation has been completed and accepted for S07.
+- Acceptance record AC-S07-001 has been created and the S07 stage is marked Accepted.
 
 ## Document Register
 - `ENGINEERING_CONSTITUTION.md` — governance and mandatory principles.
