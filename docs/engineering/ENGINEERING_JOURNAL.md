@@ -184,3 +184,9 @@
 - Scope: configured the ASP.NET Core API host, added health checks and minimal root endpoint exposure, and registered the API boundary with Application and Infrastructure abstractions.
 - Architectural confirmation: the API acts as the external delivery boundary only; business logic and persistence behaviour remain in lower layers.
 - Verification: restore, build, and tests were validated after the API foundation was added.
+
+2026-08-01 — AC-S13-001
+- Task ID: AC-S13-001
+- Reason for this update: record formal acceptance of the completed S13 API Foundation work package.
+- Acceptance artifact created: `docs/engineering/AC-S13-001.md`.
+- Stage status recorded as Accepted with S13 completed and the next stage awaiting Lead Engineer Authorization.
