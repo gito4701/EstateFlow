@@ -10,11 +10,13 @@ public sealed class PropertiesController : ControllerBase
 {
     private readonly CreatePropertyService _createPropertyService;
     private readonly GetPropertyService _getPropertyService;
+    private readonly UpdatePropertyService _updatePropertyService;
 
-    public PropertiesController(CreatePropertyService createPropertyService, GetPropertyService getPropertyService)
+    public PropertiesController(CreatePropertyService createPropertyService, GetPropertyService getPropertyService, UpdatePropertyService updatePropertyService)
     {
         _createPropertyService = createPropertyService;
         _getPropertyService = getPropertyService;
+        _updatePropertyService = updatePropertyService;
     }
 
     [HttpPost]
@@ -66,5 +68,42 @@ public sealed class PropertiesController : ControllerBase
             address = property.Address,
             state = property.State.ToString()
         }));
+    }
+
+    [HttpPut("{id:guid}")]
+    public IActionResult Update(Guid id, [FromBody] UpdatePropertyRequest request)
+    {
+        if (request is null)
+        {
+            return BadRequest(new { message = "Request body is required." });
+        }
+
+        try
+        {
+            var response = _updatePropertyService.Handle(new UpdatePropertyRequest(new EstateFlow.Domain.Properties.PropertyId(id), request.Name, request.Address));
+
+            if (!response.IsSuccess || response.Property is null)
+            {
+                if (response.Error?.Contains("not found", StringComparison.OrdinalIgnoreCase) == true)
+                {
+                    return NotFound(new { message = response.Error });
+                }
+
+                return BadRequest(new { message = response.Error ?? "Unable to update property." });
+            }
+
+            return Ok(new
+            {
+                id = response.Property.Id.Value,
+                name = response.Property.Name,
+                address = response.Property.Address,
+                state = response.Property.State.ToString()
+            });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+
     }
 }

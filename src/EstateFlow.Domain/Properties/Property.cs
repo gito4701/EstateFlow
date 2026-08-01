@@ -32,6 +32,22 @@ namespace EstateFlow.Domain.Properties
             return new Property(id, name, address, PropertyLifecycleState.Draft);
         }
 
+        public void Update(string name, string address)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new InvalidPropertyException("Property Name is required.");
+            }
+
+            if (string.IsNullOrWhiteSpace(address))
+            {
+                throw new InvalidPropertyException("Property Address is required.");
+            }
+
+            Name = name;
+            Address = address;
+        }
+
         public void Activate()
         {
             if (State != PropertyLifecycleState.Draft)

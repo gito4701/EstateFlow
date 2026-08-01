@@ -60,6 +60,52 @@ public sealed class PropertiesApiTests : IClassFixture<CustomWebApplicationFacto
     }
 
     [Fact]
+    public async Task PutApiProperties_WithValidRequest_ReturnsUpdatedProperty()
+    {
+        var propertyId = PropertyId.NewId();
+        var property = Property.Create(propertyId, "Original", "Original Address");
+        var repository = new EstateFlow.Infrastructure.Persistence.Repositories.PropertyRepository(
+            new EstateFlow.Infrastructure.Persistence.EstateFlowDbContext(
+                new Microsoft.EntityFrameworkCore.DbContextOptionsBuilder<EstateFlow.Infrastructure.Persistence.EstateFlowDbContext>()
+                    .UseInMemoryDatabase("EstateFlow-IntegrationTests")
+                    .Options));
+        await repository.AddAsync(property);
+
+        var response = await _client.PutAsJsonAsync($"/api/properties/{propertyId.Value}", new UpdatePropertyRequest(propertyId, "Updated", "Updated Address"));
+
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        var payload = await response.Content.ReadFromJsonAsync<Dictionary<string, object?>>();
+        Assert.NotNull(payload);
+        Assert.Equal("Updated", payload!["name"]!.ToString());
+        Assert.Equal("Updated Address", payload["address"]!.ToString());
+    }
+
+    [Fact]
+    public async Task PutApiProperties_WithMissingProperty_ReturnsNotFound()
+    {
+        var response = await _client.PutAsJsonAsync($"/api/properties/{Guid.NewGuid()}", new UpdatePropertyRequest(PropertyId.NewId(), "Updated", "Updated Address"));
+
+        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task PutApiProperties_WithInvalidRequest_ReturnsBadRequest()
+    {
+        var propertyId = PropertyId.NewId();
+        var property = Property.Create(propertyId, "Original", "Original Address");
+        var repository = new EstateFlow.Infrastructure.Persistence.Repositories.PropertyRepository(
+            new EstateFlow.Infrastructure.Persistence.EstateFlowDbContext(
+                new Microsoft.EntityFrameworkCore.DbContextOptionsBuilder<EstateFlow.Infrastructure.Persistence.EstateFlowDbContext>()
+                    .UseInMemoryDatabase("EstateFlow-IntegrationTests")
+                    .Options));
+        await repository.AddAsync(property);
+
+        var response = await _client.PutAsJsonAsync($"/api/properties/{propertyId.Value}", new UpdatePropertyRequest(propertyId, "", ""));
+
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+    }
+
+    [Fact]
     public async Task GetApiProperties_WithMissingProperty_ReturnsNotFound()
     {
         var response = await _client.GetAsync($"/api/properties/{Guid.NewGuid()}");
