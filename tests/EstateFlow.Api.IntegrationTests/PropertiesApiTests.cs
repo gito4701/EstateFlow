@@ -243,6 +243,32 @@ public sealed class PropertiesApiTests : IClassFixture<CustomWebApplicationFacto
     }
 
     [Fact]
+    public async Task SwaggerUiEndpoint_ReturnsSuccess()
+    {
+        var response = await _client.GetAsync("/swagger/index.html");
+
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task OpenApiDocument_IsGeneratedWithPropertyEndpoints()
+    {
+        var response = await _client.GetAsync("/openapi/v1.json");
+
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+
+        var payload = await response.Content.ReadFromJsonAsync<JsonDocument>();
+        Assert.NotNull(payload);
+
+        var paths = payload!.RootElement.GetProperty("paths");
+        var documentedPaths = paths.EnumerateObject().Select(property => property.Name).ToList();
+
+        Assert.Contains(documentedPaths, path => path.Contains("/api/properties", StringComparison.OrdinalIgnoreCase));
+        Assert.Contains(documentedPaths, path => path.Contains("/api/properties/", StringComparison.OrdinalIgnoreCase));
+        Assert.Contains(documentedPaths, path => path.Contains("/api/properties/search", StringComparison.OrdinalIgnoreCase));
+    }
+
+    [Fact]
     public async Task GetHealth_ReturnsSuccess()
     {
         var response = await _client.GetAsync("/health");

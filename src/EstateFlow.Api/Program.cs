@@ -11,10 +11,10 @@ using Microsoft.Extensions.Hosting;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHealthChecks();
-builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddProblemDetails();
 builder.Services.AddControllers();
 builder.Services.AddRouting();
+builder.Services.AddSwaggerDocumentation();
 
 builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
@@ -53,6 +53,7 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware<RequestCorrelationMiddleware>();
 app.UseMiddleware<RequestLoggingMiddleware>();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
+app.UseSwaggerDocumentation();
 app.UseRouting();
 app.UseAuthorization();
 app.MapHealthChecks("/health");
