@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EstateFlow.Api.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b961747e4bdafc0d04be4ad151f7c6f9c795e17")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49d9a147ab8f983034190749faabfb66f089771a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EstateFlow.Api.IntegrationTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EstateFlow.Api.IntegrationTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

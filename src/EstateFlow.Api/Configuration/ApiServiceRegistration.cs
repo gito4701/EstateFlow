@@ -13,6 +13,7 @@ public sealed class ApiServiceRegistration : IApplicationService, IInfrastructur
         services.AddScoped<CreatePropertyService>();
         services.AddScoped<GetPropertyService>();
         services.AddScoped<UpdatePropertyService>();
+        services.AddScoped<DeletePropertyService>();
         services.AddScoped<IPropertyRepository, PropertyRepository>();
     }
 }

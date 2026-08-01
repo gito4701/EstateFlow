@@ -67,5 +67,10 @@ namespace EstateFlow.Domain.Properties
 
             State = PropertyLifecycleState.Archived;
         }
+
+        public void Delete()
+        {
+            Archive();
+        }
     }
 }

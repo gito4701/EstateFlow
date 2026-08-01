@@ -5,6 +5,7 @@ C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Domain\obj\Debug\net9.0\EstateFlow
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Domain\obj\Debug\net9.0\EstateFlow.Domain.AssemblyInfoInputs.cache
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Domain\obj\Debug\net9.0\EstateFlow.Domain.AssemblyInfo.cs
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Domain\obj\Debug\net9.0\EstateFlow.Domain.csproj.CoreCompileInputs.cache
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Domain\obj\Debug\net9.0\EstateFlow.Domain.sourcelink.json
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Domain\obj\Debug\net9.0\EstateFlow.Domain.dll
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Domain\obj\Debug\net9.0\refint\EstateFlow.Domain.dll
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Domain\obj\Debug\net9.0\EstateFlow.Domain.pdb

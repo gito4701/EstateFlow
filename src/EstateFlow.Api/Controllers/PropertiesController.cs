@@ -11,12 +11,14 @@ public sealed class PropertiesController : ControllerBase
     private readonly CreatePropertyService _createPropertyService;
     private readonly GetPropertyService _getPropertyService;
     private readonly UpdatePropertyService _updatePropertyService;
+    private readonly DeletePropertyService _deletePropertyService;
 
-    public PropertiesController(CreatePropertyService createPropertyService, GetPropertyService getPropertyService, UpdatePropertyService updatePropertyService)
+    public PropertiesController(CreatePropertyService createPropertyService, GetPropertyService getPropertyService, UpdatePropertyService updatePropertyService, DeletePropertyService deletePropertyService)
     {
         _createPropertyService = createPropertyService;
         _getPropertyService = getPropertyService;
         _updatePropertyService = updatePropertyService;
+        _deletePropertyService = deletePropertyService;
     }
 
     [HttpPost]
@@ -104,6 +106,23 @@ public sealed class PropertiesController : ControllerBase
         {
             return BadRequest(new { message = ex.Message });
         }
+    }
 
+    [HttpDelete("{id:guid}")]
+    public IActionResult Delete(Guid id)
+    {
+        var response = _deletePropertyService.Handle(new DeletePropertyRequest(new EstateFlow.Domain.Properties.PropertyId(id)));
+
+        if (!response.IsSuccess)
+        {
+            if (response.Error?.Contains("not found", StringComparison.OrdinalIgnoreCase) == true)
+            {
+                return NotFound(new { message = response.Error });
+            }
+
+            return BadRequest(new { message = response.Error ?? "Unable to delete property." });
+        }
+
+        return NoContent();
     }
 }

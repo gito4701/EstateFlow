@@ -81,6 +81,49 @@ public sealed class PropertiesApiTests : IClassFixture<CustomWebApplicationFacto
     }
 
     [Fact]
+    public async Task DeleteApiProperties_WithExistingProperty_ReturnsNoContent()
+    {
+        var propertyId = PropertyId.NewId();
+        var property = Property.Create(propertyId, "Delete Me", "Delete Address");
+        var repository = new EstateFlow.Infrastructure.Persistence.Repositories.PropertyRepository(
+            new EstateFlow.Infrastructure.Persistence.EstateFlowDbContext(
+                new Microsoft.EntityFrameworkCore.DbContextOptionsBuilder<EstateFlow.Infrastructure.Persistence.EstateFlowDbContext>()
+                    .UseInMemoryDatabase("EstateFlow-IntegrationTests")
+                    .Options));
+        await repository.AddAsync(property);
+
+        var response = await _client.DeleteAsync($"/api/properties/{propertyId.Value}");
+
+        Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task DeleteApiProperties_WithMissingProperty_ReturnsNotFound()
+    {
+        var response = await _client.DeleteAsync($"/api/properties/{Guid.NewGuid()}");
+
+        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task DeleteApiProperties_WithAlreadyArchivedProperty_ReturnsBadRequest()
+    {
+        var propertyId = PropertyId.NewId();
+        var property = Property.Create(propertyId, "Delete Me", "Delete Address");
+        property.Delete();
+        var repository = new EstateFlow.Infrastructure.Persistence.Repositories.PropertyRepository(
+            new EstateFlow.Infrastructure.Persistence.EstateFlowDbContext(
+                new Microsoft.EntityFrameworkCore.DbContextOptionsBuilder<EstateFlow.Infrastructure.Persistence.EstateFlowDbContext>()
+                    .UseInMemoryDatabase("EstateFlow-IntegrationTests")
+                    .Options));
+        await repository.AddAsync(property);
+
+        var response = await _client.DeleteAsync($"/api/properties/{propertyId.Value}");
+
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+    }
+
+    [Fact]
     public async Task PutApiProperties_WithMissingProperty_ReturnsNotFound()
     {
         var response = await _client.PutAsJsonAsync($"/api/properties/{Guid.NewGuid()}", new UpdatePropertyRequest(PropertyId.NewId(), "Updated", "Updated Address"));

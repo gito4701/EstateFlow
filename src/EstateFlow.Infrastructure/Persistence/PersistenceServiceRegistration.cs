@@ -30,6 +30,7 @@ public static class PersistenceServiceRegistration
         services.AddScoped<CreatePropertyService>();
         services.AddScoped<GetPropertyService>();
         services.AddScoped<UpdatePropertyService>();
+        services.AddScoped<DeletePropertyService>();
 
         return services;
     }
