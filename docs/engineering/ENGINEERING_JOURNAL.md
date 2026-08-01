@@ -60,3 +60,10 @@
 - Documentation-only confirmation: no source code, architecture, or project changes were introduced.
 - Traceability confirmation: approved decisions remain PD-001, PD-002, and PD-005; deferred decisions PD-003 and PD-004 remain explicitly out of scope for current implementation.
 - No-code-change confirmation: engineering must not implement lifecycle states, business validation rules, or additional domain behaviour without fresh Product Owner approval.
+
+2026-08-01 — S06-PD-007
+- Task ID: S06-PD-007
+- Reason for this update: prepare the Product Owner authorization request required before Property domain behaviour implementation.
+- Product decision request created in `docs/product/PROPERTY_DOMAIN_DECISION_REQUEST.md`.
+- Engineering remains blocked from Property domain behaviour until Product Owner decisions for PD-003 and PD-004 are recorded.
+- No implementation occurred; only the documentation boundary for authorization was extended.
