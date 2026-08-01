@@ -171,3 +171,9 @@
 - Scope: added EF Core package references and created an Infrastructure-only DbContext and persistence options foundation for future repository implementation.
 - Architectural confirmation: EF Core is confined to Infrastructure; Domain remains dependency-free and Application remains independent of Infrastructure.
 - Verification: restore, build, and tests were validated after the persistence technology foundation was added.
+
+2026-08-01 — AC-S12-001
+- Task ID: AC-S12-001
+- Reason for this update: record formal acceptance of the completed S12 Persistence Implementation Foundation work package.
+- Acceptance artifact created: `docs/engineering/AC-S12-001.md`.
+- Stage status recorded as Accepted with S12 completed and the next stage awaiting Lead Engineer Authorization.

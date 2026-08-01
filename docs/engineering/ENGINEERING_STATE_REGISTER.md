@@ -19,6 +19,8 @@ This register records the current governance state, decisions, and approved stat
 - Acceptance record AC-S10-001 has been created and the S10 stage is marked Accepted.
 - Persistence foundation has been completed and accepted for S11.
 - Acceptance record AC-S11-001 has been created and the S11 stage is marked Accepted.
+- Persistence implementation foundation has been completed and accepted for S12.
+- Acceptance record AC-S12-001 has been created and the S12 stage is marked Accepted.
 
 ## Document Register
 - `ENGINEERING_CONSTITUTION.md` — governance and mandatory principles.
