@@ -151,3 +151,10 @@
 - Acceptance artifact created: `docs/engineering/AC-S10-001.md`.
 - Stage status recorded as Accepted with S10 completed and the next stage awaiting Lead Engineer Authorization.
 - Non-blocking observation: an IDE source-loading warning for `IInfrastructureService.cs` was recorded during development and does not block the milestone.
+
+2026-08-01 — S11-PER-001
+- Task ID: S11-PER-001
+- Reason for this update: establish the persistence boundary foundation in Infrastructure without introducing any database technology, persistence behaviour, or repository implementation.
+- Scope: created Infrastructure persistence folders and abstraction contracts for generic repository access, a Property-specific repository contract, and a persistence service abstraction.
+- Architectural boundary confirmation: Infrastructure owns the persistence abstraction contracts; Domain remains dependency-free; Application remains independent of Infrastructure.
+- Verification: build and tests were validated after the persistence abstraction scaffolding was added.
