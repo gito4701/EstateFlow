@@ -35,3 +35,11 @@ Owner-related work is considered acceptable only when it remains within this app
 
 ## Product Boundary Summary
 This document establishes the Owner product boundary only. It does not authorize implementation, data design, or functional delivery beyond the documented baseline.
+
+## Product Owner Review Status
+The Owner baseline is prepared for Product Owner review. The following decisions remain pending approval before any implementation may be authorized:
+- PD-006 — Owner definition approval
+- PD-007 — Owner scope approval
+- PD-008 — Owner-to-Property relationship approval
+- PD-009 — Owner business rules approval
+- PD-010 — Owner acceptance criteria approval

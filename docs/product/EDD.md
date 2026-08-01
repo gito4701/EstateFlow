@@ -9,6 +9,9 @@ EstateFlow v1.0 includes the approved Property aggregate and the minimum busines
 ## Owner Product Definition Baseline
 A new product-definition baseline for Owner management has been prepared to define the approved business boundary for introducing Owner into EstateFlow v1.0. This baseline documents the purpose of Owner, the approved scope of Owner within EstateFlow v1, the Owner-to-Property relationship, approved capabilities, explicit exclusions, and acceptance principles. The Owner baseline is documentation-only and does not authorize implementation work.
 
+## Owner Product Definition Review Baseline
+The Owner baseline is now prepared for Product Owner review. The review package identifies the pending Product Owner decisions required before implementation authorization: PD-006 through PD-010. No Owner implementation work is authorized at this stage.
+
 ## Property Aggregate Definition
 Property is the core EstateFlow v1.0 domain aggregate. It represents a real-estate asset record with a uniquely identified property record and the minimum business identity required for future implementation. The approved product baseline defines Property as the authoritative business concept for this release.
 

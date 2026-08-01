@@ -212,3 +212,10 @@
 - Scope: created the Owner product-definition baseline document and updated the EDD and RTM to record the approved Owner boundary, scope, relationship to Property, capabilities, exclusions, and acceptance principles.
 - Verification: build and tests were re-run after the documentation-only change.
 - Acceptance artifact: documentation-only baseline prepared for future Owner implementation planning.
+
+2026-08-02 — S29-PD-002
+- Task ID: S29-PD-002
+- Reason for this update: prepare the Owner Product Definition baseline for Product Owner review and capture the pending decisions required before implementation authorization.
+- Scope: created the Owner decision request package and updated the Owner product definition, EDD, RTM, and engineering journal to reflect the pending review decisions PD-006 through PD-010.
+- Verification: build and tests were re-run after the documentation-only review package updates.
+- Review status: no Owner implementation is authorized; the package remains documentation-only.
