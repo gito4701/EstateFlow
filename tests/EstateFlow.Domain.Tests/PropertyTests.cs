@@ -16,6 +16,13 @@ public class PropertyTests
     }
 
     [Fact]
+    public void Create_WithoutNameAndAddress_ShouldThrow()
+    {
+        var ex = Assert.Throws<InvalidPropertyException>(() => Property.Create(PropertyId.NewId(), " ", " "));
+        Assert.Contains("required", ex.Message);
+    }
+
+    [Fact]
     public void Activate_ShouldTransitionFromDraftToActive()
     {
         var property = Property.Create(PropertyId.NewId(), "Sample Property", "123 Main St");

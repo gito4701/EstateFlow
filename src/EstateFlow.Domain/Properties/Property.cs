@@ -17,11 +17,6 @@ namespace EstateFlow.Domain.Properties
             State = state;
         }
 
-        public static Property Create(PropertyId id)
-        {
-            return Create(id, "Untitled Property", "Address not provided");
-        }
-
         public static Property Create(PropertyId id, string name, string address)
         {
             if (string.IsNullOrWhiteSpace(name))

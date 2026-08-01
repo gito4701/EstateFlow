@@ -102,3 +102,9 @@
 - Review scope: product alignment, domain architecture compliance, aggregate integrity, lifecycle validation, exception handling, domain test coverage, and engineering quality gates.
 - Review outcome: implementation is broadly aligned with the approved baseline and passes the required build/tests; one review finding remains around the Property.Create(PropertyId id) overload creating placeholder values rather than enforcing the approved name/address invariants.
 - Review artifact created: `docs/engineering/S07_DOMAIN_REVIEW_REPORT.md`.
+
+2026-08-01 — S07-DOM-002
+- Task ID: S07-DOM-002
+- Reason for this update: correct the Property aggregate creation path so that creation requires approved business identity information and rejects invalid creation attempts through domain validation.
+- Scope: updated the Domain layer creation logic and added regression coverage for missing required information while preserving the approved lifecycle model.
+- Verification: build and domain tests passed after the correction.
