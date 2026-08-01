@@ -11,6 +11,8 @@ This register records the current governance state, decisions, and approved stat
 - Repository governance and product-definition documentation are established.
 - Property domain behaviour implementation has been completed and accepted for S07.
 - Acceptance record AC-S07-001 has been created and the S07 stage is marked Accepted.
+- Application layer foundation has been completed and accepted for S08.
+- Acceptance record AC-S08-001 has been created and the S08 stage is marked Accepted.
 
 ## Document Register
 - `ENGINEERING_CONSTITUTION.md` — governance and mandatory principles.
