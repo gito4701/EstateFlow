@@ -2,4 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EstateFlow.Application\EstateFlow.Application.csproj" />
+  </ItemGroup>
 </Project>
