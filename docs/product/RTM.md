@@ -1,5 +1,8 @@
 # Requirements Traceability Matrix
 
-| Requirement ID | Requirement Description | Source | Acceptance Criteria | Implementation Reference | Verification Evidence | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| TBD-001 | Awaiting Product Definition | Product Owner | Awaiting Product Definition | Awaiting Product Definition | Awaiting Product Definition | Awaiting Product Definition |
+| Requirement ID | Requirement Description | Source | Implementation Stage | Status |
+| --- | --- | --- | --- | --- |
+| PD-001 | Define the minimum approved Product Definition baseline for EstateFlow v1.0. | EDD v1.0 / Product Owner authority | S06-PD-002 | Complete |
+| PD-002 | Record the approved scope and purpose boundary for the product baseline. | EDD v1.0 / Product Owner authority | S06-PD-002 | Complete |
+| PD-003 | Define the current `Property` concept boundary without authorizing lifecycle or validation rules. | EDD v1.0 / Product Owner authority | S06-PD-002 | Complete |
+| PD-004 | Capture exclusion and acceptance principles that prevent unauthorized domain behaviour. | EDD v1.0 / Product Owner authority | S06-PD-002 | Complete |
