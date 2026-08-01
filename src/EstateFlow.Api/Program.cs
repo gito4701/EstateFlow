@@ -32,3 +32,7 @@ app.MapControllers();
 app.MapGet("/", () => Results.Ok(new { status = "EstateFlow API ready" }));
 
 app.Run();
+
+public partial class Program
+{
+}

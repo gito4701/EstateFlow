@@ -1,10 +1,17 @@
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\bin\Debug\net9.0\EstateFlow.Infrastructure.deps.json
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\bin\Debug\net9.0\EstateFlow.Infrastructure.dll
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\bin\Debug\net9.0\EstateFlow.Infrastructure.pdb
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\bin\Debug\net9.0\EstateFlow.Application.dll
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\bin\Debug\net9.0\EstateFlow.Domain.dll
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\bin\Debug\net9.0\EstateFlow.Application.pdb
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\bin\Debug\net9.0\EstateFlow.Domain.pdb
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\obj\Debug\net9.0\EstateFlow.Infrastructure.csproj.AssemblyReference.cache
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\obj\Debug\net9.0\EstateFlow.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\obj\Debug\net9.0\EstateFlow.Infrastructure.AssemblyInfoInputs.cache
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\obj\Debug\net9.0\EstateFlow.Infrastructure.AssemblyInfo.cs
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\obj\Debug\net9.0\EstateFlow.Infrastructure.csproj.CoreCompileInputs.cache
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\obj\Debug\net9.0\EstateFlow.Infrastructure.sourcelink.json
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\obj\Debug\net9.0\EstateFl.0AFD79EA.Up2Date
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\obj\Debug\net9.0\EstateFlow.Infrastructure.dll
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\obj\Debug\net9.0\refint\EstateFlow.Infrastructure.dll
 C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Infrastructure\obj\Debug\net9.0\EstateFlow.Infrastructure.pdb

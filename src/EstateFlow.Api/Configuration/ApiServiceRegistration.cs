@@ -11,6 +11,7 @@ public sealed class ApiServiceRegistration : IApplicationService, IInfrastructur
     public static void RegisterServices(IServiceCollection services)
     {
         services.AddScoped<CreatePropertyService>();
+        services.AddScoped<GetPropertyService>();
         services.AddScoped<IPropertyRepository, PropertyRepository>();
     }
 }

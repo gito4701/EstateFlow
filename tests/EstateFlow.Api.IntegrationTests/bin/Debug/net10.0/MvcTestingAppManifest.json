@@ -1,0 +1,6 @@
+{
+  "EstateFlow.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\dev\\Project\\Apps\\EstateFlow\\src\\EstateFlow.Api",
+  "EstateFlow.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\dev\\Project\\Apps\\EstateFlow\\src\\EstateFlow.Application",
+  "EstateFlow.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\dev\\Project\\Apps\\EstateFlow\\src\\EstateFlow.Domain",
+  "EstateFlow.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\dev\\Project\\Apps\\EstateFlow\\src\\EstateFlow.Infrastructure"
+}

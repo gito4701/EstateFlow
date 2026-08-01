@@ -28,6 +28,7 @@ public static class PersistenceServiceRegistration
 
         services.AddScoped<IPropertyRepository, PropertyRepository>();
         services.AddScoped<CreatePropertyService>();
+        services.AddScoped<GetPropertyService>();
 
         return services;
     }

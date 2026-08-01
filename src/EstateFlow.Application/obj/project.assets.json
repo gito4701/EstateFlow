@@ -1,11 +1,30 @@
 {
   "version": 4,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "EstateFlow.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/EstateFlow.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EstateFlow.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "EstateFlow.Domain/1.0.0": {
+      "type": "project",
+      "path": "../EstateFlow.Domain/EstateFlow.Domain.csproj",
+      "msbuildProject": "../EstateFlow.Domain/EstateFlow.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "EstateFlow.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\morga\\.nuget\\packages\\": {}
@@ -32,7 +51,11 @@
         "net9.0": {
           "framework": "net9.0",
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\dev\\Project\\Apps\\EstateFlow\\src\\EstateFlow.Domain\\EstateFlow.Domain.csproj": {
+              "projectPath": "C:\\dev\\Project\\Apps\\EstateFlow\\src\\EstateFlow.Domain\\EstateFlow.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

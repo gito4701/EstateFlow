@@ -9,6 +9,8 @@ public interface IPropertyRepository
 {
     Task<Property?> GetByIdAsync(PropertyId id, CancellationToken cancellationToken = default);
 
+    Task<IReadOnlyList<Property>> GetAllAsync(CancellationToken cancellationToken = default);
+
     Task<IReadOnlyList<Property>> ListAsync(CancellationToken cancellationToken = default);
 
     Task AddAsync(Property aggregate, CancellationToken cancellationToken = default);

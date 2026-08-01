@@ -21,25 +21,31 @@ public sealed class PropertyRepository : IPropertyRepository
         return await _dbContext.Properties.FirstOrDefaultAsync(property => property.Id.Equals(id), cancellationToken);
     }
 
-    public async Task<IReadOnlyList<Property>> ListAsync(CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<Property>> GetAllAsync(CancellationToken cancellationToken = default)
     {
         return await _dbContext.Properties.AsNoTracking().ToListAsync(cancellationToken);
+    }
+
+    public Task<IReadOnlyList<Property>> ListAsync(CancellationToken cancellationToken = default)
+    {
+        return GetAllAsync(cancellationToken);
     }
 
     public async Task AddAsync(Property aggregate, CancellationToken cancellationToken = default)
     {
         await _dbContext.Properties.AddAsync(aggregate, cancellationToken);
+        await _dbContext.SaveChangesAsync(cancellationToken);
     }
 
-    public Task UpdateAsync(Property aggregate, CancellationToken cancellationToken = default)
+    public async Task UpdateAsync(Property aggregate, CancellationToken cancellationToken = default)
     {
         _dbContext.Properties.Update(aggregate);
-        return Task.CompletedTask;
+        await _dbContext.SaveChangesAsync(cancellationToken);
     }
 
-    public Task DeleteAsync(Property aggregate, CancellationToken cancellationToken = default)
+    public async Task DeleteAsync(Property aggregate, CancellationToken cancellationToken = default)
     {
         _dbContext.Properties.Remove(aggregate);
-        return Task.CompletedTask;
+        await _dbContext.SaveChangesAsync(cancellationToken);
     }
 }
