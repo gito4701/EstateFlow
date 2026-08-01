@@ -35,6 +35,14 @@ In the approved repository context, `Property` is the current domain concept rep
 - Approval recorded.
 - Future product changes require new Product Owner decisions.
 
+## Product Definition Traceability Notes
+- Approved Product Decisions: PD-001, PD-002, PD-005.
+- Deferred Product Decisions: PD-003, PD-004.
+- Property domain behaviour is not yet authorized.
+- Engineering must not implement lifecycle states.
+- Engineering must not implement business validation rules.
+- Future domain behaviour requires Product Owner approval.
+
 ## Product Owner Review
 
 Review Status:

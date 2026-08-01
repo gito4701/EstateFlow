@@ -24,6 +24,15 @@ Reference:
 
 Engineering implementation of Property domain behaviour may proceed only within approved requirements and must remain limited to the approved Product Definition baseline.
 
+## Traceability Notes
+
+- Approved Product Decisions: PD-001, PD-002, PD-005.
+- Deferred Product Decisions: PD-003, PD-004.
+- Property domain behaviour is not yet authorized.
+- Engineering must not implement lifecycle states.
+- Engineering must not implement business validation rules.
+- Future domain behaviour requires Product Owner approval.
+
 ## Future Implementation Dependency
 
 - S07 Domain Behaviour Implementation depends on this approval record and remains constrained to the approved baseline.
