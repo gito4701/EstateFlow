@@ -95,3 +95,10 @@
 - Reason for this update: implement approved Property domain behaviour in the Domain layer using the approved Product Definition baseline.
 - Product Definition source used: `docs/product/EDD.md`, `docs/product/RTM.md`, and `docs/product/PRODUCT_APPROVAL_RECORD.md`.
 - Scope confirmation: no architecture expansion or out-of-scope behaviour was introduced.
+
+2026-08-01 — S07-DOM-REVIEW-001
+- Task ID: S07-DOM-REVIEW-001
+- Reason for this update: perform a review-only engineering assessment of the implemented Property domain behaviour against the approved Product Definition baseline.
+- Review scope: product alignment, domain architecture compliance, aggregate integrity, lifecycle validation, exception handling, domain test coverage, and engineering quality gates.
+- Review outcome: implementation is broadly aligned with the approved baseline and passes the required build/tests; one review finding remains around the Property.Create(PropertyId id) overload creating placeholder values rather than enforcing the approved name/address invariants.
+- Review artifact created: `docs/engineering/S07_DOMAIN_REVIEW_REPORT.md`.
