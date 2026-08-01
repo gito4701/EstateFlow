@@ -158,3 +158,9 @@
 - Scope: created Infrastructure persistence folders and abstraction contracts for generic repository access, a Property-specific repository contract, and a persistence service abstraction.
 - Architectural boundary confirmation: Infrastructure owns the persistence abstraction contracts; Domain remains dependency-free; Application remains independent of Infrastructure.
 - Verification: build and tests were validated after the persistence abstraction scaffolding was added.
+
+2026-08-01 — AC-S11-001
+- Task ID: AC-S11-001
+- Reason for this update: record formal acceptance of the completed S11 Persistence Foundation work package.
+- Acceptance artifact created: `docs/engineering/AC-S11-001.md`.
+- Stage status recorded as Accepted with S11 completed and the next stage awaiting Lead Engineer Authorization.
