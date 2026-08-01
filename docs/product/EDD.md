@@ -6,6 +6,9 @@ Establish the approved EstateFlow v1.0 product baseline for Property domain mana
 ## Product Scope
 EstateFlow v1.0 includes the approved Property aggregate and the minimum business context required to support future Property domain implementation. The approved product baseline is limited to Property definition, lifecycle handling, business rules, invariants, and acceptance criteria. No additional business domains are authorized in this release baseline.
 
+## Owner Product Definition Baseline
+A new product-definition baseline for Owner management has been prepared to define the approved business boundary for introducing Owner into EstateFlow v1.0. This baseline documents the purpose of Owner, the approved scope of Owner within EstateFlow v1, the Owner-to-Property relationship, approved capabilities, explicit exclusions, and acceptance principles. The Owner baseline is documentation-only and does not authorize implementation work.
+
 ## Property Aggregate Definition
 Property is the core EstateFlow v1.0 domain aggregate. It represents a real-estate asset record with a uniquely identified property record and the minimum business identity required for future implementation. The approved product baseline defines Property as the authoritative business concept for this release.
 

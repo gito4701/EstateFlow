@@ -8,3 +8,4 @@
 | Property business rules and invariants | PD-004 | Authorized | S07 |
 | Acceptance criteria for Property implementation | PD-005 | Authorized | S07 |
 | Product approval baseline and traceability governance | PRA-001 | Authorized | S06 |
+| Owner product definition baseline and scope | PD-006 | Authorized | S29 |

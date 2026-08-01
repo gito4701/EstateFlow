@@ -205,3 +205,10 @@
 - Scope: added Docker runtime assets for the API and verified the application endpoints using the same configuration shape expected by the container environment.
 - Verification evidence: /health returned HTTP 200, /swagger/index.html returned HTTP 200, and /api/properties returned HTTP 200 with an empty collection payload.
 - Acceptance artifact created: `docs/engineering/AC-S28-001.md`.
+
+2026-08-02 — S29-PD-001
+- Task ID: S29-PD-001
+- Reason for this update: prepare the approved product-definition baseline for introducing Owner management into EstateFlow without changing application code or architecture.
+- Scope: created the Owner product-definition baseline document and updated the EDD and RTM to record the approved Owner boundary, scope, relationship to Property, capabilities, exclusions, and acceptance principles.
+- Verification: build and tests were re-run after the documentation-only change.
+- Acceptance artifact: documentation-only baseline prepared for future Owner implementation planning.
