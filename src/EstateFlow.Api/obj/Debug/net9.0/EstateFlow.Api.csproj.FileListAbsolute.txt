@@ -1,0 +1,11 @@
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Api\obj\Debug\net9.0\EstateFlow.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Api\obj\Debug\net9.0\EstateFlow.Api.AssemblyInfoInputs.cache
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Api\obj\Debug\net9.0\EstateFlow.Api.AssemblyInfo.cs
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Api\obj\Debug\net9.0\EstateFlow.Api.csproj.CoreCompileInputs.cache
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Api\bin\Debug\net9.0\EstateFlow.Api.deps.json
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Api\bin\Debug\net9.0\EstateFlow.Api.dll
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Api\bin\Debug\net9.0\EstateFlow.Api.pdb
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Api\obj\Debug\net9.0\EstateFlow.Api.dll
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Api\obj\Debug\net9.0\refint\EstateFlow.Api.dll
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Api\obj\Debug\net9.0\EstateFlow.Api.pdb
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Api\obj\Debug\net9.0\ref\EstateFlow.Api.dll

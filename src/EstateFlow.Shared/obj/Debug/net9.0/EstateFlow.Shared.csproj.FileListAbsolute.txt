@@ -1,0 +1,11 @@
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Shared\bin\Debug\net9.0\EstateFlow.Shared.deps.json
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Shared\bin\Debug\net9.0\EstateFlow.Shared.dll
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Shared\bin\Debug\net9.0\EstateFlow.Shared.pdb
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Shared\obj\Debug\net9.0\EstateFlow.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Shared\obj\Debug\net9.0\EstateFlow.Shared.AssemblyInfoInputs.cache
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Shared\obj\Debug\net9.0\EstateFlow.Shared.AssemblyInfo.cs
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Shared\obj\Debug\net9.0\EstateFlow.Shared.csproj.CoreCompileInputs.cache
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Shared\obj\Debug\net9.0\EstateFlow.Shared.dll
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Shared\obj\Debug\net9.0\refint\EstateFlow.Shared.dll
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Shared\obj\Debug\net9.0\EstateFlow.Shared.pdb
+C:\dev\Project\Apps\EstateFlow\src\EstateFlow.Shared\obj\Debug\net9.0\ref\EstateFlow.Shared.dll
