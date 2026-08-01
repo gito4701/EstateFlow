@@ -177,3 +177,10 @@
 - Reason for this update: record formal acceptance of the completed S12 Persistence Implementation Foundation work package.
 - Acceptance artifact created: `docs/engineering/AC-S12-001.md`.
 - Stage status recorded as Accepted with S12 completed and the next stage awaiting Lead Engineer Authorization.
+
+2026-08-01 — S13-API-001
+- Task ID: S13-API-001
+- Reason for this update: establish the API delivery-boundary foundation without introducing business logic, workflows, or domain changes.
+- Scope: configured the ASP.NET Core API host, added health checks and minimal root endpoint exposure, and registered the API boundary with Application and Infrastructure abstractions.
+- Architectural confirmation: the API acts as the external delivery boundary only; business logic and persistence behaviour remain in lower layers.
+- Verification: restore, build, and tests were validated after the API foundation was added.
