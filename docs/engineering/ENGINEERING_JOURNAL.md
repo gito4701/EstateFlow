@@ -39,3 +39,10 @@
 - Product Definition baseline status: completed documentation-only baseline prepared for Product Owner review.
 - Product Owner review status: `Awaiting Product Owner Approval`.
 - Engineering implementation status: blocked until Product Owner approval is recorded in the Product Definition artifacts.
+
+2026-08-01 — S06-PD-004
+- Task ID: S06-PD-004
+- Reason for Product Definition approval record preparation: established the formal approval artifact that records the prerequisite for future domain implementation.
+- Product approval record created in `docs/product/PRODUCT_APPROVAL_RECORD.md`.
+- Engineering remains blocked from `Property` domain behaviour until Product Owner approval is recorded.
+- Approval artifact established as the required implementation prerequisite for `S07 Domain Behaviour Implementation`.
