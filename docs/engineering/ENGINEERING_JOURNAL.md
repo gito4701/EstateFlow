@@ -46,3 +46,10 @@
 - Product approval record created in `docs/product/PRODUCT_APPROVAL_RECORD.md`.
 - Engineering remains blocked from `Property` domain behaviour until Product Owner approval is recorded.
 - Approval artifact established as the required implementation prerequisite for `S07 Domain Behaviour Implementation`.
+
+2026-08-01 — S06-PD-005
+- Task ID: S06-PD-005
+- Reason for this update: record the Product Owner approval baseline and convert the review checkpoint into an approved engineering input.
+- Product Owner approval baseline recorded in `docs/product/PRODUCT_APPROVAL_RECORD.md`.
+- Engineering authorization boundary established: implementation may proceed only within the approved requirements baseline.
+- Deferred decisions remain outside the current implementation scope and must not be inferred or implemented by engineering.

@@ -30,6 +30,11 @@ In the approved repository context, `Property` is the current domain concept rep
 - Future implementation must remain traceable to approved Product Definition artifacts.
 - Domain behaviour remains blocked until explicit Product Owner approval is captured in Product Definition documentation.
 
+## Product Approval Status
+- Approved Baseline
+- Approval recorded.
+- Future product changes require new Product Owner decisions.
+
 ## Product Owner Review
 
 Review Status:
