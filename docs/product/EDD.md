@@ -1,57 +1,69 @@
-# EDD — Product Definition Baseline
+# EDD — EstateFlow v1.0 Product Definition
 
 ## Product Purpose
-Establish the minimum approved Product Definition baseline for EstateFlow v1.0 so that future engineering work can be traced to explicit business meaning and documented acceptance principles.
+Establish the approved EstateFlow v1.0 product baseline for Property domain management so that engineering can implement future domain behaviour against explicit business meaning and documented acceptance criteria.
 
 ## Product Scope
-This baseline records the currently approved product-governance boundary for EstateFlow v1.0 and the known domain concept boundary that is authorized for future engineering review. The baseline is intentionally limited to documentation and traceability preparation; it does not authorize any implementation work.
+EstateFlow v1.0 includes the approved Property aggregate and the minimum business context required to support future Property domain implementation. The approved product baseline is limited to Property definition, lifecycle handling, business rules, invariants, and acceptance criteria. No additional business domains are authorized in this release baseline.
 
-## Property Concept Definition
-In the approved repository context, `Property` is the current domain concept represented as an aggregate root with a strongly typed identifier. The repository currently provides a minimal domain foundation for that concept, and the Domain layer remains the authoritative source for future business meaning.
+## Property Aggregate Definition
+Property is the core EstateFlow v1.0 domain aggregate. It represents a real-estate asset record with a uniquely identified property record and the minimum business identity required for future implementation. The approved product baseline defines Property as the authoritative business concept for this release.
 
-## Approved Capabilities Currently Known
-- A minimal `Property` aggregate foundation has been established in the Domain layer.
-- `PropertyId` is the currently approved identifier representation for the concept.
-- Product Definition remains the governing source of business meaning and acceptance criteria.
-- Future domain behaviour must remain traceable to approved Product Definition artifacts.
+## Property Lifecycle Definition
+The approved Property lifecycle baseline consists of the following states:
+- Draft
+- Active
+- Archived
+
+The approved transitions are:
+- Draft -> Active
+- Active -> Archived
+- Draft -> Archived
+
+## Property Business Rules
+The approved Property business rules for v1.0 are:
+- A Property must have a unique identity.
+- A Property must have a business name.
+- A Property must have an address.
+- A Property may only transition through approved lifecycle transitions.
+- A Property must remain traceable to the approved Product Definition baseline.
+
+## Property Invariants
+The approved Property invariants for v1.0 are:
+- Identity must be present.
+- Name must be present.
+- Address must be present.
+- Lifecycle state must be one of the approved states.
+
+## Acceptance Criteria
+The approved acceptance criteria for v1.0 are:
+- Property records must be identifiable through the approved aggregate definition.
+- Property lifecycle transitions must follow the approved state model.
+- Property business rules and invariants must be preserved in future implementation.
+- Engineering must use this Product Definition baseline as the authoritative business source.
 
 ## Explicit Exclusions
-- Property lifecycle states.
-- Property status values.
-- Property transitions.
-- Property validation rules.
-- Business workflows.
-- Additional business actors or responsibilities.
-- Any implementation detail not explicitly approved in Product Definition artifacts.
-
-## Acceptance Principles
-- Product Definition is the only authority source for business meaning.
-- Engineering must not invent business rules, states, or transitions.
-- Future implementation must remain traceable to approved Product Definition artifacts.
-- Domain behaviour remains blocked until explicit Product Owner approval is captured in Product Definition documentation.
+- Additional business domains beyond Property are not included in this baseline.
+- Unapproved lifecycle states and transitions are excluded.
+- Unapproved business rules and invariants are excluded.
+- Any implementation detail not explicitly covered by this Product Definition baseline is out of scope.
 
 ## Product Approval Status
 - Approved Baseline
-- Approval recorded.
+- Product Owner approval recorded.
 - Future product changes require new Product Owner decisions.
 
 ## Product Definition Traceability Notes
-- Property domain behaviour requires explicit Product Owner approval before engineering implementation.
-- Approved Product Decisions: PD-001, PD-002, PD-005.
-- Pending Product Owner Approval: PD-003, PD-004.
-- Property domain behaviour authorization is pending Product Owner approval.
-- Engineering must not implement lifecycle states.
-- Engineering must not implement business validation rules.
-- Future domain behaviour requires Product Owner approval.
+- Approved Product Decisions: PD-001, PD-002, PD-003, PD-004, PD-005.
+- Engineering implementation must remain within the approved Property baseline.
+- Engineering must not implement unapproved lifecycle states, transitions, rules, or invariants.
+- Future domain behaviour requires Product Owner approval for any change to the approved baseline.
 
 ## Product Owner Review
 
 Review Status:
-- Awaiting Product Owner Approval
+- Approved Baseline
 
-Required Decisions:
-- Property definition approval
-- Property scope approval
-- Property lifecycle approval (if required)
-- Property business rule approval (if required)
-- Acceptance criteria approval
+Approval Summary:
+- Product Owner approval received for the Property baseline.
+- Engineering may proceed to implementation only within the approved Product Definition baseline.
