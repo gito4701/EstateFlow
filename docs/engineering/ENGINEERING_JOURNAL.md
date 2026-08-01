@@ -89,3 +89,9 @@
 - Product Owner approval received for the Property baseline and recorded in `docs/product/PRODUCT_APPROVAL_RECORD.md`.
 - Engineering is unblocked for Property domain implementation within the approved Product Definition baseline.
 - No code changes were introduced; the repository remains documentation-only.
+
+2026-08-01 — S07-DOM-001
+- Task ID: S07-DOM-001
+- Reason for this update: implement approved Property domain behaviour in the Domain layer using the approved Product Definition baseline.
+- Product Definition source used: `docs/product/EDD.md`, `docs/product/RTM.md`, and `docs/product/PRODUCT_APPROVAL_RECORD.md`.
+- Scope confirmation: no architecture expansion or out-of-scope behaviour was introduced.
