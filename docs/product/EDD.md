@@ -12,6 +12,9 @@ A new product-definition baseline for Owner management has been prepared to defi
 ## Owner Product Definition Review Baseline
 The Owner baseline is now prepared for Product Owner review. The review package identifies the pending Product Owner decisions required before implementation authorization: PD-006 through PD-010. No Owner implementation work is authorized at this stage.
 
+## Owner Approval Record
+A formal approval record has been created to capture the pending Product Owner approval structure for the Owner baseline. The approval record does not invent decisions; it records that implementation authorization remains blocked until Product Owner approvals are recorded.
+
 ## Property Aggregate Definition
 Property is the core EstateFlow v1.0 domain aggregate. It represents a real-estate asset record with a uniquely identified property record and the minimum business identity required for future implementation. The approved product baseline defines Property as the authoritative business concept for this release.
 

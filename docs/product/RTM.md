@@ -13,3 +13,4 @@
 | Owner-to-Property relationship approval | PD-008 | Pending Product Owner review | S29 |
 | Owner business rules approval | PD-009 | Pending Product Owner review | S29 |
 | Owner acceptance criteria approval | PD-010 | Pending Product Owner review | S29 |
+| Owner approval record and review structure | PRA-002 | Pending Product Owner review | S29 |

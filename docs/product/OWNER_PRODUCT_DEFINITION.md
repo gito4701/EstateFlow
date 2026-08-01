@@ -43,3 +43,6 @@ The Owner baseline is prepared for Product Owner review. The following decisions
 - PD-008 — Owner-to-Property relationship approval
 - PD-009 — Owner business rules approval
 - PD-010 — Owner acceptance criteria approval
+
+## Approval Structure Status
+An approval record has been created to formalize the pending Product Owner review structure for these decisions. No Owner implementation is authorized until the corresponding approvals are recorded.
