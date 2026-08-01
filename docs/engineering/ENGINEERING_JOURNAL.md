@@ -74,3 +74,10 @@
 - Property Domain Decision Record created in `docs/product/PROPERTY_DOMAIN_DECISION_RECORD.md`.
 - Engineering remains blocked from Property domain behaviour because no implementation authorization exists for PD-003 or PD-004.
 - No implementation occurred; the repository remains documentation-only.
+
+2026-08-01 — S06-PD-009
+- Task ID: S06-PD-009
+- Reason for this update: finalize the Product Owner approval status for the Property lifecycle and business-rule decision placeholders.
+- Product governance status: PD-003 and PD-004 remain pending Product Owner approval; no business decisions were invented.
+- Engineering authorization status: unchanged; implementation remains blocked until Product Owner approval is recorded.
+- Documentation-only confirmation: no source code, architecture, or implementation changes were introduced.

@@ -41,3 +41,8 @@ Engineering implementation of Property domain behaviour may proceed only within 
 
 - PD-003 Property Lifecycle
 - PD-004 Property Business Rules
+
+## Approval Status Summary
+
+- Product Owner approval for PD-003 and PD-004 remains pending.
+- Engineering authorization remains blocked until those decisions are recorded.

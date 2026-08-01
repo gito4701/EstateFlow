@@ -3,7 +3,7 @@
 ## PD-003 Property Lifecycle
 
 Status:
-- Awaiting Product Owner Decision
+- Awaiting Product Owner Approval
 
 Decision:
 - [Reserved for Product Owner approval]
@@ -19,7 +19,7 @@ Approved Transitions:
 ## PD-004 Property Business Rules
 
 Status:
-- Awaiting Product Owner Decision
+- Awaiting Product Owner Approval
 
 Decision:
 - [Reserved for Product Owner approval]
