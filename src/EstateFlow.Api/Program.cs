@@ -5,10 +5,14 @@ using EstateFlow.Infrastructure.Persistence;
 using EstateFlow.Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Configuration
+    .AddEstateFlowConfiguration(builder.Environment.ContentRootPath, builder.Environment.EnvironmentName);
 
 builder.Services.AddHealthChecks();
 builder.Services.AddProblemDetails();
@@ -16,7 +20,7 @@ builder.Services.AddControllers();
 builder.Services.AddRouting();
 builder.Services.AddSwaggerDocumentation();
 
-builder.Services.Configure<ApiBehaviorOptions>(options =>
+builder.Services.Configure<Microsoft.AspNetCore.Mvc.ApiBehaviorOptions>(options =>
 {
     options.InvalidModelStateResponseFactory = context =>
     {
@@ -37,6 +41,8 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
         });
     };
 });
+
+builder.Services.Configure<EstateFlow.Api.Configuration.ApiBehaviorOptions>(builder.Configuration.GetSection("ApiBehavior"));
 
 builder.Services.AddScoped<IApplicationService, ApiServiceRegistration>();
 builder.Services.AddScoped<IInfrastructureService, ApiServiceRegistration>();
