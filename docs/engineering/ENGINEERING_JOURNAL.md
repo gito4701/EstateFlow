@@ -19,3 +19,9 @@
 2026-08-01 — S06-DOM-001 (Blocked)
 - Attempted to implement `Property` domain behaviour but stopped. No approved Product Definition (EDD) or lifecycle information was found in the repository to justify specific behaviour or lifecycle states. Per authority rules, no behavioural changes were made. Recorded on `feature/stage-06-property-domain-behaviour`.
 - Action required: Lead Engineer or Product Owner must provide Product Definition excerpts (EDD v1.0) specifying approved `Property` behaviour or lifecycle to proceed.
+
+2026-08-01 — S06-DOM-002 (Requirement Alignment Review)
+- Reviewed repository contents for approved product artifacts and found no `docs/product/EDD.md`, no `docs/product/RTM.md`, and no approved domain decision record containing explicit `Property` lifecycle, creation, validation, transition, or invariant requirements.
+- Requirement alignment outcome: no approved Property behaviour can be implemented from repository evidence.
+- Implementation blocker: missing Product Owner approval and missing product requirement artifacts for `Property` behaviour.
+- Required clarification: Product Owner or Lead Engineer must supply the approved `Property` lifecycle or validation specification before any domain behaviour may be added.
