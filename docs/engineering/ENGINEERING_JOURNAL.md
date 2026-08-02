@@ -294,6 +294,13 @@
 - Verification: build and tests were re-run after the workflow-quality improvements.
 - Status: CI validation workflow quality is now improved within the approved validation-only scope.
 
+2026-08-02 — S67-OPS-001
+- Task ID: S67-OPS-001
+- Reason for this update: define the artifact governance model required before CI/CD artifact publishing implementation.
+- Scope: created the artifact-governance definition document and updated the CI/CD authorization and release-governance documents to reference the artifact policy boundaries.
+- Verification: build and tests were re-run after the documentation-only governance updates.
+- Status: artifact-governance documentation is now captured without authorizing publishing, deployment, or release automation.
+
 2026-08-02 — S54-ARCH-001
 - Task ID: S54-ARCH-001
 - Reason for this update: perform a documentation-only platform quality and reliability review after the operational hardening work.

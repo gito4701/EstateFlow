@@ -111,3 +111,6 @@ Each item below is recorded with one of the following statuses:
 
 ## Implementation authorization status
 This package authorizes documentation and governance alignment for future CI/CD implementation planning only. No implementation authorization is granted for workflow creation, pipeline implementation, deployment automation, artifact repositories, cloud resources, infrastructure automation, or security integration.
+
+## Artifact governance reference
+The artifact-governance model for this stage is maintained in [docs/engineering/ARTIFACT_GOVERNANCE_DEFINITION.md](docs/engineering/ARTIFACT_GOVERNANCE_DEFINITION.md). That package defines the approved artifact purpose, ownership, metadata, retention expectations, promotion conditions, and security boundaries while keeping publishing and deployment implementation explicitly excluded.

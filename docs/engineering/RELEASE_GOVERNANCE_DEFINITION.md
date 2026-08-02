@@ -153,3 +153,6 @@ All governance decisions in this document are approved for documentation and pol
 
 ## S64 Authorization Package Reference
 The formal CI/CD implementation authorization package for this stage is maintained in [docs/engineering/CICD_IMPLEMENTATION_AUTHORIZATION.md](docs/engineering/CICD_IMPLEMENTATION_AUTHORIZATION.md). That package records the approved automation scope, deferred release-execution decisions, environment expectations, artifact-governance boundaries, rollback governance, and explicit exclusions for future implementation planning.
+
+## S67 Artifact Governance Reference
+The artifact-governance model for this stage is maintained in [docs/engineering/ARTIFACT_GOVERNANCE_DEFINITION.md](docs/engineering/ARTIFACT_GOVERNANCE_DEFINITION.md). That package records the approved artifact purpose, ownership, metadata, retention expectations, promotion conditions, and security boundaries while keeping publishing and deployment implementation explicitly excluded.
