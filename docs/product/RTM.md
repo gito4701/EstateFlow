@@ -28,3 +28,4 @@
 | Property operational capability review | S51-PROP-001 | Documentation and analysis only | S51 |
 | Lease acceptance criteria approval | PD-020 | Approved for documentation | S42 |
 | Lease product approval record and review package | PRA-004 | Approved for documentation | S42 |
+| Platform quality and reliability review | S54-ARCH-001 | Documentation and analysis only | S54 |
