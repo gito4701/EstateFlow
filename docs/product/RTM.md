@@ -31,3 +31,4 @@
 | Platform quality and reliability review | S54-ARCH-001 | Documentation and analysis only | S54 |
 | Security and identity product definition | S55-SEC-001 | Documentation only | S55 |
 | Security product decision recording | S55-SEC-002 | Documentation only | S55 |
+| Configuration and deployment hardening review | S56-OPS-001 | Documentation and controlled operational review only | S56 |
