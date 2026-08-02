@@ -17,5 +17,7 @@ public sealed class ApiServiceRegistration : IApplicationService, IInfrastructur
         services.AddScoped<SearchPropertiesService>();
         services.AddScoped<CreateOwnerService>();
         services.AddScoped<GetOwnerService>();
+        services.AddScoped<CreateTenantService>();
+        services.AddScoped<GetTenantService>();
     }
 }
