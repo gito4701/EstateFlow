@@ -317,3 +317,10 @@
 - Scope: created the Lease aggregate, LeaseId value object, and InvalidLeaseException in the Domain layer; added Lease domain tests for creation and validation behavior; kept Application, Infrastructure, API, persistence, and relationship concerns unchanged.
 - Verification: `dotnet clean EstateFlow.sln`, `dotnet restore EstateFlow.sln`, `dotnet build EstateFlow.sln -v minimal`, and `dotnet test EstateFlow.sln -v minimal` were re-run after the Domain-only Lease foundation implementation.
 - Approval status: PD-019 remains Deferred; no Lease business rules, lifecycle rules, occupancy behavior, financial rules, or relationships were invented or implemented.
+
+2026-08-02 — S44-APP-001
+- Task ID: S44-APP-001
+- Reason for this update: implement the approved Lease application foundation inside the Application layer only, following the established Create*Service and request/response patterns used for Property, Owner, and Tenant.
+- Scope: created the Lease create request, create response, create service, repository abstraction, and application tests; kept Domain, Infrastructure, API, persistence implementation, and workflow concerns unchanged.
+- Verification: `dotnet clean EstateFlow.sln`, `dotnet restore EstateFlow.sln`, `dotnet build EstateFlow.sln -v minimal`, and `dotnet test EstateFlow.sln -v minimal` were re-run after the Application-only Lease foundation implementation.
+- Approval status: PD-019 remains Deferred; no Lease business rules, lifecycle rules, workflows, or persistence behavior were invented or implemented.
