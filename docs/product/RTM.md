@@ -39,3 +39,4 @@
 | Release governance definition | S62-OPS-001 | Documentation and governance definition only | S62 |
 | Delivery automation readiness review | S63-OPS-001 | Documentation and readiness review only | S63 |
 | CI/CD implementation authorization | S64-OPS-001 | Documentation and authorization-boundary definition only | S64 |
+| CI/CD build validation pipeline | S65-OPS-001 | Build and test validation automation only | S65 |

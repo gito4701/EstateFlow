@@ -145,3 +145,7 @@ The S63 delivery automation readiness review records the current readiness postu
 ## S64 CI/CD Implementation Authorization Note
 
 The S64 CI/CD implementation authorization package records the approved implementation boundaries for future automation in EstateFlow. The package defines the approved automation scope, the deferred release-execution decisions, the environment expectations, the artifact-governance boundaries, the rollback governance expectations, and the explicitly excluded implementation areas while preserving the documentation-only boundary.
+
+## S65 CI/CD Build Validation Pipeline Note
+
+The S65 CI/CD build validation pipeline implements the first approved automation capability for EstateFlow. The workflow validates the repository through restore, build, and test execution for pull requests and approved branch pushes while keeping deployment, environment promotion, artifact publication, secrets handling, and infrastructure automation outside the approved scope.

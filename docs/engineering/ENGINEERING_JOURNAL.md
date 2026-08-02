@@ -280,6 +280,13 @@
 - Verification: build and tests were re-run after the documentation-only authorization-package updates.
 - Status: CI/CD implementation authorization is now documented; no workflow or automation implementation is authorized.
 
+2026-08-02 — S65-OPS-001
+- Task ID: S65-OPS-001
+- Reason for this update: implement the first approved CI/CD capability for EstateFlow by adding automated build and test validation.
+- Scope: created a GitHub Actions workflow for pull request and branch-based build/test validation while keeping deployment, publishing, environment promotion, artifact retention, and release automation explicitly excluded.
+- Verification: build and tests were re-run after the workflow addition.
+- Status: build-validation automation is now implemented within the documented governance boundaries.
+
 2026-08-02 — S54-ARCH-001
 - Task ID: S54-ARCH-001
 - Reason for this update: perform a documentation-only platform quality and reliability review after the operational hardening work.
