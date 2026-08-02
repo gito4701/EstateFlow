@@ -40,3 +40,4 @@
 | Delivery automation readiness review | S63-OPS-001 | Documentation and readiness review only | S63 |
 | CI/CD implementation authorization | S64-OPS-001 | Documentation and authorization-boundary definition only | S64 |
 | CI/CD build validation pipeline | S65-OPS-001 | Build and test validation automation only | S65 |
+| CI validation workflow quality enhancement | S66-OPS-001 | CI validation workflow quality improvements only | S66 |
