@@ -1,3 +1,4 @@
+using EstateFlow.Domain.Owners;
 using EstateFlow.Domain.Properties;
 using EstateFlow.Infrastructure.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
@@ -12,10 +13,12 @@ public class EstateFlowDbContext : DbContext
     }
 
     public DbSet<Property> Properties => Set<Property>();
+    public DbSet<Owner> Owners => Set<Owner>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new PropertyConfiguration());
+        modelBuilder.ApplyConfiguration(new OwnerConfiguration());
 
         base.OnModelCreating(modelBuilder);
     }

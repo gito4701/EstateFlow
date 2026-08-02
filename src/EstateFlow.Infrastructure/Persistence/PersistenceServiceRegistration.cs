@@ -1,5 +1,5 @@
-using EstateFlow.Application.Persistence;
 using EstateFlow.Application.Services;
+using EstateFlow.Infrastructure.Persistence.Abstractions;
 using EstateFlow.Infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -27,6 +27,7 @@ public static class PersistenceServiceRegistration
         });
 
         services.AddScoped<IPropertyRepository, PropertyRepository>();
+        services.AddScoped<IOwnerRepository, OwnerRepository>();
         services.AddScoped<CreatePropertyService>();
         services.AddScoped<GetPropertyService>();
         services.AddScoped<UpdatePropertyService>();
