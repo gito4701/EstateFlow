@@ -233,3 +233,10 @@
 - Scope: created the Owner domain decision record and updated the Owner approval, definition, decision request, EDD, RTM, and engineering journal documents to reflect approved documentation decisions for PD-006, PD-007, PD-008, and PD-010, while marking PD-009 as Deferred.
 - Verification: build and tests were re-run after the documentation-only decision-record updates.
 - Approval status: documentation decisions are recorded; no Owner implementation is authorized.
+
+2026-08-02 — S30-DOM-001
+- Task ID: S30-DOM-001
+- Reason for this update: implement the approved Owner domain foundation inside the Domain layer only, using the approved Product Definition decisions and respecting the deferred business-rules constraint.
+- Scope: created the Owner aggregate foundation and supporting value object for identity in the Domain layer; added domain tests for identity and creation behavior; kept Application, Infrastructure, API, and persistence concerns unchanged.
+- Verification: build and tests were re-run after the Domain-only Owner foundation implementation.
+- Approval status: PD-009 remains Deferred; no Owner business rules, lifecycle rules, or invariants were invented.
