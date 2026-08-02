@@ -27,6 +27,9 @@ The Owner baseline has been documented with Product Owner decisions recorded for
 ## Owner Decision Record
 A formal Owner decision record has been created to capture the approved documentation decisions for the Owner baseline. The record does not invent rules and records that implementation authorization remains blocked until the documentation approval status changes.
 
+## Owner and Tenant Business Rules Review Package
+An Owner and Tenant business-rules review package has been prepared in `docs/product/OWNER_TENANT_BUSINESS_RULES_REVIEW.md`. The package captures the approved existing Owner-to-Property and Tenant relationship context while clearly identifying the unresolved Owner and Tenant business-rule, lifecycle, workflow, validation, and relationship-constraint decisions that require Product Owner input.
+
 ## Property Aggregate Definition
 Property is the core EstateFlow v1.0 domain aggregate. It represents a real-estate asset record with a uniquely identified property record and the minimum business identity required for future implementation. The approved product baseline defines Property as the authoritative business concept for this release.
 

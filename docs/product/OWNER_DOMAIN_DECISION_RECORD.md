@@ -43,6 +43,8 @@ This record captures the Product Owner decisions that have been documented for O
 - Status: Deferred.
 - Approved rules: None. No Owner business rules are approved in this documentation baseline.
 - Approved invariants: None. No Owner invariants are approved in this documentation baseline.
+- Approved context retained: Owner-to-Property relationship context is documented and preserved as the approved ownership context for future planning.
+- Review package: The Product Owner review package for this decision is documented in `docs/product/OWNER_TENANT_BUSINESS_RULES_REVIEW.md` and covers ownership responsibilities, owner/property relationship rules, owner lifecycle expectations, ownership constraints, and acceptance criteria.
 
 ## PD-010 — Owner Acceptance Criteria
 - Status: Approved.

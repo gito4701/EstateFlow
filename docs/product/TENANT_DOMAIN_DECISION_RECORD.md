@@ -43,6 +43,8 @@ This record captures the Product Owner decisions documented for Tenant managemen
 - Status: Deferred.
 - Approved rules: None. No Tenant business rules are approved in this documentation baseline.
 - Approved invariants: None. No Tenant invariants are approved in this documentation baseline.
+- Approved context retained: Tenant relationship context is documented and preserved as the approved tenant context for future planning.
+- Review package: The Product Owner review package for this decision is documented in `docs/product/OWNER_TENANT_BUSINESS_RULES_REVIEW.md` and covers tenant lifecycle expectations, tenant/property relationship rules, tenant/lease relationship expectations, tenant constraints, and acceptance criteria.
 
 ## PD-015 — Tenant Acceptance Criteria
 - Status: Approved.

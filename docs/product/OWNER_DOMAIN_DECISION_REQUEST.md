@@ -31,6 +31,7 @@ This document captures the Product Owner review checkpoints required before any 
 - Description: Approved Owner business rules and invariants.
 - Current status: Deferred.
 - Approved decision: No Owner business rules or invariants are approved in this documentation baseline.
+- Review package: The formal Owner/Tenant business-rules review package has been prepared in `docs/product/OWNER_TENANT_BUSINESS_RULES_REVIEW.md` to structure the Product Owner review for ownership responsibilities, owner/property relationship rules, owner lifecycle expectations, ownership constraints, and acceptance criteria.
 - Implementation impact: None; implementation remains blocked.
 
 ### PD-010 — Owner Acceptance Criteria Approval
