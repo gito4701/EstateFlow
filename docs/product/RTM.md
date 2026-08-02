@@ -30,3 +30,4 @@
 | Lease product approval record and review package | PRA-004 | Approved for documentation | S42 |
 | Platform quality and reliability review | S54-ARCH-001 | Documentation and analysis only | S54 |
 | Security and identity product definition | S55-SEC-001 | Documentation only | S55 |
+| Security product decision recording | S55-SEC-002 | Documentation only | S55 |

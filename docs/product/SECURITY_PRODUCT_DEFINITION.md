@@ -32,17 +32,30 @@ The baseline records that permissions should be defined in a way that supports l
 ### Access boundaries
 The baseline records that access boundaries must be defined between administrative functions, property-related operations, and potentially other domain-specific capabilities. The current documentation only establishes the need for boundaries; it does not define the final access matrix.
 
-## Security Decisions Requiring Product Owner Approval
+## Recorded Product Decisions
 
-The following decisions remain pending Product Owner approval and are explicitly documented as future governance inputs:
-- Authentication approach
-- User/account model
-- Roles
-- Permissions
-- Administrative access
-- Tenant/owner access expectations
-- API protection expectations
-- Audit and security requirements
+The following product decisions are now recorded for documentation governance purposes. All of them are documentation approvals or deferrals only and do not authorize implementation.
+
+### Identity
+- User identity model — Approved for documentation only: EstateFlow will recognize a user identity concept at the product level as an abstract identity that can represent a person or service actor. No persistence model, user table, or implementation mechanism is approved.
+- Authentication expectations — Deferred: The concrete authentication approach remains to be selected by future Product Owner decision. No authentication mechanism is approved.
+- Account ownership model — Deferred: The account ownership model remains unresolved. No ownership lifecycle, provisioning behavior, or account-management semantics are approved.
+
+### Authorization
+- Roles — Deferred: The concrete role model remains unresolved and is not approved for implementation.
+- Permissions — Deferred: The concrete permission model remains unresolved and is not approved for implementation.
+- Access boundaries — Approved for documentation only: the baseline recognizes distinct boundaries between administrative, business, and operational access concerns. No concrete role matrix or enforcement model is approved.
+- Administrative capabilities — Deferred: The specific administrative capabilities that require elevated access remain unresolved.
+
+### API security
+- Protected endpoints — Deferred: The set of protected endpoints remains unresolved and is not approved for implementation.
+- Public endpoints — Approved for documentation only: operational endpoints such as health and readiness may remain publicly reachable for platform operations in documentation terms. No endpoint-protection behavior or new security middleware is approved.
+- Security requirements — Approved for documentation only: API security expectations must be documented before implementation, but no security middleware or enforcement behavior is authorized.
+
+### Operational security
+- Audit expectations — Approved for documentation only: security-relevant events should be auditable when security capabilities are implemented. No specific audit mechanism is approved.
+- Security monitoring expectations — Deferred: Monitoring scope, alerting expectations, and operational ownership remain unresolved.
+- Secrets and configuration expectations — Approved for documentation only: secrets and sensitive configuration must be handled through approved configuration practices rather than hard-coded values. No implementation detail is approved.
 
 ## Explicit Exclusions
 
@@ -53,7 +66,7 @@ The following areas are explicitly excluded from this baseline and must not be i
 - Identity provider integration
 - JWT or session handling
 - Roles and permissions code
-- API security changes
+- API security middleware
 - Database changes
 
 ## Approval Status
