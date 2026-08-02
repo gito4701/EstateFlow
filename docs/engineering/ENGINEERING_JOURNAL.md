@@ -268,3 +268,10 @@
 - Scope: created the Tenant product approval record and updated the Tenant definition, decision request, decision record, EDD, RTM, and engineering journal to reflect approved documentation decisions for PD-011, PD-012, PD-013, and PD-015, while marking PD-014 as Deferred.
 - Verification: build and tests were re-run after the documentation-only decision-record updates.
 - Approval status: documentation decisions are recorded; no Tenant implementation is authorized.
+
+2026-08-02 — S36-DOM-001
+- Task ID: S36-DOM-001
+- Reason for this update: implement the approved Tenant domain foundation inside the Domain layer only, using the approved Product Definition baseline and respecting the deferred business-rules constraint.
+- Scope: created the Tenant aggregate, TenantId value object, and InvalidTenantException in the Domain layer; added Tenant domain tests for creation and validation behavior; kept Application, Infrastructure, API, persistence, and relationship concerns unchanged.
+- Verification: build and tests were re-run after the Domain-only Tenant foundation implementation.
+- Approval status: PD-014 remains Deferred; no Tenant business rules, lifecycle rules, occupancy behavior, financial rules, or relationships were invented or implemented.
