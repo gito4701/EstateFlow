@@ -23,6 +23,6 @@
 | Lease product definition baseline and scope | PD-016 | Approved for documentation | S42 |
 | Lease scope approval | PD-017 | Approved for documentation | S42 |
 | Lease relationship approval | PD-018 | Approved for documentation | S42 |
-| Lease business rules approval | PD-019 | Deferred | S42 |
+| Lease business rules approval | PD-019 | Deferred | S48 |
 | Lease acceptance criteria approval | PD-020 | Approved for documentation | S42 |
 | Lease product approval record and review package | PRA-004 | Approved for documentation | S42 |

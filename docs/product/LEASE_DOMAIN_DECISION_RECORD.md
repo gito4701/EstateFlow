@@ -42,6 +42,7 @@ This record captures the Product Owner decisions documented for Lease management
 - Status: Deferred.
 - Approved rules: None. No Lease business rules are approved in this documentation baseline.
 - Approved invariants: None. No Lease invariants are approved in this documentation baseline.
+- Review package: The Product Owner review package for this decision is documented in `docs/product/LEASE_BUSINESS_RULES_REVIEW.md` and covers lifecycle requirements, state/status expectations, activation and termination behavior, renewal behavior, Property/Owner/Tenant relationship constraints, date validity, overlap/conflict rules, financial/rent boundaries, and workflow acceptance criteria.
 
 ## PD-020 — Lease Acceptance Criteria
 - Status: Approved.

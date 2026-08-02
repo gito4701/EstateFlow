@@ -27,6 +27,7 @@ This document captures the Product Owner decisions required to establish the Lea
 - Decision identifier: PD-019
 - Description: Product Owner decision required for Lease business rules and invariants.
 - Proposed decision: No Lease business rules or invariants are approved in this documentation baseline; future implementation must wait for a separate approval stage.
+- Review package: A formal business-rules review package has been prepared in `docs/product/LEASE_BUSINESS_RULES_REVIEW.md` to structure the Product Owner review for lifecycle requirements, state model expectations, activation and termination rules, renewal behavior, relationship constraints, date validity, overlap/conflict rules, financial boundaries, and acceptance criteria.
 - Implementation impact: None; implementation remains blocked until Product Owner approval is recorded.
 
 ### PD-020 — Lease Acceptance Criteria

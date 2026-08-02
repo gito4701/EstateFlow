@@ -339,3 +339,10 @@
 - Consolidations performed: aligned the Lease application repository contract ordering with the surrounding repository conventions and expanded Lease controller and application tests to cover missing-item and list-all scenarios in the same style as the neighboring features.
 - Verification: `dotnet clean EstateFlow.sln`, `dotnet restore EstateFlow.sln`, `dotnet build EstateFlow.sln -v minimal`, and `dotnet test EstateFlow.sln -v minimal` were re-run after the hardening pass.
 - Outcome: the Lease feature remains within the approved foundation boundary and the architecture remains consistent with the established EstateFlow layering.
+
+2026-08-02 — S48-PD-001
+- Task ID: S48-PD-001
+- Reason for this update: prepare the formal Product Owner review package required to resolve the deferred Lease business-rules decision PD-019 without introducing implementation changes.
+- Scope: created a documentation-only Lease business-rules review package and updated the Lease decision request, decision record, product approval record, EDD, RTM, and engineering journal to reference the pending review scope for lifecycle requirements, state expectations, activation and termination rules, renewal behavior, relationship constraints, date validity, overlap/conflict rules, financial boundaries, and acceptance criteria.
+- Verification: `dotnet build EstateFlow.sln -v minimal` and `dotnet test EstateFlow.sln -v minimal` were re-run after the documentation-only review-package updates.
+- Outcome: Product Owner review preparation is complete; implementation authorization remains blocked until PD-019 is resolved.
