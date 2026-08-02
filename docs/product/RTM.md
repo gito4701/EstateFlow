@@ -35,3 +35,4 @@
 | Deployment readiness validation | S58-OPS-001 | Documentation and controlled operational review only | S58 |
 | Deployment operations runbook | S59-OPS-001 | Documentation and operational guidance only | S59 |
 | CI/CD delivery strategy review | S60-OPS-001 | Documentation and future-strategy review only | S60 |
+| CI/CD delivery decision record | S61-OPS-001 | Documentation and governance decision recording only | S61 |

@@ -129,3 +129,7 @@ The S59 deployment operations runbook captures the current operational deploymen
 ## S60 CI/CD Delivery Strategy Review Note
 
 The S60 CI/CD delivery strategy review records a documentation-only future-state assessment of delivery automation for EstateFlow. The review captures the current build and testing posture, the current automation gaps, the recommended future pipeline model covering build automation, quality gates, source-control expectations, delivery flow, environment promotion, rollback expectations, operational alignment, and release traceability, and the decisions that will require future approval before any implementation work begins. The review explicitly excludes GitHub Actions, Azure DevOps pipelines, CI/CD workflow implementation, deployment automation, cloud resources, authentication, authorization, and secrets providers.
+
+## S61 CI/CD Delivery Decision Record Note
+
+The S61 CI/CD delivery decision record captures the approved documentation decisions for future delivery automation for EstateFlow. The record documents approved, deferred, and explicitly excluded positions for build checks, test gates, quality thresholds, branch strategy, pull request expectations, release ownership, promotion flow, deployment approvals, rollback expectations, artifact ownership, retention expectations, and traceability requirements. The record keeps implementation authorization separate from documentation approval and explicitly excludes workflow automation, deployment automation, artifact registries, cloud resources, and infrastructure changes.

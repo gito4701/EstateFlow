@@ -434,3 +434,10 @@
 - Scope: created the CI/CD delivery review package and updated the EDD and RTM governance artifacts to record the future automation strategy review and the explicit exclusions for workflow implementation.
 - Verification: `dotnet build EstateFlow.sln -v minimal` and `dotnet test EstateFlow.sln -v minimal` were re-run after the documentation-only review update.
 - Outcome: the repository now contains a governance-focused CI/CD delivery review that documents the current build posture, delivery gaps, recommended future model, and the future approval decisions required before any automation implementation.
+
+2026-08-02 — S61-OPS-001
+- Task ID: S61-OPS-001
+- Reason for this update: record the approved documentation decisions for the future CI/CD delivery automation strategy for EstateFlow while preserving a documentation-only authorization boundary.
+- Scope: created the CI/CD delivery decision record and updated the CI/CD review, EDD, and RTM governance artifacts to distinguish documented approval from implementation authorization.
+- Verification: `dotnet build EstateFlow.sln -v minimal` and `dotnet test EstateFlow.sln -v minimal` were re-run after the documentation-only decision-record update.
+- Outcome: the repository now contains a formal decision record that captures the approved, deferred, and explicitly excluded delivery-governance positions while keeping all implementation work unauthorized.

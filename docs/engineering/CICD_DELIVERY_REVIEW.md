@@ -92,3 +92,6 @@ The future CI/CD strategy should remain aligned with the current documentation-d
 
 ## Review Outcome
 The current EstateFlow baseline is suitable for a documentation-only strategy review. The repository already supports local build and test execution, but a formal CI/CD and delivery automation strategy remains a future governance and implementation topic. The recommended next step is to formalize the delivery model through approved documentation and governance decisions before any automation is introduced.
+
+## Decision Record Reference
+The formal decision record for this review package is maintained in [docs/engineering/CICD_DELIVERY_DECISION_RECORD.md](docs/engineering/CICD_DELIVERY_DECISION_RECORD.md). The decision record preserves the separation between documentation approval and implementation authorization.
