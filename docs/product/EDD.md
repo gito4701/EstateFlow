@@ -157,3 +157,7 @@ The S66 CI validation workflow quality update improves the maintainability and f
 ## S67 Artifact Governance Strategy Note
 
 The S67 artifact governance strategy defines the documentation-only model for artifact purpose, ownership, metadata, retention expectations, promotion conditions, and security boundaries before any artifact publishing implementation. The package preserves the separation between policy definition and implementation authorization.
+
+## S68 Build Artifact Production Note
+
+The S68 build artifact production update implements the first approved artifact capability for EstateFlow by packaging the successful build output and attaching it to the workflow execution as a traceable workflow artifact. The workflow remains limited to validation and artifact generation only and does not introduce registry publishing, deployment, promotion, or release automation.

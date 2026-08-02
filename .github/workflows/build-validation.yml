@@ -43,6 +43,31 @@ jobs:
       - name: Execute test suite
         run: dotnet test EstateFlow.sln -v minimal
 
+      - name: Prepare build artifact
+        if: success()
+        run: |
+          mkdir -p build-artifact/estateflow-build
+          cp -R src/EstateFlow.Api/bin/Debug/net9.0/. build-artifact/estateflow-build/
+          cat > build-artifact/estateflow-build/build-metadata.json <<EOF
+          {
+            "buildIdentifier": "github-run-${{ github.run_id }}",
+            "commitIdentifier": "${{ github.sha }}",
+            "workflowRunId": "${{ github.run_id }}",
+            "workflowRunNumber": "${{ github.run_number }}",
+            "repository": "${{ github.repository }}",
+            "ref": "${{ github.ref }}"
+          }
+          EOF
+          echo "Created build artifact package with build metadata."
+
+      - name: Publish workflow artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: estateflow-build-${{ github.run_number }}
+          path: build-artifact/
+          if-no-files-found: error
+
       - name: Report validation summary
         if: always()
         run: |
