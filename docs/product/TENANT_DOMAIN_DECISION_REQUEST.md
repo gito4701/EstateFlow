@@ -1,45 +1,45 @@
 # Tenant Domain Decision Request
 
 ## Purpose
-This document captures the Product Owner review checkpoints required before any Tenant domain implementation may be authorized in EstateFlow.
+This document captures the Product Owner decisions required to establish the Tenant product-definition baseline in EstateFlow.
 
 ## Review Decisions Recorded
 
 ### PD-011 — Tenant Definition Approval
 - Decision identifier: PD-011
-- Description: Product Owner review required for the business meaning of Tenant within EstateFlow v1.
-- Request: Confirm whether Tenant is defined as the party occupying or paying for a property asset.
-- Implementation impact: None; implementation remains blocked until the decision is recorded.
+- Description: Product Owner decision recorded for the business meaning of Tenant within EstateFlow v1.
+- Decision: Tenant is defined as the party occupying or paying for a property asset.
+- Implementation impact: None; implementation remains blocked until implementation is separately authorized.
 
 ### PD-012 — Tenant Scope Approval
 - Decision identifier: PD-012
-- Description: Product Owner review required for the approved Tenant scope within EstateFlow v1.
-- Request: Confirm the Tenant scope as a documentation-only product boundary with explicit exclusions for implementation artifacts.
-- Implementation impact: None; implementation remains blocked until the decision is recorded.
+- Description: Product Owner decision recorded for the approved Tenant scope within EstateFlow v1.
+- Decision: Tenant scope is a documentation-only product boundary with explicit exclusions for implementation artifacts.
+- Implementation impact: None; implementation remains blocked until implementation is separately authorized.
 
 ### PD-013 — Tenant-to-Property Relationship Approval
 - Decision identifier: PD-013
-- Description: Product Owner review required for the Tenant-to-Property relationship.
-- Request: Confirm whether the Tenant and Property relationship is a business association between a property record and a Tenant record.
-- Implementation impact: None; implementation remains blocked until the decision is recorded.
+- Description: Product Owner decision recorded for the Tenant-to-Property relationship.
+- Decision: The Tenant and Property relationship is a business association between a property record and a Tenant record.
+- Implementation impact: None; implementation remains blocked until implementation is separately authorized.
 
 ### PD-014 — Tenant Business Rules Approval
 - Decision identifier: PD-014
-- Description: Product Owner review required for Tenant business rules and invariants.
-- Request: Confirm that no Tenant business rules or invariants are approved in this documentation baseline.
-- Implementation impact: None; implementation remains blocked until the decision is recorded.
+- Description: Product Owner decision recorded for Tenant business rules and invariants.
+- Decision: Deferred. No Tenant business rules or invariants are approved in this documentation baseline.
+- Implementation impact: None; implementation remains blocked until implementation is separately authorized.
 
 ### PD-015 — Tenant Acceptance Criteria Approval
 - Decision identifier: PD-015
-- Description: Product Owner review required for Tenant acceptance criteria.
-- Request: Confirm the acceptance criteria requiring Tenant-related work to remain within the approved documentation boundary.
-- Implementation impact: None; implementation remains blocked until the decision is recorded.
+- Description: Product Owner decision recorded for Tenant acceptance criteria.
+- Decision: Tenant-related work must remain within the approved documentation boundary and preserve the recorded Tenant definition, scope, and relationship meaning.
+- Implementation impact: None; implementation remains blocked until implementation is separately authorized.
 
 ## Implementation Status
-No Tenant domain implementation is authorized at this time. This review package is documentation-only and does not authorize any domain, persistence, API, or application work.
+No Tenant domain implementation is authorized at this time. This package is documentation-only and does not authorize any domain, persistence, API, or application work.
 
 ## Approval Record Status
-A formal decision record has been created to capture the pending Tenant decisions for PD-011 through PD-015. Implementation remains blocked until the documentation approval status changes.
+A formal approval record has been created to capture the recorded Tenant decisions for PD-011 through PD-015. Implementation remains blocked until a future implementation authorization stage is created.
 
 ## Review Guidance
-The documented review requests establish the business boundary, relationship meaning, and acceptance expectations for future Tenant implementation planning without authorizing implementation work.
+The recorded decisions establish the business boundary, relationship meaning, and acceptance expectations for future Tenant implementation planning without authorizing implementation work.

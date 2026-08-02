@@ -7,20 +7,20 @@ This record captures the Product Owner decisions documented for Tenant managemen
 
 | Decision ID | Decision Topic | Status | Notes |
 | --- | --- | --- | --- |
-| PD-011 | Tenant definition | Pending review | Decision requested from Product Owner. |
-| PD-012 | Tenant scope | Pending review | Decision requested from Product Owner. |
-| PD-013 | Tenant-to-Property relationship | Pending review | Decision requested from Product Owner. |
-| PD-014 | Tenant business rules | Pending review | Decision requested from Product Owner. |
-| PD-015 | Tenant acceptance criteria | Pending review | Decision requested from Product Owner. |
+| PD-011 | Tenant definition | Approved | Recorded as the business meaning of Tenant within EstateFlow v1. |
+| PD-012 | Tenant scope | Approved | Recorded as a documentation-only product boundary with explicit implementation exclusions. |
+| PD-013 | Tenant-to-Property relationship | Approved | Recorded as a business association between a property record and a Tenant record. |
+| PD-014 | Tenant business rules | Deferred | No Tenant business rules or lifecycle behavior are approved in this baseline. |
+| PD-015 | Tenant acceptance criteria | Approved | Recorded as acceptance expectations for documentation-only Tenant work. |
 
 ## PD-011 — Tenant Definition
-- Status: Pending review.
-- Review request: confirm whether Tenant is defined as a business concept representing the party occupying or paying for a property asset.
-- Role within EstateFlow: Tenant is intended to provide a product-level business identity for occupancy context and establish the product boundary for future Tenant planning.
+- Status: Approved.
+- Approved Tenant concept: Tenant is a business concept representing the party occupying or paying for a property asset within EstateFlow v1.
+- Role within EstateFlow: Tenant provides the product-level business identity for occupancy context and establishes the documented product boundary for future Tenant planning.
 
 ## PD-012 — Tenant Scope
-- Status: Pending review.
-- Review request: confirm the Tenant scope as a documentation-only product boundary with explicit exclusions for implementation artifacts.
+- Status: Approved.
+- Approved scope: Tenant is in scope as a documentation-only product boundary with explicit exclusions for implementation artifacts.
 - Included capabilities:
   - Define Tenant as an explicit business concept within EstateFlow.
   - Describe the intended relationship between Tenant and Property.
@@ -35,19 +35,17 @@ This record captures the Product Owner decisions documented for Tenant managemen
   - Any implementation detail not explicitly required to define the product boundary.
 
 ## PD-013 — Tenant-to-Property Relationship
-- Status: Pending review.
-- Review request: confirm whether the Tenant and Property relationship is a business association between a property record and a Tenant record.
-- Ownership constraints: Deferred. No occupancy or lease constraint is approved in this documentation baseline.
+- Status: Approved.
+- Approved relationship meaning: The Tenant and Property relationship is a business association between a property record and a Tenant record.
+- Relationship constraints: Deferred. No occupancy or lease constraint is approved in this documentation baseline.
 
 ## PD-014 — Tenant Business Rules
-- Status: Pending review.
-- Review request: confirm that no Tenant business rules or invariants are approved in this documentation baseline.
+- Status: Deferred.
 - Approved rules: None. No Tenant business rules are approved in this documentation baseline.
 - Approved invariants: None. No Tenant invariants are approved in this documentation baseline.
 
 ## PD-015 — Tenant Acceptance Criteria
-- Status: Pending review.
-- Review request: confirm the acceptance criteria requiring Tenant-related work to remain within the approved documentation boundary.
+- Status: Approved.
 - Conditions required for acceptance:
   - Future Tenant-related work remains within the approved documentation boundary.
   - The approved Tenant concept and scope are preserved.

@@ -261,3 +261,10 @@
 - Scope: updated Tenant review artifacts to explicitly request decisions for PD-011 through PD-015 and preserved documentation-only scope.
 - Verification: documentation-only work; no lifecycle, business rules, workflows, validations, or implementation behavior were created.
 - Status: Tenant review package ready for Product Owner decision.
+
+2026-08-02 — S35-PD-003
+- Task ID: S35-PD-003
+- Reason for this update: record the Product Owner decisions for the approved Tenant product baseline without changing application code or architecture.
+- Scope: created the Tenant product approval record and updated the Tenant definition, decision request, decision record, EDD, RTM, and engineering journal to reflect approved documentation decisions for PD-011, PD-012, PD-013, and PD-015, while marking PD-014 as Deferred.
+- Verification: build and tests were re-run after the documentation-only decision-record updates.
+- Approval status: documentation decisions are recorded; no Tenant implementation is authorized.

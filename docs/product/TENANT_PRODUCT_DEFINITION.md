@@ -35,5 +35,5 @@ Tenant-related work is considered acceptable only when it remains within this ap
 ## Product Boundary Summary
 This document establishes the Tenant product boundary only. It does not authorize implementation, persistence design, or functional delivery beyond the documented baseline.
 
-## Product Owner Review Status
-This Tenant baseline is prepared for Product Owner review. It requests Product Owner decisions for PD-011 through PD-015. No Tenant implementation authorization is granted by this document.
+## Product Owner Decision Status
+The Tenant baseline has received Product Owner decisions for PD-011 through PD-015. PD-011, PD-012, PD-013, and PD-015 are approved; PD-014 is deferred. This document records the approved documentation baseline only and does not authorize Tenant implementation work.

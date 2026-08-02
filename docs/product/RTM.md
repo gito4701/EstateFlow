@@ -14,9 +14,9 @@
 | Owner business rules approval | PD-009 | Deferred | S29 |
 | Owner acceptance criteria approval | PD-010 | Approved for documentation | S29 |
 | Owner decision record and governance structure | PRA-002 | Approved for documentation | S29 |
-| Tenant product definition baseline and governance record | PRA-003 | Pending review | S35 |
-| Tenant definition approval | PD-011 | Pending review | S35 |
-| Tenant scope approval | PD-012 | Pending review | S35 |
-| Tenant-to-Property relationship approval | PD-013 | Pending review | S35 |
-| Tenant business rules approval | PD-014 | Pending review | S35 |
-| Tenant acceptance criteria approval | PD-015 | Pending review | S35 |
+| Tenant product definition baseline and governance record | PRA-003 | Approved for documentation | S35 |
+| Tenant definition approval | PD-011 | Approved for documentation | S35 |
+| Tenant scope approval | PD-012 | Approved for documentation | S35 |
+| Tenant-to-Property relationship approval | PD-013 | Approved for documentation | S35 |
+| Tenant business rules approval | PD-014 | Deferred | S35 |
+| Tenant acceptance criteria approval | PD-015 | Approved for documentation | S35 |
