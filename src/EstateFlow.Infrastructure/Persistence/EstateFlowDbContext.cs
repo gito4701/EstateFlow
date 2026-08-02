@@ -1,5 +1,6 @@
 using EstateFlow.Domain.Owners;
 using EstateFlow.Domain.Properties;
+using EstateFlow.Domain.Tenants;
 using EstateFlow.Infrastructure.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,11 +15,13 @@ public class EstateFlowDbContext : DbContext
 
     public DbSet<Property> Properties => Set<Property>();
     public DbSet<Owner> Owners => Set<Owner>();
+    public DbSet<Tenant> Tenants => Set<Tenant>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new PropertyConfiguration());
         modelBuilder.ApplyConfiguration(new OwnerConfiguration());
+        modelBuilder.ApplyConfiguration(new TenantConfiguration());
 
         base.OnModelCreating(modelBuilder);
     }
