@@ -9,6 +9,9 @@ EstateFlow v1.0 includes the approved Property aggregate and the minimum busines
 ## Owner Product Definition Baseline
 A new product-definition baseline for Owner management has been prepared to define the approved business boundary for introducing Owner into EstateFlow v1.0. This baseline documents the purpose of Owner, the approved scope of Owner within EstateFlow v1, the Owner-to-Property relationship, approved capabilities, explicit exclusions, and acceptance principles. The Owner baseline is documentation-only and does not authorize implementation work.
 
+## Tenant Product Definition Review Baseline
+A Tenant product-definition review package has been prepared to define the proposed business boundary for introducing Tenant into EstateFlow v1.0. This baseline documents the purpose of Tenant, the proposed Tenant scope, the Tenant-to-Property relationship, the proposed capabilities, explicit exclusions, and acceptance principles. The Tenant review package is documentation-only and does not authorize implementation work.
+
 ## Owner Product Definition Review Baseline
 The Owner baseline has been documented with Product Owner decisions recorded for documentation purposes. The current decision status is: PD-006 Approved, PD-007 Approved, PD-008 Approved, PD-009 Deferred, and PD-010 Approved. No Owner implementation work is authorized at this stage.
 

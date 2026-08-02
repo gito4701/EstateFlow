@@ -247,3 +247,17 @@
 - Scope: created the Owner aggregate foundation and supporting value object for identity in the Domain layer; added domain tests for identity and creation behavior; kept Application, Infrastructure, API, and persistence concerns unchanged.
 - Verification: build and tests were re-run after the Domain-only Owner foundation implementation.
 - Approval status: PD-009 remains Deferred; no Owner business rules, lifecycle rules, or invariants were invented.
+
+2026-08-02 — S35-PD-001
+- Task ID: S35-PD-001
+- Reason for this update: prepare the Tenant product-definition baseline for documentation and review without changing application code or architecture.
+- Scope: created Tenant product-definition baseline, Tenant decision request, and Tenant decision record documents.
+- Verification: documentation-only work; no source code, architecture, or implementation changes were introduced.
+- Status: Tenant baseline and governance artifacts prepared for Product Owner review.
+
+2026-08-02 — S35-PD-002
+- Task ID: S35-PD-002
+- Reason for this update: prepare the Tenant Product Owner review package based on the completed Tenant Product Definition.
+- Scope: updated Tenant review artifacts to explicitly request decisions for PD-011 through PD-015 and preserved documentation-only scope.
+- Verification: documentation-only work; no lifecycle, business rules, workflows, validations, or implementation behavior were created.
+- Status: Tenant review package ready for Product Owner decision.
