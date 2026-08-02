@@ -133,3 +133,6 @@ The release-governance model for this stage is maintained in [docs/engineering/R
 
 ## Artifact storage and retention references
 The storage and evidence-retention expectations for this stage are maintained in [docs/engineering/ARTIFACT_STORAGE_STRATEGY.md](docs/engineering/ARTIFACT_STORAGE_STRATEGY.md) and [docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md](docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md). Those packages define the approved storage direction, evidence association expectations, and retention boundaries that support traceable promotion review.
+
+## Release automation authorization reference
+The release-automation authorization scope for this stage is maintained in [docs/engineering/RELEASE_AUTOMATION_AUTHORIZATION.md](docs/engineering/RELEASE_AUTOMATION_AUTHORIZATION.md). That package records the approved automation scope, the manual approval expectations, the environment model, the release controls, and the security boundaries that remain documentation-only.

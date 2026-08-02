@@ -173,3 +173,7 @@ The S70 artifact storage strategy defines the approved documentation-only approa
 ## S71 Release Promotion Governance Note
 
 The S71 release promotion governance package defines the approved documentation-only approach for promoting validated artifacts through Development, Test/Staging, and Production before any release-promotion automation is introduced. The package records the approved promotion sequence, environment progression expectations, human approval gates, evidence requirements, and rollback governance while preserving the boundary between governance definition and implementation authorization.
+
+## S72 Release Automation Authorization Note
+
+The S72 release automation authorization package defines the approved documentation-only scope for future release automation in EstateFlow. The package records what CI/CD may automate, what remains manually approved, the environment model for Development, Validation, and Production, the release controls, and the security boundaries while preserving the documentation-only boundary and explicitly excluding release workflows, deployment pipelines, cloud deployments, environment provisioning, artifact registries, secrets providers, authentication, authorization, and infrastructure automation.

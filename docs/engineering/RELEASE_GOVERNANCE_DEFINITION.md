@@ -165,3 +165,6 @@ The artifact-storage governance model for this stage is maintained in [docs/engi
 
 ## S71 Release Promotion Governance Reference
 The release-promotion governance model for this stage is maintained in [docs/engineering/RELEASE_PROMOTION_GOVERNANCE.md](docs/engineering/RELEASE_PROMOTION_GOVERNANCE.md). That package records the approved promotion sequence, environment progression model, artifact eligibility expectations, approval gates, release evidence requirements, and rollback governance while keeping promotion automation explicitly excluded.
+
+## S72 Release Automation Authorization Reference
+The release-automation authorization model for this stage is maintained in [docs/engineering/RELEASE_AUTOMATION_AUTHORIZATION.md](docs/engineering/RELEASE_AUTOMATION_AUTHORIZATION.md). That package records the exact future-automation scope, the manual approval expectations, the environment model, the release controls, and the security boundaries while keeping implementation authorization limited to documentation and policy definition.

@@ -329,6 +329,13 @@
 - Verification: build and tests were re-run after the documentation-only promotion-governance updates.
 - Status: release promotion governance is now documented without authorizing deployment workflows, environment-promotion automation, cloud resources, artifact registries, infrastructure changes, secrets integration, authentication, or authorization.
 
+2026-08-02 — S72-OPS-001
+- Task ID: S72-OPS-001
+- Reason for this update: define and authorize the exact scope of future release-automation implementation.
+- Scope: created the release-automation authorization document and updated the release-promotion, release-governance, CI authorization, product definition, and traceability documents to reference the approved automation-scope boundaries.
+- Verification: build and tests were re-run after the documentation-only automation-authorization updates.
+- Status: release automation scope is now documented without authorizing release workflows, deployment pipelines, cloud deployments, environment provisioning, artifact registries, secrets providers, authentication, authorization, or infrastructure automation.
+
 2026-08-02 — S54-ARCH-001
 - Task ID: S54-ARCH-001
 - Reason for this update: perform a documentation-only platform quality and reliability review after the operational hardening work.

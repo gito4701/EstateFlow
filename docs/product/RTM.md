@@ -46,3 +46,4 @@
 | Artifact retention and release evidence governance | S69-OPS-001 | Documentation and governance definition only | S69 |
 | Artifact storage strategy | S70-OPS-001 | Documentation and governance definition only | S70 |
 | Release promotion governance | S71-OPS-001 | Documentation and governance definition only | S71 |
+| Release automation authorization | S72-OPS-001 | Documentation and governance definition only | S72 |

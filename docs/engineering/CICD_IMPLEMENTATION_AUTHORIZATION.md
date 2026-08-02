@@ -120,3 +120,6 @@ The artifact-retention and release-evidence model for this stage is maintained i
 
 ## Release promotion governance reference
 The release-promotion governance model for this stage is maintained in [docs/engineering/RELEASE_PROMOTION_GOVERNANCE.md](docs/engineering/RELEASE_PROMOTION_GOVERNANCE.md). That package defines the approved promotion sequence, human approval gates, evidence expectations, rollback governance, and explicit exclusions for environment progression while keeping release automation explicitly excluded.
+
+## Release automation authorization reference
+The release-automation authorization model for this stage is maintained in [docs/engineering/RELEASE_AUTOMATION_AUTHORIZATION.md](docs/engineering/RELEASE_AUTOMATION_AUTHORIZATION.md). That package defines the approved scope of future automation, the manual approval expectations, the environment model, the release controls, and the security boundaries while keeping release workflow implementation explicitly excluded.
