@@ -47,6 +47,20 @@ public class LeasesControllerTests
         Assert.Equal(2, payload.Count());
     }
 
+    [Fact]
+    public void GetById_WithMissingLease_ReturnsNotFoundResult()
+    {
+        var repository = new FakeLeaseRepository();
+        var createService = new CreateLeaseService(repository);
+        var getService = new GetLeaseService(repository);
+        var controller = new LeasesController(createService, getService);
+
+        var result = controller.GetById(Guid.NewGuid());
+
+        var notFoundResult = Assert.IsType<NotFoundObjectResult>(result);
+        Assert.Equal(404, notFoundResult.StatusCode);
+    }
+
     private sealed class FakeLeaseRepository : ILeaseRepository
     {
         private readonly List<Lease> _leases = new();

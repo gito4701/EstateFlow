@@ -331,3 +331,11 @@
 - Scope: created the Lease repository, Lease EF Core configuration, Lease persistence tests, Lease retrieval tests, and registered the Lease repository in the persistence service registration; kept Domain, Application, API, lifecycle, and business-rule concerns unchanged.
 - Verification: `dotnet clean EstateFlow.sln`, `dotnet restore EstateFlow.sln`, `dotnet build EstateFlow.sln -v minimal`, and `dotnet test EstateFlow.sln -v minimal` were re-run after the Infrastructure-only Lease persistence implementation.
 - Approval status: PD-019 remains Deferred; no Lease lifecycle, status, date, rent, payment, or relationship behavior was implemented.
+
+2026-08-02 — S47-ARCH-001
+- Task ID: S47-ARCH-001
+- Reason for this update: review the Lease implementation for architectural consistency with Property, Owner, and Tenant and perform a hardening pass without introducing new lease behavior.
+- Scope: reviewed the Lease domain, application, infrastructure, API, and test layers; preserved the approved foundation and applied consistency improvements only where the existing shared patterns already justified them.
+- Consolidations performed: aligned the Lease application repository contract ordering with the surrounding repository conventions and expanded Lease controller and application tests to cover missing-item and list-all scenarios in the same style as the neighboring features.
+- Verification: `dotnet clean EstateFlow.sln`, `dotnet restore EstateFlow.sln`, `dotnet build EstateFlow.sln -v minimal`, and `dotnet test EstateFlow.sln -v minimal` were re-run after the hardening pass.
+- Outcome: the Lease feature remains within the approved foundation boundary and the architecture remains consistent with the established EstateFlow layering.
