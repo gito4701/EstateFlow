@@ -8,7 +8,7 @@ namespace EstateFlow.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public sealed class PropertiesController : ControllerBase
+public sealed class PropertiesController : ApiControllerBase
 {
     private readonly CreatePropertyService _createPropertyService;
     private readonly GetPropertyService _getPropertyService;
@@ -160,21 +160,4 @@ public sealed class PropertiesController : ControllerBase
         return NoContent();
     }
 
-    private IActionResult BuildErrorResponse(int statusCode, string title, string detail)
-    {
-        var problemDetails = new ProblemDetails
-        {
-            Type = "about:blank",
-            Title = title,
-            Detail = detail,
-            Status = statusCode
-        };
-
-        return statusCode switch
-        {
-            StatusCodes.Status400BadRequest => BadRequest(problemDetails),
-            StatusCodes.Status404NotFound => NotFound(problemDetails),
-            _ => StatusCode(statusCode, problemDetails)
-        };
-    }
 }

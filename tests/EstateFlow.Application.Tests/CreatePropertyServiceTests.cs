@@ -56,8 +56,14 @@ public class CreatePropertyServiceTests
         public Task<Property?> GetByIdAsync(PropertyId id, CancellationToken cancellationToken = default)
             => Task.FromResult<Property?>(null);
 
+        public Task<IReadOnlyList<Property>> GetAllAsync(CancellationToken cancellationToken = default)
+            => Task.FromResult<IReadOnlyList<Property>>(Array.Empty<Property>());
+
         public Task<IReadOnlyList<Property>> ListAsync(CancellationToken cancellationToken = default)
             => Task.FromResult<IReadOnlyList<Property>>(Array.Empty<Property>());
+
+        public Task<SearchPropertiesResult> SearchAsync(string? name, PropertyLifecycleState? status, int page, int pageSize, string? sortField, string? sortDirection, CancellationToken cancellationToken = default)
+            => Task.FromResult(new SearchPropertiesResult(Array.Empty<Property>(), page, pageSize, 0));
 
         public Task AddAsync(Property aggregate, CancellationToken cancellationToken = default)
         {

@@ -57,8 +57,8 @@ public class GetPropertyServiceTests
 
         Assert.NotNull(properties);
         Assert.Equal(2, properties.Count);
-        Assert.Contains(properties, property => property.Id == firstProperty.Id);
-        Assert.Contains(properties, property => property.Id == secondProperty.Id);
+        Assert.Contains(properties, property => property.Id.Equals(firstProperty.Id));
+        Assert.Contains(properties, property => property.Id.Equals(secondProperty.Id));
     }
 
     private sealed class FakePropertyRepository : IPropertyRepository
@@ -72,7 +72,7 @@ public class GetPropertyServiceTests
 
         public Task<Property?> GetByIdAsync(PropertyId id, CancellationToken cancellationToken = default)
         {
-            var property = _properties.FirstOrDefault(item => item.Id.Equals(id));
+            var property = _properties?.FirstOrDefault(item => item?.Id.Equals(id) == true);
             return Task.FromResult(property);
         }
 
@@ -81,6 +81,9 @@ public class GetPropertyServiceTests
 
         public Task<IReadOnlyList<Property>> ListAsync(CancellationToken cancellationToken = default)
             => Task.FromResult(_properties);
+
+        public Task<SearchPropertiesResult> SearchAsync(string? name, PropertyLifecycleState? status, int page, int pageSize, string? sortField, string? sortDirection, CancellationToken cancellationToken = default)
+            => Task.FromResult(new SearchPropertiesResult(_properties, page, pageSize, _properties.Count));
 
         public Task AddAsync(Property aggregate, CancellationToken cancellationToken = default)
             => Task.CompletedTask;

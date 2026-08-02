@@ -218,6 +218,13 @@
 - Reason for this update: prepare the Owner Product Definition baseline for Product Owner review and capture the pending decisions required before implementation authorization.
 - Scope: created the Owner decision request package and updated the Owner product definition, EDD, RTM, and engineering journal to reflect the pending review decisions PD-006 through PD-010.
 - Verification: build and tests were re-run after the documentation-only review package updates.
+
+2026-08-02 — S34-ARCH-001
+- Task ID: S34-ARCH-001
+- Reason for this update: consolidate shared API, Application, and Infrastructure patterns across the EstateFlow solution while preserving existing behavior.
+- Scope: added shared controller error handling, shared application service exception wrapping, shared persistence repository base, and consistent repository DI registrations.
+- Verification: `dotnet clean`, `dotnet restore`, `dotnet build -v minimal`, and `dotnet test -v minimal` all passed.
+- Notes: the work preserves current API contracts and extends Owner persistence with consistent architecture patterns.
 - Review status: no Owner implementation is authorized; the package remains documentation-only.
 
 2026-08-02 — S29-PD-003

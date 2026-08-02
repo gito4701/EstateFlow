@@ -33,7 +33,7 @@ public class SearchPropertiesServiceTests
     {
         var repository = new FakePropertyRepository();
         var service = new SearchPropertiesService(repository);
-        var request = new SearchPropertiesRequest(name: null, status: null, page: 0, pageSize: 0, sort: null, direction: null);
+        var request = new SearchPropertiesRequest(Name: null, Status: null, Page: 0, PageSize: 0, Sort: null, Direction: null);
 
         var response = service.Handle(request);
 

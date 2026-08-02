@@ -6,38 +6,26 @@ using System.Threading.Tasks;
 using EstateFlow.Application.Persistence;
 using EstateFlow.Domain.Properties;
 using EstateFlow.Infrastructure.Persistence.Abstractions;
+using EstateFlow.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace EstateFlow.Infrastructure.Persistence.Repositories;
 
-public sealed class PropertyRepository : EstateFlow.Infrastructure.Persistence.Abstractions.IPropertyRepository
+public sealed class PropertyRepository : PersistenceRepositoryBase<Property, PropertyId>, EstateFlow.Infrastructure.Persistence.Abstractions.IPropertyRepository
 {
-    private readonly EstateFlowDbContext _dbContext;
-
     public PropertyRepository(EstateFlowDbContext dbContext)
+        : base(dbContext)
     {
-        _dbContext = dbContext;
     }
 
     public async Task<Property?> GetByIdAsync(PropertyId id, CancellationToken cancellationToken = default)
     {
-        return await _dbContext.Properties.FirstOrDefaultAsync(property => property.Id.Equals(id), cancellationToken);
+        return await Entities.OfType<Property>().FirstOrDefaultAsync(property => property.Id.Equals(id), cancellationToken);
     }
 
     public async Task<IReadOnlyList<Property>> GetAllAsync(CancellationToken cancellationToken = default)
     {
-        return await _dbContext.Properties.AsNoTracking().ToListAsync(cancellationToken);
-    }
-
-    public Task<IReadOnlyList<Property>> ListAsync(CancellationToken cancellationToken = default)
-    {
-        return GetAllAsync(cancellationToken);
-    }
-
-    public async Task AddAsync(Property aggregate, CancellationToken cancellationToken = default)
-    {
-        await _dbContext.Properties.AddAsync(aggregate, cancellationToken);
-        await _dbContext.SaveChangesAsync(cancellationToken);
+        return await Entities.AsNoTracking().ToListAsync(cancellationToken);
     }
 
     public async Task UpdateAsync(Property aggregate, CancellationToken cancellationToken = default)
@@ -54,7 +42,7 @@ public sealed class PropertyRepository : EstateFlow.Infrastructure.Persistence.A
 
     public async Task<SearchPropertiesResult> SearchAsync(string? name, PropertyLifecycleState? status, int page, int pageSize, string? sortField, string? sortDirection, CancellationToken cancellationToken = default)
     {
-        IQueryable<Property> query = _dbContext.Properties.AsNoTracking();
+        IQueryable<Property> query = Entities.AsNoTracking();
 
         if (!string.IsNullOrWhiteSpace(name))
         {

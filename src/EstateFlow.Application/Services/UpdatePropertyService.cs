@@ -1,6 +1,7 @@
 using EstateFlow.Application.Persistence;
 using EstateFlow.Application.Requests;
 using EstateFlow.Application.Responses;
+using EstateFlow.Domain.Exceptions;
 using EstateFlow.Domain.Properties;
 
 namespace EstateFlow.Application.Services;
@@ -30,7 +31,15 @@ public sealed class UpdatePropertyService : ApplicationServiceBase
 
             return new UpdatePropertyResponse(true, property, null, property.Id);
         }
-        catch (Exception ex) when (ex is ArgumentException || ex is InvalidOperationException)
+        catch (InvalidPropertyException ex)
+        {
+            return new UpdatePropertyResponse(false, null, ex.Message, request.PropertyId);
+        }
+        catch (ArgumentException ex)
+        {
+            return new UpdatePropertyResponse(false, null, ex.Message, request.PropertyId);
+        }
+        catch (InvalidOperationException ex)
         {
             return new UpdatePropertyResponse(false, null, ex.Message, request.PropertyId);
         }

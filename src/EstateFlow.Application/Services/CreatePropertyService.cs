@@ -17,15 +17,13 @@ public sealed class CreatePropertyService : ApplicationServiceBase
 
     public CreatePropertyResponse Handle(CreatePropertyRequest request)
     {
-        try
-        {
-            var property = Property.Create(PropertyId.NewId(), request.Name, request.Address);
-            _propertyRepository.AddAsync(property).GetAwaiter().GetResult();
-            return new CreatePropertyResponse(true, property, null, property.Id);
-        }
-        catch (InvalidPropertyException ex)
-        {
-            return new CreatePropertyResponse(false, null, ex.Message, null);
-        }
+        return ExecuteWithDomainException<InvalidPropertyException, CreatePropertyResponse>(
+            () =>
+            {
+                var property = Property.Create(PropertyId.NewId(), request.Name, request.Address);
+                _propertyRepository.AddAsync(property).GetAwaiter().GetResult();
+                return new CreatePropertyResponse(true, property, null, property.Id);
+            },
+            ex => new CreatePropertyResponse(false, null, ex.Message, null));
     }
 }

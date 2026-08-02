@@ -1,3 +1,4 @@
+using EstateFlow.Application.Persistence;
 using EstateFlow.Application.Services;
 using EstateFlow.Infrastructure.Persistence.Abstractions;
 using EstateFlow.Infrastructure.Persistence.Repositories;
@@ -26,13 +27,10 @@ public static class PersistenceServiceRegistration
             options.UseInMemoryDatabase(persistenceOptions.ConnectionString ?? "EstateFlow");
         });
 
-        services.AddScoped<IPropertyRepository, PropertyRepository>();
-        services.AddScoped<IOwnerRepository, OwnerRepository>();
-        services.AddScoped<CreatePropertyService>();
-        services.AddScoped<GetPropertyService>();
-        services.AddScoped<UpdatePropertyService>();
-        services.AddScoped<DeletePropertyService>();
-        services.AddScoped<SearchPropertiesService>();
+        services.AddScoped<Infrastructure.Persistence.Abstractions.IPropertyRepository, PropertyRepository>();
+        services.AddScoped<Application.Persistence.IPropertyRepository, PropertyRepository>();
+        services.AddScoped<Infrastructure.Persistence.Abstractions.IOwnerRepository, OwnerRepository>();
+        services.AddScoped<Application.Persistence.IOwnerRepository, OwnerRepository>();
 
         return services;
     }
