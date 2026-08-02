@@ -49,5 +49,5 @@ The following assumptions remain open and require future Product Owner approval:
 ## Product Boundary Summary
 This document establishes the Lease product boundary only. It does not authorize implementation, persistence design, or functional delivery beyond the documented baseline.
 
-## Product Owner Review Status
-The Lease baseline is now prepared for Product Owner review through the formal review package. The pending decisions PD-016 through PD-020 are recorded for review and remain documentation-only; no implementation authorization is granted by this baseline.
+## Product Owner Decision Status
+The Lease baseline has received Product Owner decisions for PD-016 through PD-020. PD-016, PD-017, PD-018, and PD-020 are approved; PD-019 is deferred. This document records the approved documentation baseline only and does not authorize Lease implementation work.

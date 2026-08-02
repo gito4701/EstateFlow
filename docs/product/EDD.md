@@ -16,7 +16,7 @@ A Tenant product-definition baseline has been recorded to define the approved bu
 A Lease product-definition baseline has been prepared to define the initial business boundary for introducing Lease into EstateFlow v1.0. This baseline documents the purpose of Lease, the approved Lease scope, the Lease-to-Property, Lease-to-Tenant, and Lease-to-Owner relationship context, approved capabilities, explicit exclusions, and acceptance principles. The Lease baseline is documentation-only and does not authorize implementation work.
 
 ## Lease Product Owner Review Package
-A formal Lease Product Owner review package has been prepared for the pending Lease decisions PD-016 through PD-020. The review package records the pending review status for the Lease definition, scope, relationship meaning, business-rule boundary, and acceptance criteria while keeping all implementation authorization blocked.
+A formal Lease Product Owner review package has been prepared for the Lease decisions PD-016 through PD-020. The review package records the approved documentation decisions for Lease definition, scope, relationship meaning, and acceptance criteria while deferring the Lease business-rules decision and keeping all implementation authorization blocked.
 
 ## Owner Product Definition Review Baseline
 The Owner baseline has been documented with Product Owner decisions recorded for documentation purposes. The current decision status is: PD-006 Approved, PD-007 Approved, PD-008 Approved, PD-009 Deferred, and PD-010 Approved. No Owner implementation work is authorized at this stage.

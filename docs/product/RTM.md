@@ -20,9 +20,9 @@
 | Tenant-to-Property relationship approval | PD-013 | Approved for documentation | S35 |
 | Tenant business rules approval | PD-014 | Deferred | S35 |
 | Tenant acceptance criteria approval | PD-015 | Approved for documentation | S35 |
-| Lease product definition baseline and scope | PD-016 | Pending Product Owner review | S42 |
-| Lease scope approval | PD-017 | Pending Product Owner review | S42 |
-| Lease relationship approval | PD-018 | Pending Product Owner review | S42 |
-| Lease business rules approval | PD-019 | Pending Product Owner review | S42 |
-| Lease acceptance criteria approval | PD-020 | Pending Product Owner review | S42 |
-| Lease product approval record and review package | PRA-004 | Pending Product Owner review | S42 |
+| Lease product definition baseline and scope | PD-016 | Approved for documentation | S42 |
+| Lease scope approval | PD-017 | Approved for documentation | S42 |
+| Lease relationship approval | PD-018 | Approved for documentation | S42 |
+| Lease business rules approval | PD-019 | Deferred | S42 |
+| Lease acceptance criteria approval | PD-020 | Approved for documentation | S42 |
+| Lease product approval record and review package | PRA-004 | Approved for documentation | S42 |

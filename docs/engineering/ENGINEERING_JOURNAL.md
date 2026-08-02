@@ -303,3 +303,10 @@
 - Scope: created the Lease product approval record and updated the Lease product definition, decision request, decision record, EDD, RTM, and engineering journal to reflect the pending Product Owner review status for PD-016 through PD-020.
 - Verification: `dotnet build EstateFlow.sln -v minimal` and `dotnet test EstateFlow.sln -v minimal` were re-run after the documentation-only review-package updates.
 - Outcome: the Lease review package is ready for Product Owner review without authorizing any implementation work.
+
+2026-08-02 — S42-PD-003
+- Task ID: S42-PD-003
+- Reason for this update: record the Product Owner decisions for the Lease aggregate and update the governance documentation to authorize or defer implementation as appropriate.
+- Scope: updated the Lease approval record and supporting Lease definition, decision request, decision record, EDD, RTM, and engineering journal documents to reflect PD-016 Approved, PD-017 Approved, PD-018 Approved, PD-019 Deferred, and PD-020 Approved while preserving the documentation-only authorization boundary.
+- Verification: `dotnet build EstateFlow.sln -v minimal` and `dotnet test EstateFlow.sln -v minimal` were re-run after the documentation-only decision-record updates.
+- Outcome: the Lease documentation baseline is now recorded with explicit approval and deferred-status decisions, and no implementation work is authorized.

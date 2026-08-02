@@ -7,19 +7,19 @@ This record captures the Product Owner decisions documented for Lease management
 
 | Decision ID | Decision Topic | Status | Notes |
 | --- | --- | --- | --- |
-| PD-016 | Lease definition | Pending Product Owner review | Draft definition recorded for review. |
-| PD-017 | Lease scope | Pending Product Owner review | Draft scope recorded for review. |
-| PD-018 | Lease relationships | Pending Product Owner review | Draft relationship meanings recorded for review. |
-| PD-019 | Lease business rules | Pending Product Owner review | No Lease business rules are approved in this baseline. |
-| PD-020 | Lease acceptance criteria | Pending Product Owner review | Draft acceptance criteria recorded for review. |
+| PD-016 | Lease definition | Approved | Recorded as the business meaning of Lease within EstateFlow v1. |
+| PD-017 | Lease scope | Approved | Recorded as a documentation-only product boundary with explicit implementation exclusions. |
+| PD-018 | Lease relationships | Approved | Recorded as the business relationship between Lease, Property, Owner, and Tenant. |
+| PD-019 | Lease business rules | Deferred | No Lease business rules or lifecycle behavior are approved in this baseline. |
+| PD-020 | Lease acceptance criteria | Approved | Recorded as acceptance expectations for documentation-only Lease work. |
 
 ## PD-016 — Lease Definition
-- Status: Pending Product Owner approval.
+- Status: Approved.
 - Draft Lease concept: Lease is the business concept representing the agreed arrangement for the use of a property asset by a tenant, with ownership context provided by the property owner.
 - Role within EstateFlow: Lease provides the product-level business context for future planning and review.
 
 ## PD-017 — Lease Scope
-- Status: Pending Product Owner approval.
+- Status: Approved.
 - Draft scope: Lease is in scope as a documentation-only product boundary with explicit exclusions for implementation artifacts.
 - Included capabilities:
   - Define Lease as an explicit business concept within EstateFlow.
@@ -34,17 +34,17 @@ This record captures the Product Owner decisions documented for Lease management
   - Legal review, payment terms, renewal workflows, termination logic, or financial obligations.
 
 ## PD-018 — Lease Relationships
-- Status: Pending Product Owner approval.
+- Status: Approved.
 - Draft relationship meaning: Lease relates to a Property as the subject asset, to a Tenant as the occupying party, and to an Owner as the ownership context for the arrangement.
 - Relationship constraints: No legal, financial, or lifecycle behavior is approved in this documentation baseline.
 
 ## PD-019 — Lease Business Rules
-- Status: Pending Product Owner approval.
+- Status: Deferred.
 - Approved rules: None. No Lease business rules are approved in this documentation baseline.
 - Approved invariants: None. No Lease invariants are approved in this documentation baseline.
 
 ## PD-020 — Lease Acceptance Criteria
-- Status: Pending Product Owner approval.
+- Status: Approved.
 - Draft conditions required for acceptance:
   - Future Lease-related work remains within the approved documentation boundary.
   - The recorded Lease concept and scope are preserved.
