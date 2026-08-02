@@ -38,5 +38,8 @@ This document captures the Product Owner decisions required to establish the Lea
 ## Implementation Status
 No Lease domain implementation is authorized at this time. This package is documentation-only and does not authorize any domain, persistence, API, or application work.
 
+## Approval Record Status
+A formal approval record has been created to capture the review status for PD-016 through PD-020. Implementation remains blocked until a future implementation authorization stage is created.
+
 ## Review Guidance
 The recorded decisions establish the initial business boundary, relationship meaning, and acceptance expectations for future Lease implementation planning without authorizing implementation work.

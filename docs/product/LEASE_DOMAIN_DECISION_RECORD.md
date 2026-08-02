@@ -7,11 +7,11 @@ This record captures the Product Owner decisions documented for Lease management
 
 | Decision ID | Decision Topic | Status | Notes |
 | --- | --- | --- | --- |
-| PD-016 | Lease definition | Pending Product Owner approval | Draft definition recorded for review. |
-| PD-017 | Lease scope | Pending Product Owner approval | Draft scope recorded for review. |
-| PD-018 | Lease relationships | Pending Product Owner approval | Draft relationship meanings recorded for review. |
-| PD-019 | Lease business rules | Pending Product Owner approval | No Lease business rules are approved in this baseline. |
-| PD-020 | Lease acceptance criteria | Pending Product Owner approval | Draft acceptance criteria recorded for review. |
+| PD-016 | Lease definition | Pending Product Owner review | Draft definition recorded for review. |
+| PD-017 | Lease scope | Pending Product Owner review | Draft scope recorded for review. |
+| PD-018 | Lease relationships | Pending Product Owner review | Draft relationship meanings recorded for review. |
+| PD-019 | Lease business rules | Pending Product Owner review | No Lease business rules are approved in this baseline. |
+| PD-020 | Lease acceptance criteria | Pending Product Owner review | Draft acceptance criteria recorded for review. |
 
 ## PD-016 — Lease Definition
 - Status: Pending Product Owner approval.

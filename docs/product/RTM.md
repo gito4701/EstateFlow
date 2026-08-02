@@ -25,3 +25,4 @@
 | Lease relationship approval | PD-018 | Pending Product Owner review | S42 |
 | Lease business rules approval | PD-019 | Pending Product Owner review | S42 |
 | Lease acceptance criteria approval | PD-020 | Pending Product Owner review | S42 |
+| Lease product approval record and review package | PRA-004 | Pending Product Owner review | S42 |
