@@ -259,6 +259,13 @@
 - Task ID: S35-PD-002
 - Reason for this update: prepare the Tenant Product Owner review package based on the completed Tenant Product Definition.
 
+2026-08-02 — S62-OPS-001
+- Task ID: S62-OPS-001
+- Reason for this update: define the release-governance model required before any CI/CD implementation for EstateFlow.
+- Scope: created the release-governance definition document and updated the CI/CD decision record, product EDD, and product RTM to reference the governance package.
+- Verification: build and tests were re-run after the documentation-only governance updates.
+- Status: release-governance documentation is now captured without authorizing implementation changes.
+
 2026-08-02 — S54-ARCH-001
 - Task ID: S54-ARCH-001
 - Reason for this update: perform a documentation-only platform quality and reliability review after the operational hardening work.
