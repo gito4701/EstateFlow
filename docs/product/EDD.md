@@ -133,3 +133,7 @@ The S60 CI/CD delivery strategy review records a documentation-only future-state
 ## S61 CI/CD Delivery Decision Record Note
 
 The S61 CI/CD delivery decision record captures the approved documentation decisions for future delivery automation for EstateFlow. The record documents approved, deferred, and explicitly excluded positions for build checks, test gates, quality thresholds, branch strategy, pull request expectations, release ownership, promotion flow, deployment approvals, rollback expectations, artifact ownership, retention expectations, and traceability requirements. The record keeps implementation authorization separate from documentation approval and explicitly excludes workflow automation, deployment automation, artifact registries, cloud resources, and infrastructure changes.
+
+## S62 Release Governance Definition Note
+
+The S62 release governance definition captures the documentation-only release-governance model required before any CI/CD implementation for EstateFlow. The definition records the approved and deferred positions for release ownership, environment governance, artifact governance, release lifecycle, and operational governance while explicitly excluding CI/CD workflows, pipelines, deployment automation, artifact registries, cloud resources, authentication, authorization, and infrastructure changes.

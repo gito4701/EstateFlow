@@ -111,3 +111,6 @@ Each decision below is recorded with the following status fields:
 
 ## Implementation Authorization Status
 All of the decisions in this record are approved for documentation and governance purposes only. No implementation authorization is granted for CI/CD workflows, deployment automation, environments, artifact registries, cloud resources, or related infrastructure.
+
+## Release Governance Reference
+The release governance model for this review package is maintained in [docs/engineering/RELEASE_GOVERNANCE_DEFINITION.md](docs/engineering/RELEASE_GOVERNANCE_DEFINITION.md). This reference keeps release governance aligned with the earlier CI/CD decision record while preserving the separation between documentation approval and implementation authorization.
