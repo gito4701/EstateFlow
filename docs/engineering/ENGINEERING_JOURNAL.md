@@ -310,3 +310,10 @@
 - Scope: updated the Lease approval record and supporting Lease definition, decision request, decision record, EDD, RTM, and engineering journal documents to reflect PD-016 Approved, PD-017 Approved, PD-018 Approved, PD-019 Deferred, and PD-020 Approved while preserving the documentation-only authorization boundary.
 - Verification: `dotnet build EstateFlow.sln -v minimal` and `dotnet test EstateFlow.sln -v minimal` were re-run after the documentation-only decision-record updates.
 - Outcome: the Lease documentation baseline is now recorded with explicit approval and deferred-status decisions, and no implementation work is authorized.
+
+2026-08-02 — S43-DOM-001
+- Task ID: S43-DOM-001
+- Reason for this update: implement the approved Lease domain foundation inside the Domain layer only, using the approved Product Definition baseline and respecting the deferred business-rules constraint.
+- Scope: created the Lease aggregate, LeaseId value object, and InvalidLeaseException in the Domain layer; added Lease domain tests for creation and validation behavior; kept Application, Infrastructure, API, persistence, and relationship concerns unchanged.
+- Verification: `dotnet clean EstateFlow.sln`, `dotnet restore EstateFlow.sln`, `dotnet build EstateFlow.sln -v minimal`, and `dotnet test EstateFlow.sln -v minimal` were re-run after the Domain-only Lease foundation implementation.
+- Approval status: PD-019 remains Deferred; no Lease business rules, lifecycle rules, occupancy behavior, financial rules, or relationships were invented or implemented.
