@@ -33,3 +33,4 @@
 | Security product decision recording | S55-SEC-002 | Documentation only | S55 |
 | Configuration and deployment hardening review | S56-OPS-001 | Documentation and controlled operational review only | S56 |
 | Deployment readiness validation | S58-OPS-001 | Documentation and controlled operational review only | S58 |
+| Deployment operations runbook | S59-OPS-001 | Documentation and operational guidance only | S59 |

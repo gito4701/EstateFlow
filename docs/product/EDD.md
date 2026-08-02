@@ -121,3 +121,7 @@ The S56 review records the current configuration and deployment posture of Estat
 ## S58 Deployment Readiness Validation Note
 
 The S58 deployment readiness validation records the current deployment posture of EstateFlow after the configuration-governance improvements. The review confirms that the API is operationally startable, the configuration path validates required settings, the health and readiness endpoints respond, the container and compose assets provide a repeatable local deployment shape, and the remaining production risks are limited to runtime secrets handling, environment-specific configuration, and the need for operator-facing deployment guidance. The review remains documentation-only and does not authorize implementation work outside the approved governance scope.
+
+## S59 Deployment Operations Runbook Note
+
+The S59 deployment operations runbook captures the current operational deployment expectations for EstateFlow in a documentation-only form. The runbook covers deployment preparation, local and container deployment flows, startup and readiness verification, log and correlation troubleshooting, audit inspection, common configuration failures, promotion and rollback considerations, operational ownership expectations, known limitations, and operational exit criteria. It remains confined to governance and operator guidance and does not authorize implementation, infrastructure, authentication, authorization, secrets-management, or CI/CD work.
