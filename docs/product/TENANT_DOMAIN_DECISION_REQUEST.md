@@ -27,7 +27,11 @@ This document captures the Product Owner decisions required to establish the Ten
 - Decision identifier: PD-014
 - Description: Product Owner decision recorded for Tenant business rules and invariants.
 - Decision: Deferred. No Tenant business rules or invariants are approved in this documentation baseline.
+- Approved business rules: None beyond the documented Tenant concept and the approved Tenant-to-Property relationship context.
+- Deferred business rules: Tenant lifecycle states, lifecycle transitions, tenant constraints, tenant/lease relationship expectations, validation rules, and any workflow behavior remain deferred pending Product Owner review.
+- Explicit exclusions: No Tenant domain model, aggregate lifecycle behavior, workflow behavior, persistence design, API contract changes, database changes, or application workflows are authorized by this review package.
 - Review package: The formal Owner/Tenant business-rules review package has been prepared in `docs/product/OWNER_TENANT_BUSINESS_RULES_REVIEW.md` to structure the Product Owner review for tenant lifecycle expectations, tenant/property relationship rules, tenant/lease relationship expectations, tenant constraints, and acceptance criteria.
+- Implementation authorization status: Documentation-only status remains approved; no Tenant implementation behavior is authorized.
 - Implementation impact: None; implementation remains blocked until implementation is separately authorized.
 
 ### PD-015 — Tenant Acceptance Criteria Approval

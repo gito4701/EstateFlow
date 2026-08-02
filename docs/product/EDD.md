@@ -30,6 +30,13 @@ A formal Owner decision record has been created to capture the approved document
 ## Owner and Tenant Business Rules Review Package
 An Owner and Tenant business-rules review package has been prepared in `docs/product/OWNER_TENANT_BUSINESS_RULES_REVIEW.md`. The package captures the approved existing Owner-to-Property and Tenant relationship context while clearly identifying the unresolved Owner and Tenant business-rule, lifecycle, workflow, validation, and relationship-constraint decisions that require Product Owner input.
 
+The S50 decision-recording package now records the following status for documentation governance:
+- Owner approved business rules: Owner concept, Owner-to-Property relationship context, and Owner acceptance criteria remain documented only.
+- Owner deferred business rules: Owner responsibilities, lifecycle expectations, ownership constraints, workflow rules, and validation behavior remain deferred.
+- Tenant approved business rules: Tenant concept, Tenant-to-Property relationship context, and Tenant acceptance criteria remain documented only.
+- Tenant deferred business rules: Tenant lifecycle expectations, tenant constraints, tenant/lease relationship expectations, workflow rules, and validation behavior remain deferred.
+- Implementation authorization: No Owner or Tenant behavior implementation is authorized by this documentation package.
+
 ## Property Aggregate Definition
 Property is the core EstateFlow v1.0 domain aggregate. It represents a real-estate asset record with a uniquely identified property record and the minimum business identity required for future implementation. The approved product baseline defines Property as the authoritative business concept for this release.
 

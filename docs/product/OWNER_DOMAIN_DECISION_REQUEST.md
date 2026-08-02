@@ -30,8 +30,11 @@ This document captures the Product Owner review checkpoints required before any 
 - Decision identifier: PD-009
 - Description: Approved Owner business rules and invariants.
 - Current status: Deferred.
-- Approved decision: No Owner business rules or invariants are approved in this documentation baseline.
+- Approved business rules: None beyond the documented Owner concept and Owner-to-Property relationship context.
+- Deferred business rules: Owner responsibilities, lifecycle state behavior, lifecycle transitions, ownership invariants, relationship constraints, workflow rules, and validation behavior remain deferred pending Product Owner review.
+- Explicit exclusions: No Owner domain model, aggregate lifecycle behavior, workflow behavior, persistence design, API contract changes, database changes, or application workflows are authorized by this review package.
 - Review package: The formal Owner/Tenant business-rules review package has been prepared in `docs/product/OWNER_TENANT_BUSINESS_RULES_REVIEW.md` to structure the Product Owner review for ownership responsibilities, owner/property relationship rules, owner lifecycle expectations, ownership constraints, and acceptance criteria.
+- Implementation authorization status: Documentation-only status remains approved; no Owner implementation behavior is authorized.
 - Implementation impact: None; implementation remains blocked.
 
 ### PD-010 — Owner Acceptance Criteria Approval

@@ -4,9 +4,35 @@
 This document prepares the formal Product Owner review package required to resolve the remaining Owner and Tenant business-rule decisions identified during the cross-aggregate readiness review. The review is documentation-only and does not authorize any domain, application, persistence, API, database, or workflow implementation.
 
 ## Review Status
-- Review package status: Prepared for Product Owner review.
+- Review package status: Product Owner decisions recorded for documentation-only governance.
 - Scope: Documentation only.
-- Implementation authorization: Blocked until Product Owner decisions are recorded.
+- Implementation authorization: Blocked until Product Owner decisions are recorded in the approval record; no implementation behavior is authorized by this package.
+
+## Recorded Decision Summary
+
+### Owner decisions
+- Approved business rules:
+  - Owner is the business concept associated with a property record.
+  - The Owner-to-Property relationship is an approved business association captured at the business-definition level only.
+  - Owner acceptance criteria are documented and preserved as the governance boundary for future Owner-related planning.
+- Deferred business rules:
+  - Owner responsibilities, lifecycle states, lifecycle transitions, ownership invariants, relationship constraints, and any workflow or validation behavior remain deferred.
+- Explicit exclusions:
+  - No Owner domain behavior, aggregate lifecycle behavior, workflow implementation, persistence design, API contracts, database changes, or application services are authorized.
+- Implementation authorization status:
+  - Documentation-only baseline approved; no Owner implementation behavior is authorized.
+
+### Tenant decisions
+- Approved business rules:
+  - Tenant is the business concept representing the party occupying or paying for a property asset.
+  - The Tenant-to-Property relationship is an approved business association captured at the business-definition level only.
+  - Tenant acceptance criteria are documented and preserved as the governance boundary for future Tenant-related planning.
+- Deferred business rules:
+  - Tenant lifecycle states, lifecycle transitions, tenant constraints, tenant/lease relationship expectations, validation rules, and any workflow behavior remain deferred.
+- Explicit exclusions:
+  - No Tenant domain behavior, aggregate lifecycle behavior, workflow implementation, persistence design, API contracts, database changes, or application services are authorized.
+- Implementation authorization status:
+  - Documentation-only baseline approved; no Tenant implementation behavior is authorized.
 
 ## Approved Existing Context
 The following context is already approved and may be preserved in future planning:

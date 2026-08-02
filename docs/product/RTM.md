@@ -11,14 +11,14 @@
 | Owner product definition baseline and scope | PD-006 | Approved for documentation | S29 |
 | Owner scope approval | PD-007 | Approved for documentation | S29 |
 | Owner-to-Property relationship approval | PD-008 | Approved for documentation | S29 |
-| Owner business rules approval | PD-009 | Deferred | S50 |
+| Owner business rules approval | PD-009 | Deferred; approved context retained, no implementation behavior authorized | S50 |
 | Owner acceptance criteria approval | PD-010 | Approved for documentation | S29 |
 | Owner decision record and governance structure | PRA-002 | Approved for documentation | S29 |
 | Tenant product definition baseline and governance record | PRA-003 | Approved for documentation | S35 |
 | Tenant definition approval | PD-011 | Approved for documentation | S35 |
 | Tenant scope approval | PD-012 | Approved for documentation | S35 |
 | Tenant-to-Property relationship approval | PD-013 | Approved for documentation | S35 |
-| Tenant business rules approval | PD-014 | Deferred | S50 |
+| Tenant business rules approval | PD-014 | Deferred; approved context retained, no implementation behavior authorized | S50 |
 | Tenant acceptance criteria approval | PD-015 | Approved for documentation | S35 |
 | Lease product definition baseline and scope | PD-016 | Approved for documentation | S42 |
 | Lease scope approval | PD-017 | Approved for documentation | S42 |
