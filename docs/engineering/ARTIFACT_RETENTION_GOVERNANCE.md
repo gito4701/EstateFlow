@@ -93,3 +93,6 @@ This governance package authorizes documentation and policy definition only. It 
 
 ## Storage strategy reference
 The approved storage strategy for this stage is maintained in [docs/engineering/ARTIFACT_STORAGE_STRATEGY.md](docs/engineering/ARTIFACT_STORAGE_STRATEGY.md). That package defines the selected workflow-artifact storage direction, the deferred external-storage alternatives, and the governance expectations for naming, access, identity preservation, and integrity.
+
+## Promotion governance reference
+The release-promotion governance model for this stage is maintained in [docs/engineering/RELEASE_PROMOTION_GOVERNANCE.md](docs/engineering/RELEASE_PROMOTION_GOVERNANCE.md). That package defines the approved promotion sequence, environment progression expectations, human approval gates, evidence requirements, and rollback governance that depend on the retained evidence baseline.

@@ -111,3 +111,6 @@ Each decision below is recorded with one of the following statuses:
 
 ## Implementation authorization status
 This governance package authorizes documentation and strategy definition only. It does not authorize artifact registries, package feeds, container registries, cloud storage, deployment workflows, environment promotion, release automation, secrets integration, authentication, authorization, or infrastructure automation.
+
+## Promotion governance reference
+The release-promotion governance model for this stage is maintained in [docs/engineering/RELEASE_PROMOTION_GOVERNANCE.md](docs/engineering/RELEASE_PROMOTION_GOVERNANCE.md). That package defines the approved promotion sequence, environment progression expectations, evidence requirements, ownership responsibilities, and rollback governance that rely on the artifacts and evidence preserved under this storage strategy.

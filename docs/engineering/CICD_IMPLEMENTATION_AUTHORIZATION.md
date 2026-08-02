@@ -117,3 +117,6 @@ The artifact-governance model for this stage is maintained in [docs/engineering/
 
 ## Artifact retention governance reference
 The artifact-retention and release-evidence model for this stage is maintained in [docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md](docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md). That package defines the approved evidence requirements, deferred retention duration, deferred cleanup responsibility, and the operational rules for evidence retention while keeping automation explicitly excluded.
+
+## Release promotion governance reference
+The release-promotion governance model for this stage is maintained in [docs/engineering/RELEASE_PROMOTION_GOVERNANCE.md](docs/engineering/RELEASE_PROMOTION_GOVERNANCE.md). That package defines the approved promotion sequence, human approval gates, evidence expectations, rollback governance, and explicit exclusions for environment progression while keeping release automation explicitly excluded.

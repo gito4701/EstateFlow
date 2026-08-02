@@ -322,6 +322,13 @@
 - Verification: build and tests were re-run after the documentation-only storage-strategy updates.
 - Status: artifact storage strategy is now documented without authorizing registries, cloud storage, or infrastructure-backed storage implementation.
 
+2026-08-02 — S71-OPS-001
+- Task ID: S71-OPS-001
+- Reason for this update: define the governance model for promoting validated artifacts through environments before implementing release-promotion automation.
+- Scope: created the release-promotion governance document and updated the release-governance, CI authorization, artifact-storage, artifact-retention, product definition, and traceability documents to reference the approved promotion-policy boundaries.
+- Verification: build and tests were re-run after the documentation-only promotion-governance updates.
+- Status: release promotion governance is now documented without authorizing deployment workflows, environment-promotion automation, cloud resources, artifact registries, infrastructure changes, secrets integration, authentication, or authorization.
+
 2026-08-02 — S54-ARCH-001
 - Task ID: S54-ARCH-001
 - Reason for this update: perform a documentation-only platform quality and reliability review after the operational hardening work.

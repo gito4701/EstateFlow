@@ -162,3 +162,6 @@ The artifact-retention and release-evidence governance model for this stage is m
 
 ## S70 Artifact Storage Strategy Reference
 The artifact-storage governance model for this stage is maintained in [docs/engineering/ARTIFACT_STORAGE_STRATEGY.md](docs/engineering/ARTIFACT_STORAGE_STRATEGY.md). That package records the approved workflow-artifact storage direction, deferred external-storage alternatives, naming and identity expectations, and access/integrity boundaries while keeping storage implementation explicitly excluded.
+
+## S71 Release Promotion Governance Reference
+The release-promotion governance model for this stage is maintained in [docs/engineering/RELEASE_PROMOTION_GOVERNANCE.md](docs/engineering/RELEASE_PROMOTION_GOVERNANCE.md). That package records the approved promotion sequence, environment progression model, artifact eligibility expectations, approval gates, release evidence requirements, and rollback governance while keeping promotion automation explicitly excluded.

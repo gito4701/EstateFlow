@@ -169,3 +169,7 @@ The S69 artifact retention and release evidence governance package defines the d
 ## S70 Artifact Storage Strategy Note
 
 The S70 artifact storage strategy defines the approved documentation-only approach for storing CI-generated artifacts before any artifact repository or external storage implementation is introduced. The strategy selects workflow artifacts as the current storage direction, defers external storage alternatives, and records the access, naming, identity-preservation, and integrity expectations that remain within the governance-only boundary.
+
+## S71 Release Promotion Governance Note
+
+The S71 release promotion governance package defines the approved documentation-only approach for promoting validated artifacts through Development, Test/Staging, and Production before any release-promotion automation is introduced. The package records the approved promotion sequence, environment progression expectations, human approval gates, evidence requirements, and rollback governance while preserving the boundary between governance definition and implementation authorization.
