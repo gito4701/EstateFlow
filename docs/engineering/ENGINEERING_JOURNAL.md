@@ -336,6 +336,13 @@
 - Verification: build and tests were re-run after the documentation-only automation-authorization updates.
 - Status: release automation scope is now documented without authorizing release workflows, deployment pipelines, cloud deployments, environment provisioning, artifact registries, secrets providers, authentication, authorization, or infrastructure automation.
 
+2026-08-02 — S73-OPS-001
+- Task ID: S73-OPS-001
+- Reason for this update: implement the first authorized GitHub Actions release workflow using the governance approved in S64 through S72.
+- Scope: created the tag-triggered release workflow, preserved the existing CI validation workflow behavior, and updated the product and traceability documents to record the implementation boundary.
+- Verification: clean, restore, build, and test commands were run after the workflow implementation.
+- Status: release workflow implementation is now documented and implemented for validation-only release packaging, artifact upload, and release metadata generation without introducing deployment or promotion automation.
+
 2026-08-02 — S54-ARCH-001
 - Task ID: S54-ARCH-001
 - Reason for this update: perform a documentation-only platform quality and reliability review after the operational hardening work.

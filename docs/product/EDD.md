@@ -177,3 +177,7 @@ The S71 release promotion governance package defines the approved documentation-
 ## S72 Release Automation Authorization Note
 
 The S72 release automation authorization package defines the approved documentation-only scope for future release automation in EstateFlow. The package records what CI/CD may automate, what remains manually approved, the environment model for Development, Validation, and Production, the release controls, and the security boundaries while preserving the documentation-only boundary and explicitly excluding release workflows, deployment pipelines, cloud deployments, environment provisioning, artifact registries, secrets providers, authentication, authorization, and infrastructure automation.
+
+## S73 Release Workflow Implementation Note
+
+The S73 release workflow implementation adds the first authorized GitHub Actions release workflow for EstateFlow. The workflow is isolated to version-tag execution, restores dependencies, builds and tests the solution, packages the build output, and generates release metadata and workflow artifacts without introducing deployment, promotion, cloud, package-registry, container-registry, secrets, authentication, authorization, or source-code behavior changes.

@@ -1,0 +1,83 @@
+name: Release Workflow
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  release-validation:
+    name: Validate release build and tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK 9.x
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+          cache: true
+          cache-dependency-path: |
+            **/packages.lock.json
+            **/*.csproj
+
+      - name: Clean solution
+        run: dotnet clean EstateFlow.sln
+
+      - name: Restore dependencies
+        run: dotnet restore EstateFlow.sln
+
+      - name: Build solution
+        run: dotnet build EstateFlow.sln -c Release -v minimal
+
+      - name: Execute test suite
+        run: dotnet test EstateFlow.sln -c Release -v minimal
+
+      - name: Package release build output
+        if: success()
+        run: |
+          mkdir -p release-package/estateflow-release
+          cp -R src/EstateFlow.Api/bin/Release/net9.0/. release-package/estateflow-release/
+          cat > release-package/release-metadata.json <<EOF
+          {
+            "buildIdentifier": "release-${{ github.run_number }}-${{ github.run_id }}",
+            "commitSha": "${{ github.sha }}",
+            "workflowRunId": "${{ github.run_id }}",
+            "workflowRunNumber": "${{ github.run_number }}",
+            "repository": "${{ github.repository }}",
+            "tag": "${{ github.ref_name }}",
+            "buildTimestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          }
+          EOF
+          echo "Created release package and metadata."
+
+      - name: Upload packaged build artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: estateflow-release-package-${{ github.run_number }}
+          path: release-package/estateflow-release/
+          if-no-files-found: error
+
+      - name: Upload release metadata artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: estateflow-release-metadata-${{ github.run_number }}
+          path: release-package/release-metadata.json
+          if-no-files-found: error
+
+      - name: Report release workflow summary
+        if: always()
+        run: |
+          echo "Release workflow completed."
+          if [ "${{ job.status }}" != "success" ]; then
+            echo "Release workflow failed. Review the build or test logs above for details."
+            exit 1
+          fi

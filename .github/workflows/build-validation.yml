@@ -55,7 +55,8 @@ jobs:
             "workflowRunId": "${{ github.run_id }}",
             "workflowRunNumber": "${{ github.run_number }}",
             "repository": "${{ github.repository }}",
-            "ref": "${{ github.ref }}"
+            "ref": "${{ github.ref }}",
+            "buildTimestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
           }
           EOF
           echo "Created build artifact package with build metadata."
