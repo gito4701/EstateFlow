@@ -15,6 +15,7 @@ public class EstateFlowDbContext : DbContext
     }
 
     public DbSet<Property> Properties => Set<Property>();
+    public DbSet<PropertyAuditEntry> PropertyAuditEntries => Set<PropertyAuditEntry>();
     public DbSet<Owner> Owners => Set<Owner>();
     public DbSet<Tenant> Tenants => Set<Tenant>();
     public DbSet<Lease> Leases => Set<Lease>();
@@ -22,6 +23,7 @@ public class EstateFlowDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new PropertyConfiguration());
+        modelBuilder.ApplyConfiguration(new PropertyAuditEntryConfiguration());
         modelBuilder.ApplyConfiguration(new OwnerConfiguration());
         modelBuilder.ApplyConfiguration(new TenantConfiguration());
         modelBuilder.ApplyConfiguration(new LeaseConfiguration());

@@ -27,6 +27,10 @@ public sealed class RequestLoggingMiddleware
         catch (Exception ex)
         {
             stopwatch.Stop();
+            if (!context.Response.HasStarted)
+            {
+                context.Response.Headers["X-Response-Time-Ms"] = stopwatch.ElapsedMilliseconds.ToString();
+            }
             _logger.LogError(ex, "Request {Method} {Path} failed with status {StatusCode} in {DurationMs}ms. CorrelationId: {CorrelationId}",
                 context.Request.Method,
                 context.Request.Path,
@@ -37,6 +41,10 @@ public sealed class RequestLoggingMiddleware
         }
 
         stopwatch.Stop();
+        if (!context.Response.HasStarted)
+        {
+            context.Response.Headers["X-Response-Time-Ms"] = stopwatch.ElapsedMilliseconds.ToString();
+        }
         _logger.LogInformation("Request {Method} {Path} completed with status {StatusCode} in {DurationMs}ms. CorrelationId: {CorrelationId}",
             context.Request.Method,
             context.Request.Path,

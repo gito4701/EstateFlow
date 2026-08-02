@@ -77,7 +77,7 @@ app.MapHealthChecks("/health", new HealthCheckOptions
 });
 app.MapHealthChecks("/health/ready", new HealthCheckOptions
 {
-    Predicate = check => check.Name == "self",
+    Predicate = check => check.Name is "self" or "persistence",
     ResponseWriter = WriteHealthResponse
 });
 app.MapControllers();

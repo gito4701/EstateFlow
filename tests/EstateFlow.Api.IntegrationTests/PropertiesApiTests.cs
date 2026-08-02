@@ -269,6 +269,31 @@ public sealed class PropertiesApiTests : IClassFixture<CustomWebApplicationFacto
     }
 
     [Fact]
+    public async Task GetApiPropertiesAudit_WithExistingProperty_ReturnsAuditEntries()
+    {
+        var propertyId = PropertyId.NewId();
+        var property = Property.Create(propertyId, "Audit Property", "Audit Address");
+        var repository = new EstateFlow.Infrastructure.Persistence.Repositories.PropertyRepository(
+            new EstateFlow.Infrastructure.Persistence.EstateFlowDbContext(
+                new Microsoft.EntityFrameworkCore.DbContextOptionsBuilder<EstateFlow.Infrastructure.Persistence.EstateFlowDbContext>()
+                    .UseInMemoryDatabase("EstateFlow-IntegrationTests")
+                    .Options));
+
+        await repository.AddAsync(property);
+        property.Update("Updated Audit Property", "Updated Audit Address");
+        await repository.UpdateAsync(property);
+        property.Delete();
+        await repository.DeleteAsync(property);
+
+        var response = await _client.GetAsync($"/api/properties/{propertyId.Value}/audit");
+
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        var payload = await response.Content.ReadFromJsonAsync<List<Dictionary<string, object>>>();
+        Assert.NotNull(payload);
+        Assert.True(payload!.Count >= 3);
+    }
+
+    [Fact]
     public async Task GetHealth_ReturnsSuccess()
     {
         var response = await _client.GetAsync("/health");

@@ -16,6 +16,7 @@ public static class ApiServiceRegistration
     {
         services.AddScoped<CreatePropertyService>();
         services.AddScoped<GetPropertyService>();
+        services.AddScoped<GetPropertyAuditService>();
         services.AddScoped<UpdatePropertyService>();
         services.AddScoped<DeletePropertyService>();
         services.AddScoped<SearchPropertiesService>();

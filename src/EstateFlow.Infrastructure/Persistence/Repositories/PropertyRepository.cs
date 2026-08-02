@@ -31,13 +31,31 @@ public sealed class PropertyRepository : PersistenceRepositoryBase<Property, Pro
     public async Task UpdateAsync(Property aggregate, CancellationToken cancellationToken = default)
     {
         _dbContext.Properties.Update(aggregate);
+        await _dbContext.PropertyAuditEntries.AddAsync(PropertyAuditEntry.Create(aggregate.Id, PropertyAuditOperation.Update), cancellationToken);
         await _dbContext.SaveChangesAsync(cancellationToken);
     }
 
     public async Task DeleteAsync(Property aggregate, CancellationToken cancellationToken = default)
     {
         _dbContext.Properties.Remove(aggregate);
+        await _dbContext.PropertyAuditEntries.AddAsync(PropertyAuditEntry.Create(aggregate.Id, PropertyAuditOperation.Delete), cancellationToken);
         await _dbContext.SaveChangesAsync(cancellationToken);
+    }
+
+    public override async Task AddAsync(Property aggregate, CancellationToken cancellationToken = default)
+    {
+        await _dbContext.Properties.AddAsync(aggregate, cancellationToken);
+        await _dbContext.PropertyAuditEntries.AddAsync(PropertyAuditEntry.Create(aggregate.Id, PropertyAuditOperation.Create), cancellationToken);
+        await _dbContext.SaveChangesAsync(cancellationToken);
+    }
+
+    public async Task<IReadOnlyList<PropertyAuditEntry>> GetPropertyAuditEntriesAsync(PropertyId id, CancellationToken cancellationToken = default)
+    {
+        return await _dbContext.PropertyAuditEntries
+            .Where(entry => entry.PropertyId.Value == id.Value)
+            .OrderBy(entry => entry.OccurredAtUtc)
+            .AsNoTracking()
+            .ToListAsync(cancellationToken);
     }
 
     public async Task<SearchPropertiesResult> SearchAsync(string? name, PropertyLifecycleState? status, int page, int pageSize, string? sortField, string? sortDirection, CancellationToken cancellationToken = default)

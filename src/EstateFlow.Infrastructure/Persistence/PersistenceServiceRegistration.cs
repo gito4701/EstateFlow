@@ -38,6 +38,7 @@ public static class PersistenceServiceRegistration
 
         services.AddScoped<Infrastructure.Persistence.Abstractions.IPropertyRepository, PropertyRepository>();
         services.AddScoped<Application.Persistence.IPropertyRepository, PropertyRepository>();
+        services.AddHealthChecks().AddCheck<PersistenceHealthCheck>("persistence");
         services.AddScoped<Infrastructure.Persistence.Abstractions.IOwnerRepository, OwnerRepository>();
         services.AddScoped<Application.Persistence.IOwnerRepository, OwnerRepository>();
         services.AddScoped<Infrastructure.Persistence.Abstractions.ITenantRepository, TenantRepository>();

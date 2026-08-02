@@ -15,14 +15,16 @@ public sealed class PropertiesController : ApiControllerBase
     private readonly UpdatePropertyService _updatePropertyService;
     private readonly DeletePropertyService _deletePropertyService;
     private readonly SearchPropertiesService _searchPropertiesService;
+    private readonly GetPropertyAuditService _getPropertyAuditService;
 
-    public PropertiesController(CreatePropertyService createPropertyService, GetPropertyService getPropertyService, UpdatePropertyService updatePropertyService, DeletePropertyService deletePropertyService, SearchPropertiesService searchPropertiesService)
+    public PropertiesController(CreatePropertyService createPropertyService, GetPropertyService getPropertyService, UpdatePropertyService updatePropertyService, DeletePropertyService deletePropertyService, SearchPropertiesService searchPropertiesService, GetPropertyAuditService getPropertyAuditService)
     {
         _createPropertyService = createPropertyService;
         _getPropertyService = getPropertyService;
         _updatePropertyService = updatePropertyService;
         _deletePropertyService = deletePropertyService;
         _searchPropertiesService = searchPropertiesService;
+        _getPropertyAuditService = getPropertyAuditService;
     }
 
     [HttpPost]
@@ -140,6 +142,25 @@ public sealed class PropertiesController : ApiControllerBase
         {
             return BuildErrorResponse(StatusCodes.Status400BadRequest, "Unable to update property.", ex.Message);
         }
+    }
+
+    [HttpGet("{id:guid}/audit")]
+    public IActionResult GetAudit(Guid id)
+    {
+        var response = _getPropertyAuditService.Handle(new GetPropertyAuditQuery(new EstateFlow.Domain.Properties.PropertyId(id)));
+
+        if (!response.IsSuccess || response.Entries is null)
+        {
+            return BuildErrorResponse(StatusCodes.Status404NotFound, "Property not found.", response.Error ?? "Property not found.");
+        }
+
+        return Ok(response.Entries.Select(entry => new
+        {
+            id = entry.Id,
+            operation = entry.Operation.ToString(),
+            occurredAtUtc = entry.OccurredAtUtc,
+            details = entry.Details
+        }));
     }
 
     [HttpDelete("{id:guid}")]
