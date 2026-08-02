@@ -282,3 +282,10 @@
 - Scope: tightened shared domain nullability and equality semantics, simplified the API service-registration path, removed unnecessary marker-interface DI registrations, and documented the registration entry points for consistency.
 - Verification: `dotnet clean`, `dotnet restore`, `dotnet build -v minimal`, and `dotnet test -v minimal` were re-run after the hardening pass.
 - Outcome: the solution remains behaviorally equivalent while improving clarity, consistency, and build hygiene.
+
+2026-08-02 — S41-OPS-001
+- Task ID: S41-OPS-001
+- Reason for this update: perform a repository-wide production readiness review without introducing new business functionality.
+- Scope: added a dedicated readiness endpoint, improved health-check behavior, gated Swagger/OpenAPI by environment configuration, and introduced explicit middleware for HTTPS/HSTS and security headers while preserving the existing API contracts.
+- Verification: `dotnet clean`, `dotnet restore`, `dotnet build -v minimal`, and `dotnet test -v minimal` were re-run after the production-hardening pass.
+- Outcome: the API is now easier to deploy and operate in production while remaining behaviorally equivalent to the existing surface.

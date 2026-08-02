@@ -1,5 +1,6 @@
 using System.Reflection;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
@@ -32,6 +33,14 @@ public static class SwaggerServiceRegistration
 
     public static IApplicationBuilder UseSwaggerDocumentation(this IApplicationBuilder app)
     {
+        var configuration = app.ApplicationServices.GetRequiredService<IConfiguration>();
+        var swaggerEnabled = configuration.GetValue("FeatureManagement:SwaggerEnabled", false);
+
+        if (!swaggerEnabled)
+        {
+            return app;
+        }
+
         app.UseSwagger(options =>
         {
             options.RouteTemplate = "openapi/{documentName}.json";

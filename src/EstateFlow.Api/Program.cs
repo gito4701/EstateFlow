@@ -2,9 +2,10 @@ using EstateFlow.Api.Configuration;
 using EstateFlow.Api.Middleware;
 using EstateFlow.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,10 +13,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Configuration
     .AddEstateFlowConfiguration(builder.Environment.ContentRootPath, builder.Environment.EnvironmentName);
 
-builder.Services.AddHealthChecks();
+builder.Services.AddHealthChecks()
+    .AddCheck("self", () => HealthCheckResult.Healthy("API is ready"));
 builder.Services.AddProblemDetails();
 builder.Services.AddControllers();
 builder.Services.AddRouting();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddSwaggerDocumentation();
 
 builder.Services.Configure<Microsoft.AspNetCore.Mvc.ApiBehaviorOptions>(options =>
@@ -55,14 +58,55 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware<RequestCorrelationMiddleware>();
 app.UseMiddleware<RequestLoggingMiddleware>();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
-app.UseSwaggerDocumentation();
 app.UseRouting();
+app.UseHttpsRedirection();
+app.UseHsts();
+app.Use(async (context, next) =>
+{
+    context.Response.Headers["X-Content-Type-Options"] = "nosniff";
+    context.Response.Headers["X-Frame-Options"] = "SAMEORIGIN";
+    context.Response.Headers["Referrer-Policy"] = "no-referrer";
+    context.Response.Headers["Content-Security-Policy"] = "default-src 'self'; frame-ancestors 'self'";
+    await next();
+});
 app.UseAuthorization();
-app.MapHealthChecks("/health");
+app.MapHealthChecks("/health", new HealthCheckOptions
+{
+    Predicate = _ => true,
+    ResponseWriter = WriteHealthResponse
+});
+app.MapHealthChecks("/health/ready", new HealthCheckOptions
+{
+    Predicate = check => check.Name == "self",
+    ResponseWriter = WriteHealthResponse
+});
 app.MapControllers();
 app.MapGet("/", () => Results.Ok(new { status = "EstateFlow API ready" }));
 
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwaggerDocumentation();
+}
+
 app.Run();
+
+static Task WriteHealthResponse(HttpContext context, HealthReport report)
+{
+    context.Response.ContentType = "application/json";
+
+    var payload = new
+    {
+        status = report.Status.ToString(),
+        checks = report.Entries.Select(entry => new
+        {
+            name = entry.Key,
+            status = entry.Value.Status.ToString(),
+            description = entry.Value.Description
+        })
+    };
+
+    return context.Response.WriteAsJsonAsync(payload);
+}
 
 public partial class Program
 {
