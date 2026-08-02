@@ -24,5 +24,6 @@
 | Lease scope approval | PD-017 | Approved for documentation | S42 |
 | Lease relationship approval | PD-018 | Approved for documentation | S42 |
 | Lease business rules approval | PD-019 | Recorded for documentation only; future implementation remains blocked until deferred rules are approved | S48 |
+| Cross-aggregate readiness review | S49-ARCH-001 | Documentation and analysis only | S49 |
 | Lease acceptance criteria approval | PD-020 | Approved for documentation | S42 |
 | Lease product approval record and review package | PRA-004 | Approved for documentation | S42 |

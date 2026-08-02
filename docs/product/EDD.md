@@ -18,6 +18,9 @@ A Lease product-definition baseline has been prepared to define the initial busi
 ## Lease Product Owner Review Package
 A formal Lease Product Owner review package has been prepared for the Lease decisions PD-016 through PD-020. The review package records the approved documentation decisions for Lease definition, scope, relationship meaning, and acceptance criteria while recording the Product Owner decision for PD-019. The Lease business-rules review package in `docs/product/LEASE_BUSINESS_RULES_REVIEW.md` captures the approved business-context statements, the deferred Lease business-rule areas, the explicit exclusions, and the constraints for any future implementation planning.
 
+## Cross-Aggregate Readiness Review
+A cross-aggregate readiness review has been added in `docs/product/CROSS_AGGREGATE_READINESS_REPORT.md` to document the current architecture and product-readiness posture across Property, Owner, Tenant, and Lease. The review confirms that the layered architecture remains consistent while identifying the remaining product decision gaps that continue to block future business-rule-driven implementation.
+
 ## Owner Product Definition Review Baseline
 The Owner baseline has been documented with Product Owner decisions recorded for documentation purposes. The current decision status is: PD-006 Approved, PD-007 Approved, PD-008 Approved, PD-009 Deferred, and PD-010 Approved. No Owner implementation work is authorized at this stage.
 

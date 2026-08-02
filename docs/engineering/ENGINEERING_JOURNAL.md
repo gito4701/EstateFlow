@@ -353,3 +353,10 @@
 - Scope: updated the Lease business-rules review package and the supporting Lease governance documents to capture the approved business-context statements, the deferred Lease business-rule areas, the explicit exclusions, and the constraints for future development planning.
 - Verification: `dotnet build EstateFlow.sln -v minimal` and `dotnet test EstateFlow.sln -v minimal` were re-run after the documentation-only decision-recording updates.
 - Outcome: Lease business-rule decisions are now documented as approved for governance purposes only, while implementation authorization remains blocked until the deferred areas receive explicit Product Owner approval.
+
+2026-08-02 — S49-ARCH-001
+- Task ID: S49-ARCH-001
+- Reason for this update: perform a cross-aggregate architecture and product-readiness review across the current EstateFlow aggregate foundations without introducing new behavior.
+- Scope: created a documentation-only cross-aggregate readiness report and updated the EDD and RTM to reference the current architecture posture, completed capabilities, available extension points, deferred decisions, and implementation risks across Property, Owner, Tenant, and Lease.
+- Verification: `dotnet build EstateFlow.sln -v minimal` and `dotnet test EstateFlow.sln -v minimal` were re-run after the documentation-only review updates.
+- Outcome: the architecture remains consistent across the current foundations; the review identifies governance gaps, especially for the remaining deferred Lease business-rule areas and the unresolved Owner/Tenant decision scopes.
