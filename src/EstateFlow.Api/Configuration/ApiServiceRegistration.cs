@@ -23,5 +23,7 @@ public static class ApiServiceRegistration
         services.AddScoped<GetOwnerService>();
         services.AddScoped<CreateTenantService>();
         services.AddScoped<GetTenantService>();
+        services.AddScoped<CreateLeaseService>();
+        services.AddScoped<GetLeaseService>();
     }
 }
