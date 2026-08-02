@@ -159,3 +159,6 @@ The artifact-governance model for this stage is maintained in [docs/engineering/
 
 ## S69 Artifact Retention Governance Reference
 The artifact-retention and release-evidence governance model for this stage is maintained in [docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md](docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md). That package records the approved retention expectations, deferred cleanup policy, release evidence requirements, ownership boundaries, and operational rules for evidence handling.
+
+## S70 Artifact Storage Strategy Reference
+The artifact-storage governance model for this stage is maintained in [docs/engineering/ARTIFACT_STORAGE_STRATEGY.md](docs/engineering/ARTIFACT_STORAGE_STRATEGY.md). That package records the approved workflow-artifact storage direction, deferred external-storage alternatives, naming and identity expectations, and access/integrity boundaries while keeping storage implementation explicitly excluded.

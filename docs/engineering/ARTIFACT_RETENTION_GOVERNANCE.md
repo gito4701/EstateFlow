@@ -90,3 +90,6 @@ Each decision below is recorded with one of the following statuses:
 
 ## Implementation authorization status
 This governance package authorizes documentation and policy definition only. It does not authorize artifact cleanup automation, registries, deployment workflows, environment promotion, release automation, cloud resources, secrets integration, authentication, authorization, or infrastructure automation.
+
+## Storage strategy reference
+The approved storage strategy for this stage is maintained in [docs/engineering/ARTIFACT_STORAGE_STRATEGY.md](docs/engineering/ARTIFACT_STORAGE_STRATEGY.md). That package defines the selected workflow-artifact storage direction, the deferred external-storage alternatives, and the governance expectations for naming, access, identity preservation, and integrity.

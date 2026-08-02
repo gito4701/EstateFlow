@@ -165,3 +165,7 @@ The S68 build artifact production update implements the first approved artifact 
 ## S69 Artifact Retention and Release Evidence Governance Note
 
 The S69 artifact retention and release evidence governance package defines the documentation-only policy for retention expectations, cleanup responsibility, release evidence requirements, ownership boundaries, and operational rules before any artifact lifecycle automation is introduced. The package preserves the boundary between governance definition and implementation authorization.
+
+## S70 Artifact Storage Strategy Note
+
+The S70 artifact storage strategy defines the approved documentation-only approach for storing CI-generated artifacts before any artifact repository or external storage implementation is introduced. The strategy selects workflow artifacts as the current storage direction, defers external storage alternatives, and records the access, naming, identity-preservation, and integrity expectations that remain within the governance-only boundary.

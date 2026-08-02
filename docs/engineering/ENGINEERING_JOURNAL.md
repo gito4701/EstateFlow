@@ -315,6 +315,13 @@
 - Verification: build and tests were re-run after the documentation-only governance updates.
 - Status: artifact retention and release-evidence governance are now documented without authorizing lifecycle automation.
 
+2026-08-02 — S70-OPS-001
+- Task ID: S70-OPS-001
+- Reason for this update: define the approved strategy for storing CI-generated artifacts before implementing artifact repositories or external storage.
+- Scope: created the artifact-storage strategy document and updated the artifact-governance, artifact-retention, release-governance, product definition, and traceability documents to reference the approved storage policy boundaries.
+- Verification: build and tests were re-run after the documentation-only storage-strategy updates.
+- Status: artifact storage strategy is now documented without authorizing registries, cloud storage, or infrastructure-backed storage implementation.
+
 2026-08-02 — S54-ARCH-001
 - Task ID: S54-ARCH-001
 - Reason for this update: perform a documentation-only platform quality and reliability review after the operational hardening work.

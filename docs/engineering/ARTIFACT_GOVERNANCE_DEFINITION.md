@@ -115,3 +115,6 @@ This governance definition authorizes documentation and policy definition only. 
 
 ## Retention governance reference
 The retention and release-evidence model for this stage is maintained in [docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md](docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md). That package defines the approved retention expectations, deferred cleanup policy, release evidence requirements, and ownership boundaries while keeping lifecycle automation explicitly excluded.
+
+## Storage strategy reference
+The approved storage strategy for this stage is maintained in [docs/engineering/ARTIFACT_STORAGE_STRATEGY.md](docs/engineering/ARTIFACT_STORAGE_STRATEGY.md). That package defines the selected workflow-artifact direction, the deferred external-storage alternatives, the naming and identity expectations, and the access and integrity boundaries while keeping storage implementation explicitly excluded.
