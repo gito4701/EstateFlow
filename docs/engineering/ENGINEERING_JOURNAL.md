@@ -289,3 +289,10 @@
 - Scope: added a dedicated readiness endpoint, improved health-check behavior, gated Swagger/OpenAPI by environment configuration, and introduced explicit middleware for HTTPS/HSTS and security headers while preserving the existing API contracts.
 - Verification: `dotnet clean`, `dotnet restore`, `dotnet build -v minimal`, and `dotnet test -v minimal` were re-run after the production-hardening pass.
 - Outcome: the API is now easier to deploy and operate in production while remaining behaviorally equivalent to the existing surface.
+
+2026-08-02 — S42-PD-001
+- Task ID: S42-PD-001
+- Reason for this update: create the initial Product Definition for Lease as a documentation-only baseline following the established Product Owner documentation process used for Property, Owner, and Tenant.
+- Scope: created the Lease product-definition baseline, Lease decision request, and Lease decision record documents; updated the EDD and RTM to include Lease traceability and recorded the work in the engineering journal.
+- Verification: `dotnet build EstateFlow.sln -v minimal` and `dotnet test EstateFlow.sln -v minimal` were re-run after the documentation-only update.
+- Outcome: the Lease documentation package is prepared for Product Owner review without introducing any implementation, persistence, API, or domain changes.

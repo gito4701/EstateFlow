@@ -12,6 +12,9 @@ A new product-definition baseline for Owner management has been prepared to defi
 ## Tenant Product Definition Baseline
 A Tenant product-definition baseline has been recorded to define the approved business boundary for introducing Tenant into EstateFlow v1.0. This baseline documents the purpose of Tenant, the approved Tenant scope, the Tenant-to-Property relationship, the approved capabilities, explicit exclusions, and acceptance principles. The Tenant baseline is documentation-only and does not authorize implementation work.
 
+## Lease Product Definition Baseline
+A Lease product-definition baseline has been prepared to define the initial business boundary for introducing Lease into EstateFlow v1.0. This baseline documents the purpose of Lease, the approved Lease scope, the Lease-to-Property, Lease-to-Tenant, and Lease-to-Owner relationship context, approved capabilities, explicit exclusions, and acceptance principles. The Lease baseline is documentation-only and does not authorize implementation work.
+
 ## Owner Product Definition Review Baseline
 The Owner baseline has been documented with Product Owner decisions recorded for documentation purposes. The current decision status is: PD-006 Approved, PD-007 Approved, PD-008 Approved, PD-009 Deferred, and PD-010 Approved. No Owner implementation work is authorized at this stage.
 
