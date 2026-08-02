@@ -39,10 +39,11 @@ This record captures the Product Owner decisions documented for Lease management
 - Relationship constraints: No legal, financial, or lifecycle behavior is approved in this documentation baseline.
 
 ## PD-019 — Lease Business Rules
-- Status: Deferred.
-- Approved rules: None. No Lease business rules are approved in this documentation baseline.
-- Approved invariants: None. No Lease invariants are approved in this documentation baseline.
-- Review package: The Product Owner review package for this decision is documented in `docs/product/LEASE_BUSINESS_RULES_REVIEW.md` and covers lifecycle requirements, state/status expectations, activation and termination behavior, renewal behavior, Property/Owner/Tenant relationship constraints, date validity, overlap/conflict rules, financial/rent boundaries, and workflow acceptance criteria.
+- Status: Recorded.
+- Approved rules: Lease is the business concept representing the agreed arrangement for the use of a property asset by a tenant, with ownership context provided by the property owner; Lease is related to a Property as the subject asset, to a Tenant as the occupying party, and to an Owner as the ownership context for the arrangement; Lease documentation must preserve the approved Lease definition, scope, and relationship context; any future Lease implementation work must remain within the approved documentation boundary and must not introduce out-of-scope capabilities.
+- Deferred rules: Lifecycle requirements, state or status model, activation and termination rules, renewal behavior, Property/Owner/Tenant relationship constraints beyond the documented relationship context, date validity requirements, overlap or conflict rules, financial or rent responsibility boundaries, and workflow acceptance criteria remain unresolved and are deferred.
+- Approved invariants: None beyond the documented business-context and boundary statements above.
+- Review package: The recorded Product Owner decisions for this decision are documented in `docs/product/LEASE_BUSINESS_RULES_REVIEW.md`.
 
 ## PD-020 — Lease Acceptance Criteria
 - Status: Approved.

@@ -346,3 +346,10 @@
 - Scope: created a documentation-only Lease business-rules review package and updated the Lease decision request, decision record, product approval record, EDD, RTM, and engineering journal to reference the pending review scope for lifecycle requirements, state expectations, activation and termination rules, renewal behavior, relationship constraints, date validity, overlap/conflict rules, financial boundaries, and acceptance criteria.
 - Verification: `dotnet build EstateFlow.sln -v minimal` and `dotnet test EstateFlow.sln -v minimal` were re-run after the documentation-only review-package updates.
 - Outcome: Product Owner review preparation is complete; implementation authorization remains blocked until PD-019 is resolved.
+
+2026-08-02 — S48-PD-002
+- Task ID: S48-PD-002
+- Reason for this update: record the Product Owner resolution for the deferred Lease business-rules decision PD-019 without introducing implementation changes.
+- Scope: updated the Lease business-rules review package and the supporting Lease governance documents to capture the approved business-context statements, the deferred Lease business-rule areas, the explicit exclusions, and the constraints for future development planning.
+- Verification: `dotnet build EstateFlow.sln -v minimal` and `dotnet test EstateFlow.sln -v minimal` were re-run after the documentation-only decision-recording updates.
+- Outcome: Lease business-rule decisions are now documented as approved for governance purposes only, while implementation authorization remains blocked until the deferred areas receive explicit Product Owner approval.

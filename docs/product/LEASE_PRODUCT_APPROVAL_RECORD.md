@@ -30,10 +30,10 @@ This record establishes the formal Product Owner review structure for the Lease 
 
 ### PD-019 — Lease Business Rules Approval
 - Decision identifier: PD-019
-- Current status: Deferred.
-- Approved decision: No Lease business rules or invariants are approved in this documentation baseline.
-- Review package: The formal Product Owner review package for this decision is recorded in `docs/product/LEASE_BUSINESS_RULES_REVIEW.md` and is intended to resolve the pending decision areas before any future Lease behavior implementation may continue.
-- Implementation impact: None; implementation remains blocked.
+- Current status: Recorded.
+- Approved decision: A limited set of Lease business-context and boundary statements are approved for documentation purposes, while lifecycle, status, activation, termination, renewal, relationship-constraint, date, overlap, financial, and workflow rules remain deferred.
+- Review package: The recorded Product Owner decision package for this decision is documented in `docs/product/LEASE_BUSINESS_RULES_REVIEW.md`.
+- Implementation impact: None; implementation remains blocked until the deferred decision areas are explicitly approved.
 
 ### PD-020 — Lease Acceptance Criteria Approval
 - Decision identifier: PD-020
