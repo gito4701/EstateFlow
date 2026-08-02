@@ -156,3 +156,6 @@ The formal CI/CD implementation authorization package for this stage is maintain
 
 ## S67 Artifact Governance Reference
 The artifact-governance model for this stage is maintained in [docs/engineering/ARTIFACT_GOVERNANCE_DEFINITION.md](docs/engineering/ARTIFACT_GOVERNANCE_DEFINITION.md). That package records the approved artifact purpose, ownership, metadata, retention expectations, promotion conditions, and security boundaries while keeping publishing and deployment implementation explicitly excluded.
+
+## S69 Artifact Retention Governance Reference
+The artifact-retention and release-evidence governance model for this stage is maintained in [docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md](docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md). That package records the approved retention expectations, deferred cleanup policy, release evidence requirements, ownership boundaries, and operational rules for evidence handling.

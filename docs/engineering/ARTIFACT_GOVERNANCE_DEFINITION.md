@@ -112,3 +112,6 @@ Each decision below is recorded with one of the following statuses:
 
 ## Implementation authorization status
 This governance definition authorizes documentation and policy definition only. It does not authorize artifact publishing workflows, package or container registries, deployment workflows, release-promotion automation, cloud resources, secrets integration, authentication, authorization, or infrastructure automation.
+
+## Retention governance reference
+The retention and release-evidence model for this stage is maintained in [docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md](docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md). That package defines the approved retention expectations, deferred cleanup policy, release evidence requirements, and ownership boundaries while keeping lifecycle automation explicitly excluded.

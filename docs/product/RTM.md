@@ -43,3 +43,4 @@
 | CI validation workflow quality enhancement | S66-OPS-001 | CI validation workflow quality improvements only | S66 |
 | Artifact governance strategy | S67-OPS-001 | Documentation and governance definition only | S67 |
 | Build artifact production | S68-OPS-001 | CI artifact generation and traceability only | S68 |
+| Artifact retention and release evidence governance | S69-OPS-001 | Documentation and governance definition only | S69 |

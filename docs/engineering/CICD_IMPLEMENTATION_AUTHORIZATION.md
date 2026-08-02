@@ -114,3 +114,6 @@ This package authorizes documentation and governance alignment for future CI/CD 
 
 ## Artifact governance reference
 The artifact-governance model for this stage is maintained in [docs/engineering/ARTIFACT_GOVERNANCE_DEFINITION.md](docs/engineering/ARTIFACT_GOVERNANCE_DEFINITION.md). That package defines the approved artifact purpose, ownership, metadata, retention expectations, promotion conditions, and security boundaries while keeping publishing and deployment implementation explicitly excluded.
+
+## Artifact retention governance reference
+The artifact-retention and release-evidence model for this stage is maintained in [docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md](docs/engineering/ARTIFACT_RETENTION_GOVERNANCE.md). That package defines the approved evidence requirements, deferred retention duration, deferred cleanup responsibility, and the operational rules for evidence retention while keeping automation explicitly excluded.

@@ -308,6 +308,13 @@
 - Verification: build and tests were re-run after the artifact-production workflow update.
 - Status: CI build artifact production is now implemented within the approved validation-and-traceability boundaries.
 
+2026-08-02 — S69-OPS-001
+- Task ID: S69-OPS-001
+- Reason for this update: define the governance model for artifact retention, cleanup, and release evidence before introducing artifact lifecycle automation.
+- Scope: created the artifact-retention governance document and updated the artifact-governance, release-governance, and CI authorization documents to reference the retention and release-evidence policy boundaries.
+- Verification: build and tests were re-run after the documentation-only governance updates.
+- Status: artifact retention and release-evidence governance are now documented without authorizing lifecycle automation.
+
 2026-08-02 — S54-ARCH-001
 - Task ID: S54-ARCH-001
 - Reason for this update: perform a documentation-only platform quality and reliability review after the operational hardening work.
