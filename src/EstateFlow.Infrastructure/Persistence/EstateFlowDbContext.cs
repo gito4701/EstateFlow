@@ -1,3 +1,4 @@
+using EstateFlow.Domain.Leases;
 using EstateFlow.Domain.Owners;
 using EstateFlow.Domain.Properties;
 using EstateFlow.Domain.Tenants;
@@ -16,12 +17,14 @@ public class EstateFlowDbContext : DbContext
     public DbSet<Property> Properties => Set<Property>();
     public DbSet<Owner> Owners => Set<Owner>();
     public DbSet<Tenant> Tenants => Set<Tenant>();
+    public DbSet<Lease> Leases => Set<Lease>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new PropertyConfiguration());
         modelBuilder.ApplyConfiguration(new OwnerConfiguration());
         modelBuilder.ApplyConfiguration(new TenantConfiguration());
+        modelBuilder.ApplyConfiguration(new LeaseConfiguration());
 
         base.OnModelCreating(modelBuilder);
     }

@@ -42,6 +42,8 @@ public static class PersistenceServiceRegistration
         services.AddScoped<Application.Persistence.IOwnerRepository, OwnerRepository>();
         services.AddScoped<Infrastructure.Persistence.Abstractions.ITenantRepository, TenantRepository>();
         services.AddScoped<Application.Persistence.ITenantRepository, TenantRepository>();
+        services.AddScoped<Infrastructure.Persistence.Abstractions.ILeaseRepository, LeaseRepository>();
+        services.AddScoped<Application.Persistence.ILeaseRepository, LeaseRepository>();
 
         return services;
     }

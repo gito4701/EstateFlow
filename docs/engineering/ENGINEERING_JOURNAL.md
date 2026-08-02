@@ -324,3 +324,10 @@
 - Scope: created the Lease create request, create response, create service, repository abstraction, and application tests; kept Domain, Infrastructure, API, persistence implementation, and workflow concerns unchanged.
 - Verification: `dotnet clean EstateFlow.sln`, `dotnet restore EstateFlow.sln`, `dotnet build EstateFlow.sln -v minimal`, and `dotnet test EstateFlow.sln -v minimal` were re-run after the Application-only Lease foundation implementation.
 - Approval status: PD-019 remains Deferred; no Lease business rules, lifecycle rules, workflows, or persistence behavior were invented or implemented.
+
+2026-08-02 — S45-PER-001
+- Task ID: S45-PER-001
+- Reason for this update: implement the approved Lease persistence foundation inside the Infrastructure layer only, following the established EF Core repository and configuration patterns used for Property, Owner, and Tenant.
+- Scope: created the Lease repository, Lease EF Core configuration, Lease persistence tests, Lease retrieval tests, and registered the Lease repository in the persistence service registration; kept Domain, Application, API, lifecycle, and business-rule concerns unchanged.
+- Verification: `dotnet clean EstateFlow.sln`, `dotnet restore EstateFlow.sln`, `dotnet build EstateFlow.sln -v minimal`, and `dotnet test EstateFlow.sln -v minimal` were re-run after the Infrastructure-only Lease persistence implementation.
+- Approval status: PD-019 remains Deferred; no Lease lifecycle, status, date, rent, payment, or relationship behavior was implemented.
