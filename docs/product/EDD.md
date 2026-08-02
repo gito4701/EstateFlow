@@ -125,3 +125,7 @@ The S58 deployment readiness validation records the current deployment posture o
 ## S59 Deployment Operations Runbook Note
 
 The S59 deployment operations runbook captures the current operational deployment expectations for EstateFlow in a documentation-only form. The runbook covers deployment preparation, local and container deployment flows, startup and readiness verification, log and correlation troubleshooting, audit inspection, common configuration failures, promotion and rollback considerations, operational ownership expectations, known limitations, and operational exit criteria. It remains confined to governance and operator guidance and does not authorize implementation, infrastructure, authentication, authorization, secrets-management, or CI/CD work.
+
+## S60 CI/CD Delivery Strategy Review Note
+
+The S60 CI/CD delivery strategy review records a documentation-only future-state assessment of delivery automation for EstateFlow. The review captures the current build and testing posture, the current automation gaps, the recommended future pipeline model covering build automation, quality gates, source-control expectations, delivery flow, environment promotion, rollback expectations, operational alignment, and release traceability, and the decisions that will require future approval before any implementation work begins. The review explicitly excludes GitHub Actions, Azure DevOps pipelines, CI/CD workflow implementation, deployment automation, cloud resources, authentication, authorization, and secrets providers.
