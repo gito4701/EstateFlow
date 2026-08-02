@@ -2,9 +2,16 @@ using System.Collections.Generic;
 
 namespace EstateFlow.Domain.Common
 {
+    /// <summary>
+    /// Base class for domain entities that use a strongly typed identifier.
+    /// </summary>
+    /// <typeparam name="TId">The entity identifier type.</typeparam>
     public abstract class Entity<TId>
     {
-        public TId Id { get; protected set; }
+        /// <summary>
+        /// Gets the unique identifier for the entity.
+        /// </summary>
+        public TId Id { get; protected set; } = default!;
 
         protected Entity() { }
 
@@ -13,7 +20,7 @@ namespace EstateFlow.Domain.Common
             Id = id;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj is not Entity<TId> other) return false;
             return EqualityComparer<TId>.Default.Equals(Id, other.Id);
@@ -21,7 +28,7 @@ namespace EstateFlow.Domain.Common
 
         public override int GetHashCode()
         {
-            return EqualityComparer<TId>.Default.GetHashCode(Id);
+            return EqualityComparer<TId>.Default.GetHashCode(Id!);
         }
     }
 }

@@ -1,8 +1,6 @@
 using EstateFlow.Api.Configuration;
 using EstateFlow.Api.Middleware;
-using EstateFlow.Application.Interfaces;
 using EstateFlow.Infrastructure.Persistence;
-using EstateFlow.Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -44,8 +42,6 @@ builder.Services.Configure<Microsoft.AspNetCore.Mvc.ApiBehaviorOptions>(options 
 
 builder.Services.Configure<EstateFlow.Api.Configuration.ApiBehaviorOptions>(builder.Configuration.GetSection("ApiBehavior"));
 
-builder.Services.AddScoped<IApplicationService, ApiServiceRegistration>();
-builder.Services.AddScoped<IInfrastructureService, ApiServiceRegistration>();
 ApiServiceRegistration.RegisterServices(builder.Services);
 builder.Services.AddPersistence(builder.Configuration);
 

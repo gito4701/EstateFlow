@@ -8,8 +8,17 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace EstateFlow.Infrastructure.Persistence;
 
+/// <summary>
+/// Registers the persistence services and repositories used by the application.
+/// </summary>
 public static class PersistenceServiceRegistration
 {
+    /// <summary>
+    /// Adds the persistence layer services and repository implementations to the dependency injection container.
+    /// </summary>
+    /// <param name="services">The service collection to populate.</param>
+    /// <param name="configuration">The application configuration used to select persistence settings.</param>
+    /// <returns>The same service collection for chaining.</returns>
     public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
     {
         var persistenceOptions = new PersistenceOptions();

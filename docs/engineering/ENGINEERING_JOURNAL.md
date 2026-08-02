@@ -275,3 +275,10 @@
 - Scope: created the Tenant aggregate, TenantId value object, and InvalidTenantException in the Domain layer; added Tenant domain tests for creation and validation behavior; kept Application, Infrastructure, API, persistence, and relationship concerns unchanged.
 - Verification: build and tests were re-run after the Domain-only Tenant foundation implementation.
 - Approval status: PD-014 remains Deferred; no Tenant business rules, lifecycle rules, occupancy behavior, financial rules, or relationships were invented or implemented.
+
+2026-08-02 — S40-ARCH-001
+- Task ID: S40-ARCH-001
+- Reason for this update: perform a repository-wide architecture and quality review without introducing new business functionality.
+- Scope: tightened shared domain nullability and equality semantics, simplified the API service-registration path, removed unnecessary marker-interface DI registrations, and documented the registration entry points for consistency.
+- Verification: `dotnet clean`, `dotnet restore`, `dotnet build -v minimal`, and `dotnet test -v minimal` were re-run after the hardening pass.
+- Outcome: the solution remains behaviorally equivalent while improving clarity, consistency, and build hygiene.
