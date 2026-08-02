@@ -141,3 +141,7 @@ The S62 release governance definition captures the documentation-only release-go
 ## S63 Delivery Automation Readiness Review Note
 
 The S63 delivery automation readiness review records the current readiness posture for future CI/CD implementation in EstateFlow. The review confirms that the technical, operational, and governance foundations are now sufficient for planning and design discussions, while explicitly maintaining the documentation-only boundary and deferring implementation authorization until the approved pipeline scope, ownership model, approval checkpoints, and quality gates are finalized.
+
+## S64 CI/CD Implementation Authorization Note
+
+The S64 CI/CD implementation authorization package records the approved implementation boundaries for future automation in EstateFlow. The package defines the approved automation scope, the deferred release-execution decisions, the environment expectations, the artifact-governance boundaries, the rollback governance expectations, and the explicitly excluded implementation areas while preserving the documentation-only boundary.

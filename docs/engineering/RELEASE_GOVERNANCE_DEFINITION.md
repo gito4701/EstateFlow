@@ -150,3 +150,6 @@ The following items remain explicitly excluded from this governance package:
 
 ## Implementation Authorization Status
 All governance decisions in this document are approved for documentation and policy purposes only. No implementation authorization is granted for CI/CD workflows, pipelines, deployment automation, artifact registries, cloud resources, or infrastructure changes.
+
+## S64 Authorization Package Reference
+The formal CI/CD implementation authorization package for this stage is maintained in [docs/engineering/CICD_IMPLEMENTATION_AUTHORIZATION.md](docs/engineering/CICD_IMPLEMENTATION_AUTHORIZATION.md). That package records the approved automation scope, deferred release-execution decisions, environment expectations, artifact-governance boundaries, rollback governance, and explicit exclusions for future implementation planning.

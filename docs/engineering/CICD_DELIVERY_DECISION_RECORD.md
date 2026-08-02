@@ -114,3 +114,6 @@ All of the decisions in this record are approved for documentation and governanc
 
 ## Release Governance Reference
 The release governance model for this review package is maintained in [docs/engineering/RELEASE_GOVERNANCE_DEFINITION.md](docs/engineering/RELEASE_GOVERNANCE_DEFINITION.md). This reference keeps release governance aligned with the earlier CI/CD decision record while preserving the separation between documentation approval and implementation authorization.
+
+## S64 Authorization Package Reference
+The implementation-authorization boundaries for the next stage are recorded in [docs/engineering/CICD_IMPLEMENTATION_AUTHORIZATION.md](docs/engineering/CICD_IMPLEMENTATION_AUTHORIZATION.md). That package defines which automation concerns are approved for implementation, which remain deferred, and which are explicitly excluded.

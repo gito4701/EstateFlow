@@ -141,3 +141,6 @@ EstateFlow has reached a credible documentation and operational baseline for fut
 
 ## Implementation Authorization Status
 This review confirms that the repository is ready for delivery-automation planning and design. It does not authorize CI/CD workflow implementation, pipeline creation, deployment automation, artifact-repository use, cloud-resource provisioning, or infrastructure changes.
+
+## S64 Authorization Package Reference
+The formal CI/CD implementation authorization package for this stage is recorded in [docs/engineering/CICD_IMPLEMENTATION_AUTHORIZATION.md](docs/engineering/CICD_IMPLEMENTATION_AUTHORIZATION.md). That package defines the approved automation scope, the deferred release-execution decisions, the environment expectations, the artifact-governance boundaries, and the explicitly excluded implementation areas.
