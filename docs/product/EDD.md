@@ -40,6 +40,9 @@ The S50 decision-recording package now records the following status for document
 ## Property Aggregate Definition
 Property is the core EstateFlow v1.0 domain aggregate. It represents a real-estate asset record with a uniquely identified property record and the minimum business identity required for future implementation. The approved product baseline defines Property as the authoritative business concept for this release.
 
+## Property Operational Capability Review
+A Property operational capability review has been prepared in `docs/product/PROPERTY_OPERATIONAL_CAPABILITY_REVIEW.md`. The review documents the current completed Property capabilities, the operational gaps and future improvement opportunities, and the explicit non-expansion boundary that excludes Owner, Tenant, Lease, ownership assignment, occupancy assignment, rental/payment behavior, and cross-aggregate business workflows.
+
 ## Property Lifecycle Definition
 The approved Property lifecycle baseline consists of the following states:
 - Draft

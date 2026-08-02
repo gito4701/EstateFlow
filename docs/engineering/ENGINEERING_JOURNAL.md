@@ -374,3 +374,10 @@
 - Scope: updated the Owner/Tenant review package, decision request and decision record artifacts, EDD, RTM, and engineering journal to record the approved business-rule context, deferred Owner and Tenant business-rule areas, explicit exclusions, and the implementation authorization status for documentation governance only.
 - Verification: `dotnet build EstateFlow.sln -v minimal` and `dotnet test EstateFlow.sln -v minimal` were re-run after the decision-recording updates.
 - Outcome: the Owner and Tenant governance package now clearly separates approved documentation context from unresolved business-rule decisions and keeps implementation authorization blocked for all Owner/Tenant behavior changes.
+
+2026-08-02 — S51-PROP-001
+- Task ID: S51-PROP-001
+- Reason for this update: perform a documentation-only review of the current Property capability set and identify the next approved production-ready improvements without expanding into unauthorized Owner, Tenant, Lease, ownership-assignment, occupancy-assignment, rental/payment, or cross-aggregate workflow behavior.
+- Scope: created the Property operational capability review package and updated the EDD, RTM, and engineering journal to capture the current completed Property capabilities, potential operational improvements, missing operational concerns, technical risks, and future extension points while explicitly excluding any Owner/Tenant/Lease or cross-aggregate workflow expansion.
+- Verification: `dotnet build EstateFlow.sln -v minimal` and `dotnet test EstateFlow.sln -v minimal` were re-run after the documentation-only review updates.
+- Outcome: the review confirms the current Property baseline is operationally usable for create/read/search/update/delete behavior, while the next improvement areas remain limited to governance, validation, observability, and performance readiness rather than unauthorized workflow expansion.
