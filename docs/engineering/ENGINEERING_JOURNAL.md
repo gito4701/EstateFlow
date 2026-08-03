@@ -350,6 +350,13 @@
 - Verification: clean, restore, build, and test commands were run after the hardening changes, and the workflow YAML plus packaging steps were validated locally.
 - Status: the release workflow remains limited to packaging, metadata generation, and evidence publication without introducing deployment or promotion automation.
 
+2026-08-03 — R2-REL-001
+- Task ID: R2-REL-001
+- Reason for this update: add a Keep a Changelog–style `CHANGELOG.md` for the initial v1.0 release and update documentation references.
+- Scope: created `CHANGELOG.md`, updated `README.md` to reference the changelog, and recorded the activity in the engineering journal.
+- Verification: no implementation, source code, test, CI/CD workflow, database, API, domain, application, or infrastructure changes were introduced.
+- Status: changelog documentation added and ready for review.
+
 2026-08-02 — S54-ARCH-001
 - Task ID: S54-ARCH-001
 - Reason for this update: perform a documentation-only platform quality and reliability review after the operational hardening work.

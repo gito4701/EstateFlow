@@ -14,15 +14,19 @@ EstateFlow is a governance-led Clean Architecture reference application built fo
 - `.github/workflows/release-workflow.yml` — tag-triggered release workflow for packaging and metadata validation.
 
 ## Release preparation
-This branch is `release/v1.0-preparation` and is focused on release readiness documentation only.
+This branch is focused on release readiness documentation only.
 
-The branch includes:
+The release preparation artifacts include:
 - `RELEASE_NOTES_v1.0.md`
 - `ARCHITECTURE_OVERVIEW.md`
 - `PROJECT_STATUS.md`
+- `CHANGELOG.md`
 - Updated `README.md` describing architecture, build/run instructions, and release readiness.
 
 No production code, business logic, deployment automation, or infrastructure changes are included in this release preparation branch.
+
+## Changelog
+See `CHANGELOG.md` for the project history and release notes.
 
 ## Build and test
 From the repository root:
