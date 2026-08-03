@@ -1,21 +1,52 @@
 # EstateFlow
 
-This repository contains the approved governance documentation for EstateFlow.
+EstateFlow is a governance-led Clean Architecture reference application built for release preparation and documentation-driven delivery.
 
-Purpose
-- Provide a concise, structured foundation for engineering decisions, AI agent activity, and project planning.
-- Maintain a single source of truth for engineering governance during the repository foundation stage.
+## What is included
+- `src/EstateFlow.Api` — ASP.NET Core API host and delivery boundary.
+- `src/EstateFlow.Application` — application services and use-case orchestration.
+- `src/EstateFlow.Domain` — domain model, aggregates, and business invariants.
+- `src/EstateFlow.Infrastructure` — infrastructure scaffolding and persistence foundations.
+- `src/EstateFlow.Shared` — shared utilities and cross-cutting abstractions.
+- `tests/` — integration and unit tests for the current solution.
+- `docs/` — governance, product definition, release readiness, and engineering evidence.
+- `.github/workflows/build-validation.yml` — CI validation pipeline for PRs and branch pushes.
+- `.github/workflows/release-workflow.yml` — tag-triggered release workflow for packaging and metadata validation.
 
-Scope
-- Documentation only.
-- No source code, solutions, projects, tests, infrastructure, or implementation artifacts.
+## Release preparation
+This branch is `release/v1.0-preparation` and is focused on release readiness documentation only.
 
-Structure
-- `docs/engineering/ENGINEERING_CONSTITUTION.md`
-- `docs/engineering/AI_AGENT_GUIDE.md`
-- `docs/engineering/MASTER_PROJECT_PLAN.md`
-- `docs/engineering/ENGINEERING_STATE_REGISTER.md`
+The branch includes:
+- `RELEASE_NOTES_v1.0.md`
+- `ARCHITECTURE_OVERVIEW.md`
+- `PROJECT_STATUS.md`
+- Updated `README.md` describing architecture, build/run instructions, and release readiness.
 
-Maintenance
-- Document ownership and update responsibility are defined in each file.
-- Changes must be approved and tracked through repository governance.
+No production code, business logic, deployment automation, or infrastructure changes are included in this release preparation branch.
+
+## Build and test
+From the repository root:
+```powershell
+dotnet restore EstateFlow.sln
+dotnet build EstateFlow.sln
+dotnet test EstateFlow.sln
+```
+
+## Run locally
+```powershell
+dotnet run --project src/EstateFlow.Api/EstateFlow.Api.csproj
+```
+
+## CI/CD workflows
+- `build-validation.yml` runs on pull requests and branch pushes to validate restore, build, and test execution.
+- `release-workflow.yml` runs on Git tags matching `v*` and validates release artifact packaging and metadata.
+
+## Governance posture
+EstateFlow is currently maintained as a documentation-driven project with an emphasis on:
+- architectural clarity
+- release governance and traceability
+- CI/CD readiness without deploying production infrastructure
+- documentation-only release preparation for v1.0
+
+## Notes
+This repository is intended for review, release preparation, and evidence generation. Code and workflow changes are intentionally limited to the documentation and validation scope for the current branch.
