@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yaW5ONBlZ6c=",
+  "dgSpecHash": "/pGdNnq2CDg=",
   "success": true,
   "projectFilePath": "C:\\dev\\Project\\Apps\\EstateFlow\\src\\EstateFlow.Domain\\EstateFlow.Domain.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\morga\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.18\\microsoft.netcore.app.ref.9.0.18.nupkg.sha512",
-    "C:\\Users\\morga\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.18\\microsoft.windowsdesktop.app.ref.9.0.18.nupkg.sha512",
-    "C:\\Users\\morga\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.18\\microsoft.aspnetcore.app.ref.9.0.18.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

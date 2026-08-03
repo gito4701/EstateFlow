@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EstateFlow.Domain.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08818feef0c5172c0d2bdf6d5ff9f43105e3bf59")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be32d506c747fa79f768af7b79d80007cca9b345")]
 [assembly: System.Reflection.AssemblyProductAttribute("EstateFlow.Domain.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EstateFlow.Domain.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
