@@ -48,3 +48,4 @@
 | Release promotion governance | S71-OPS-001 | Documentation and governance definition only | S71 |
 | Release automation authorization | S72-OPS-001 | Documentation and governance definition only | S72 |
 | Release workflow implementation | S73-OPS-001 | Release workflow implementation and release evidence generation only | S73 |
+| Release workflow validation and hardening | S74-OPS-001 | Release workflow validation, packaging hardening, and evidence generation only | S74 |

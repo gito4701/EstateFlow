@@ -181,3 +181,7 @@ The S72 release automation authorization package defines the approved documentat
 ## S73 Release Workflow Implementation Note
 
 The S73 release workflow implementation adds the first authorized GitHub Actions release workflow for EstateFlow. The workflow is isolated to version-tag execution, restores dependencies, builds and tests the solution, packages the build output, and generates release metadata and workflow artifacts without introducing deployment, promotion, cloud, package-registry, container-registry, secrets, authentication, authorization, or source-code behavior changes.
+
+## S74 Release Workflow Validation and Hardening Note
+
+The S74 release workflow validation and hardening update strengthens the approved release workflow by validating generated metadata, validating package structure and naming consistency, ensuring deterministic packaging behavior, and preventing artifact publication when validation fails. The workflow remains limited to packaging, metadata generation, and release-evidence publication without introducing deployment, promotion, cloud, infrastructure, registry, secrets, authentication, or authorization automation.

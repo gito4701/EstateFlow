@@ -39,11 +39,22 @@ jobs:
       - name: Execute test suite
         run: dotnet test EstateFlow.sln -c Release -v minimal
 
+      - name: Prepare release package directory
+        if: success()
+        run: |
+          rm -rf release-package
+          mkdir -p release-package/estateflow-release
+          echo "Prepared deterministic release package directory."
+
       - name: Package release build output
         if: success()
         run: |
-          mkdir -p release-package/estateflow-release
           cp -R src/EstateFlow.Api/bin/Release/net9.0/. release-package/estateflow-release/
+          echo "Copied the release build output into the package directory."
+
+      - name: Generate release metadata
+        if: success()
+        run: |
           cat > release-package/release-metadata.json <<EOF
           {
             "buildIdentifier": "release-${{ github.run_number }}-${{ github.run_id }}",
@@ -55,7 +66,30 @@ jobs:
             "buildTimestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
           }
           EOF
-          echo "Created release package and metadata."
+          echo "Generated release metadata payload."
+
+      - name: Validate release package structure
+        if: success()
+        run: |
+          test -d release-package/estateflow-release
+          test -f release-package/release-metadata.json
+          find release-package -maxdepth 2 -type f | sort
+          echo "Validated release package structure and metadata file presence."
+
+      - name: Validate release metadata contents
+        if: success()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          metadata_path = Path('release-package/release-metadata.json')
+          data = json.loads(metadata_path.read_text(encoding='utf-8'))
+          required = ['buildIdentifier','commitSha','workflowRunId','workflowRunNumber','repository','tag','buildTimestamp']
+          missing = [key for key in required if not data.get(key)]
+          if missing:
+              raise SystemExit(f'Missing required metadata fields: {missing}')
+          print('Validated metadata keys:', ', '.join(required))
+          PY
 
       - name: Upload packaged build artifact
         if: success()
