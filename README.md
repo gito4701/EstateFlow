@@ -1,56 +1,30 @@
 # EstateFlow
 
-EstateFlow is a governance-led Clean Architecture reference application built for release preparation and documentation-driven delivery.
+EstateFlow is a governance-driven software delivery workspace and an evolving operational property management platform. The repository captures the product, engineering, verification, release, and baseline governance needed to deliver approved capability increments in a controlled way.
 
-## What is included
-- `src/EstateFlow.Api` — ASP.NET Core API host and delivery boundary.
-- `src/EstateFlow.Application` — application services and use-case orchestration.
-- `src/EstateFlow.Domain` — domain model, aggregates, and business invariants.
-- `src/EstateFlow.Infrastructure` — infrastructure scaffolding and persistence foundations.
-- `src/EstateFlow.Shared` — shared utilities and cross-cutting abstractions.
-- `tests/` — integration and unit tests for the current solution.
-- `docs/` — governance, product definition, release readiness, and engineering evidence.
-- `.github/workflows/build-validation.yml` — CI validation pipeline for PRs and branch pushes.
-- `.github/workflows/release-workflow.yml` — tag-triggered release workflow for packaging and metadata validation.
+## Purpose of this repository
+This repository preserves the EstateFlow operating model: it documents product intent, governs delivery decisions, records implementation evidence, and maintains release and baseline traceability without allowing unapproved expansion of scope.
 
-## Release preparation
-This branch is focused on release readiness documentation only.
+## Repository structure
+- /vision — platform vision and strategic direction context
+- /framework — EstateFlow Delivery Framework governance materials
+- /products — product definitions, approvals, reviews, releases, and baseline decisions
+- /src — solution source code and domain implementation
+- /tests — automated tests for the domain and solution layers
 
-The release preparation artifacts include:
-- `RELEASE_NOTES_v1.0.md`
-- `ARCHITECTURE_OVERVIEW.md`
-- `PROJECT_STATUS.md`
-- `CHANGELOG.md`
-- Updated `README.md` describing architecture, build/run instructions, and release readiness.
+## EstateFlow Delivery Framework
+The EstateFlow Delivery Framework is a structured governance lifecycle that moves work from vision through delivery in a controlled sequence. It separates Product, Engineering, Verification, Release, and Baseline responsibilities so that each approved increment remains scoped, traceable, and reviewable.
 
-No production code, business logic, deployment automation, or infrastructure changes are included in this release preparation branch.
+## Governance lifecycle
+Platform Vision → Product Roadmap → Initiative Prioritization → Product Charter → Change Classification → EDD → Implementation Authorization → Engineering Design → Implementation → Verification → Release → Baseline
 
-## Changelog
-See `CHANGELOG.md` for the project history and release notes.
+## Current project status
+- EstateFlow v1.0 frozen baseline
+- Delivery Framework operational
+- Phase Two active
+- EDD-101, EDD-102, and EDD-103 completed through baseline establishment
+- phase-two-milestone-01 tag established
 
-## Build and test
-From the repository root:
-```powershell
-dotnet restore EstateFlow.sln
-dotnet build EstateFlow.sln
-dotnet test EstateFlow.sln
-```
+## Contributor guidance
+Before beginning new capability work, review the relevant governance documents in the repository so that the proposed work remains aligned to the approved product boundary and the established delivery framework.
 
-## Run locally
-```powershell
-dotnet run --project src/EstateFlow.Api/EstateFlow.Api.csproj
-```
-
-## CI/CD workflows
-- `build-validation.yml` runs on pull requests and branch pushes to validate restore, build, and test execution.
-- `release-workflow.yml` runs on Git tags matching `v*` and validates release artifact packaging and metadata.
-
-## Governance posture
-EstateFlow is currently maintained as a documentation-driven project with an emphasis on:
-- architectural clarity
-- release governance and traceability
-- CI/CD readiness without deploying production infrastructure
-- documentation-only release preparation for v1.0
-
-## Notes
-This repository is intended for review, release preparation, and evidence generation. Code and workflow changes are intentionally limited to the documentation and validation scope for the current branch.
